@@ -22,15 +22,15 @@ var images = $("div#body-inner img").not(".inline");
 images.wrap(function(){
   var image =$(this);
   var o = getUrlParameter(image[0].src);
-  if (typeof o !== "undefined") {  // FIX
+  if (typeof o !== "undefined") { // FIX
 	  var f = o['featherlight'];
 	  // IF featherlight is false, do not use feather light
 	  if (f != 'false') {
 		if (!image.parent("a").length) {
 		  return "<a href='" + image[0].src + "' data-featherlight='image'></a>";
 		}
-	}
-  }  // FIX
+	  }
+  } // FIX
 });
 
 // Change styles, depending on parameters set to the image

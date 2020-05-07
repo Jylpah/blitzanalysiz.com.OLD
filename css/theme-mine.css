@@ -106,3 +106,52 @@ a:hover {
     border-color: var(--MENU-SECTION-HR-color);
 }
 
+#post_cards div {
+	display: flex; 
+	flex-flow: row wrap;
+}
+
+#post_cards img {
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+
+.article_date {
+	font-style: italic;	
+}
+
+.children {
+	font-weight: normal;
+	font-style: normal;
+	font-size: large;	
+}
+
+.children-li p {
+	font-weight: normal;
+	font-style: normal;
+	font-size: normal;	
+}
+
+.post_cards {
+	display: flex; 
+	flex-flow: row wrap;
+}
+.post_card {
+	width: 300px;
+	margin-right: 30px;	
+}
+
+.post_header {
+	font-weight: bold;
+	font-size: large;
+}
+.post_img {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px; 
+}
+
+.post_text {}
+
