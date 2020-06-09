@@ -12,21 +12,21 @@
     <title>Measuring tank performance :: Home</title>
 
     
-    <link href="/css/nucleus.css?1591701094" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1591701094" rel="stylesheet">
-    <link href="/css/hybrid.css?1591701094" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1591701094" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1591701094" rel="stylesheet">
-    <link href="/css/auto-complete.css?1591701094" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1591701094" rel="stylesheet">
-    <link href="/css/theme.css?1591701094" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1591701094" rel="stylesheet">
+    <link href="/css/nucleus.css?1591727138" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1591727138" rel="stylesheet">
+    <link href="/css/hybrid.css?1591727138" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1591727138" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1591727138" rel="stylesheet">
+    <link href="/css/auto-complete.css?1591727138" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1591727138" rel="stylesheet">
+    <link href="/css/theme.css?1591727138" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1591727138" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1591701094" rel="stylesheet">
+    <link href="/css/theme-mine.css?1591727138" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1591701094"></script>
+    <script src="/js/jquery-3.3.1.min.js?1591727138"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1591701094"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1591701094"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1591727138"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1591727138"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1591701094"></script>
+<script type="text/javascript" src="/js/search.js?1591727138"></script>
 
     
   </div>
@@ -325,8 +325,8 @@
   <ul>
     <li><a href="#how-to-measure-performance-in-the-game">How to measure performance in the game?</a></li>
     <li><a href="#so-average-wr-it-is-then-right">So Average WR it is then, right?</a></li>
-    <li><a href="#tank-performance-is-different-from-player-skill">Tank performance is different from player skill</a></li>
-    <li><a href="#tanks-have-different-player-bases">Tanks have different player bases</a></li>
+    <li><a href="#tank-performance-is-a-different-variable-from-player-skill">Tank performance is a different variable from player skill</a></li>
+    <li><a href="#tanks-have-different-playerbases">Tanks have different playerbases</a></li>
     <li><a href="#introducing-relative-wr">Introducing Relative WR</a></li>
     <li><a href="#performance-within-player-skill-category">Performance within player skill category</a>
       <ul>
@@ -389,7 +389,7 @@ Therefore, in my view, tank performance is not a thing that we should vote about
 Despite all the issues related to WR, I consider it the best performance measure over large number of battles and in case of tanks, over large number of players since it measures directly the objective of the game (=to win battles). It is also more understandable measure vs. somewhat abstract indexes. But I believe performance indicators like WN8 which based on “input stats” (average damage, kills, spots) give more accurate view on players’ short-term performance (&lt; 100 battles).
 Now going back to the tank performance.</p>
 <h2 id="so-average-wr-it-is-then-right">So Average WR it is then, right?</h2>
-<p><em>Not so fast.</em> Average WR of a tank is a good starter, but it itself has its own biases. Let’s have a look on two tier IX mediums: <em>AMX 30 1tier prototype</em> and <em>Prototipo Standard B</em>. Everything here is based on 6.9 data.</p>
+<p><em>Not so fast.</em> Average WR of a tank is a good starter, but it itself has its own biases. Let’s have a look on two tier IX mediums: <em>AMX 30 1er prototype</em> and <em>Prototipo Standard B</em>. Everything here is based on 6.9 data.</p>
 <p><img src="figure/fig_Tank_WR-1.png" alt="plot of chunk fig_Tank_WR"></p>
 <table>
 <thead>
@@ -413,21 +413,21 @@ Now going back to the tank performance.</p>
 </tbody>
 </table>
 <p>Both the tanks have been also played by thousands of players, but the AMX seems to have significantly higher average WR. Many would be tempted to claim the AMX is a better tank than Standard B. But is it?</p>
-<h2 id="tank-performance-is-different-from-player-skill">Tank performance is different from player skill</h2>
+<h2 id="tank-performance-is-a-different-variable-from-player-skill">Tank performance is a different variable from player skill</h2>
 <p>Let us first consider a single player and the factors affecting one’s chances to win one battle:</p>
 <p><em>Chance of winning ~ player skill * tank performance + RNG + team performance – enemy team performance</em></p>
 <p>Over a large number of battles the variables “team performance” and “enemy team performance” approach their respective averages and the impact of RNG approaches zero (“What RNG gives, RNG takes”). The more battles on plays with a tank, only two factors will influence one’s WR in it:</p>
 <p><em>WR ~ player skill * tank performance</em></p>
 <p>And to be more precise, <em>player skill</em> is <em>average player skill in the tank in question</em>. Platooning has been ignored here since unfortunately WG does not publish very usable platooning stats via their <a href="https://developers.wargaming.net/">API</a>.</p>
 <p>Saying “any tank is OP in good players hands” is the same as saying “any car is fast in the hands of a good driver”. While a good driver can make better-than-average lap times with a slow car, a good driver does not make the car any faster, but is just … a good driver. Give the driver a faster car and they can drive even faster.</p>
-<p><strong>TL;DR : tank performance is different from player skill</strong></p>
-<h2 id="tanks-have-different-player-bases">Tanks have different player bases</h2>
-<p>Let’s now go back to the AMX 30 1tier prototype vs. Standard B example and compare the player bases. I have chosen <em>player average WR at the tier</em> as a measure for “player skill”. And more precisely as measured during the update under study (i.e. not career WR). This eliminates couple of biases:</p>
+<p><strong>TL;DR. Tank performance and player skill are two separate things</strong></p>
+<h2 id="tanks-have-different-playerbases">Tanks have different playerbases</h2>
+<p>Let’s now go back to the AMX 30 1er prototype vs. Standard B example and compare the playerbases. I have chosen <em>player average WR at the tier</em> as a measure for “player skill”. And more precisely as measured during the update under study (i.e. not career WR). This eliminates couple of biases:</p>
 <ul>
 <li>WR during the update measures the player’s current performance unlike Career WR that measures the average historical performance (re-rollers vs. normal players)</li>
 <li>It measures player performance at the tier in question unlike average WR over all the tiers, and thus is not distorted by low-tier stats-padding</li>
 </ul>
-<p>The plot below shows player WR distribution at tier IX (in any tank) for the both AMX 30 1tier prototype and Standard B players. It is clear that the AMX 30 1tier prototype is played by better players than Standard B.</p>
+<p>The plot below shows player WR distribution at tier IX (in any tank) for the both AMX 30 1er prototype and Standard B players. It is clear that the AMX 30 1er prototype is played by better players than Standard B.</p>
 <p><img src="figure/fig_player_WR_histogram-1.png" alt="plot of chunk fig_player_WR_histogram"></p>
 <table>
 <thead>
@@ -449,7 +449,7 @@ Now going back to the tank performance.</p>
 </table>
 <p>While both the tanks have been played by thousands of players, the AMX is a premium tank whereas Standard B is a Tech Three tank. Both the tanks’ players are roughly equally experienced (see the histogram graph below), but the AMX players are significantly better on average.</p>
 <p><img src="figure/fig_player_battle_count_histogram-1.png" alt="plot of chunk fig_player_battle_count_histogram"></p>
-<p>But do the differences in the tanks’ player bases explain the difference in Average WR differences or not?</p>
+<p>But do the differences in the tanks’ playerbases explain the difference in Average WR differences or not?</p>
 <h2 id="introducing-relative-wr">Introducing Relative WR</h2>
 <p>To separate the players’ skill-level distribution from tank performance, we need to compare players’ WR in a tank to their skill-level. As explained above, I have chosen <em>Average WR at the Tier</em> as the measure for player skill. <a href="https://tank-compare.blitzstars.com/">Blitzstars’ Tank-Compare</a> uses players’ average WR (on any tier) as a measure for player skill in its Relative WR graphs. I have chose to use the WR at the tier in question to eliminate the impact of low-tier stats padding.</p>
 <p><em>Relative WR(tank)  = Average(WR in a tank  - Player’s WR at the Tier)</em></p>
@@ -482,12 +482,12 @@ Now going back to the tank performance.</p>
 </tr>
 </tbody>
 </table>
-<p>Relative WR graph above shows that players perform better with Standard B than the AMX when compared their tier IX average. The AMX’s average WR is far higher than the Standard B’s, but so is its player base far better – on average. Both the tanks have been played by thousands of players, so the results have not been distorted by a small sample.</p>
-<p>Premium tanks and new higher tier tank lines are often played by better players than average. This distorts the average WR of those tanks and makes people to regard the tanks as OP whereas the fundamental reason can be that the tanks are just being played by better players. Yes, there are many borderline-OP &amp; ridiculously-broken premium tanks, but by the Relative WR analysis allows us to separate tank performance out of skill-level differences in the tanks’ player bases.</p>
+<p>Relative WR graph above shows that players perform better with Standard B than the AMX when compared their tier IX average. The AMX’s average WR is far higher than the Standard B’s, but so is its playerbase far better – on average. Both the tanks have been played by thousands of players, so the results have not been distorted by a small sample.</p>
+<p>Premium tanks and new higher tier tank lines are often played by better players than average. This distorts the average WR of those tanks and makes people to regard the tanks as OP whereas the fundamental reason can be that the tanks are just being played by better players. Yes, there are many borderline-OP &amp; ridiculously-broken premium tanks, but by the Relative WR analysis allows us to separate tank performance out of skill-level differences in the tanks’ playerbases.</p>
 <p><strong>TL;DR: Relative WR measures how much higher/lower WR players achieve in a tank vs. their average WR at the same tier.</strong></p>
 <p><em>OK, is this wall of text over now? Nope.</em></p>
 <h2 id="performance-within-player-skill-category">Performance within player skill category</h2>
-<p>The data shows how Standard B’s Relative WR is higher than the AMX 30 1tier prototype’s – <em>on average</em>. And caveat here the words <em>on average</em>. How about performance in the hands of below/above average players? Some tanks are known to be difficult for less-skilled players, but well performing in the hands of more skilled players. 
+<p>The data shows how Standard B’s Relative WR is higher than the AMX 30 1er prototype’s – <em>on average</em>. And caveat here the words <em>on average</em>. How about performance in the hands of below/above average players? Some tanks are known to be difficult for less-skilled players, but well performing in the hands of more skilled players. 
 Let’s see how do Standard B and the AMX perform when played by different player skill category.</p>
 <h3 id="performance-in-the-hands-of-super-good-players-wr-at-tier-70">Performance in the hands of super-good players (WR at tier &gt;70%)</h3>
 <p>Standard B seems to perform significantly better than the AMX in the hands of super-good players. However, the player sample is bit on the small side although not miniscule.</p>
@@ -610,10 +610,11 @@ Let’s see how do Standard B and the AMX perform when played by different playe
 </tbody>
 </table>
 <h2 id="final-words">Final words</h2>
-<p>As you can see, the question of tanks’ performance is not that straightforward. Even though average WR is such a common measure for tanks&rsquo; performance, it fails to separate the impact of the different player bases from the underlying tank performance. And even when comparing tank’s (average) Relative WR it only answers to the question <em>in average</em> – not for very good player or well-below average player.</p>
+<p>As you can see, the question of tanks’ performance is not that straightforward. Even though average WR is such a common measure for tanks&rsquo; performance, it fails to separate the impact of the different playerbases from the underlying tank performance. And even when comparing tank’s (average) Relative WR it only answers to the question <em>in average</em> – not for very good player or well-below average player.</p>
+<p>To understand how does a tank perform <em>- still on average -</em> in the hands of certain skill level players, the Relative WR analysis can still come handy as it can be run for a specific skill-level players only. Again, the numbers are averages and there are always players who are relatively better with TDs or light tanks or American tanks vs. Soviet tanks, etc. But the Relative WR analysis per skill-level can help a player to choose they are more likely to perform better with.</p>
 <p>The graph below shows Relative WR for both the tanks as a function of players’ average WR at the tier (IX). The grey area shows the share of players with particular WR at the tier in the dataset. Small sample sizes are likely to cause errors in both the ends of the graph.</p>
 <p><img src="figure/fig_player_RelativeWR-1.png" alt="plot of chunk fig_player_RelativeWR"></p>
-<p>I find it surprising there was such a large difference between the tanks’ performance for 60-70% and 70% player segments. What may explain the result is the fact that player skill follows broadly normal distribution, thus there are more players with (tier) WR closer to 50% than further away from it. Therefore the 60-70% WR player segment consist of mostly 60-65% players vs. 65-70% players. And there is quite a difference skill still between 60-65% and 70%+ players.</p>
+<p>I find it surprising there was such a large difference between the tanks’ performance for 60-70% and 70% player segments. What may explain the result is the fact that player skill follows broadly normal distribution, thus there are more players with (tier) WR closer to 50% than further away from it. Therefore the 60-70% WR player segment consist of mostly 60-65% players vs. 65-70% players. And there is quite a difference skill still between 60-65% and 70%+ players as I can observe every time I watch e.g. <a href="https://www.youtube.com/channel/UCpXlz_YO1yM2JBVFi7g727A">Juicy Tender Steak</a> playing tanks.</p>
 <p><em>That’s all folks – this time</em></p>
 
 
@@ -805,19 +806,19 @@ Let’s see how do Standard B and the AMX perform when played by different playe
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1591701094"></script>
-    <script src="/js/perfect-scrollbar.min.js?1591701094"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1591701094"></script>
-    <script src="/js/jquery.sticky.js?1591701094"></script>
-    <script src="/js/featherlight.min.js?1591701094"></script>
-    <script src="/js/highlight.pack.js?1591701094"></script>
+    <script src="/js/clipboard.min.js?1591727138"></script>
+    <script src="/js/perfect-scrollbar.min.js?1591727138"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1591727138"></script>
+    <script src="/js/jquery.sticky.js?1591727138"></script>
+    <script src="/js/featherlight.min.js?1591727138"></script>
+    <script src="/js/highlight.pack.js?1591727138"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1591701094"></script>
-    <script src="/js/learn.js?1591701094"></script>
-    <script src="/js/hugo-learn.js?1591701094"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1591727138"></script>
+    <script src="/js/learn.js?1591727138"></script>
+    <script src="/js/hugo-learn.js?1591727138"></script>
 
-    <link href="/mermaid/mermaid.css?1591701094" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1591701094"></script>
+    <link href="/mermaid/mermaid.css?1591727138" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1591727138"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
