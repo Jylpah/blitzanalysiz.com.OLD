@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.70.0" />
+    <meta name="generator" content="Hugo 0.72.0" />
     <meta name="description" content="Stats analysis of World Of Tanks Blitz">
 <meta name="author" content="Jylpah@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tank stats :: Home</title>
 
     
-    <link href="/css/nucleus.css?1589798911" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1589798911" rel="stylesheet">
-    <link href="/css/hybrid.css?1589798911" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1589798911" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1589798911" rel="stylesheet">
-    <link href="/css/auto-complete.css?1589798911" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1589798911" rel="stylesheet">
-    <link href="/css/theme.css?1589798911" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1589798911" rel="stylesheet">
+    <link href="/css/nucleus.css?1591700842" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1591700842" rel="stylesheet">
+    <link href="/css/hybrid.css?1591700842" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1591700842" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1591700842" rel="stylesheet">
+    <link href="/css/auto-complete.css?1591700842" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1591700842" rel="stylesheet">
+    <link href="/css/theme.css?1591700842" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1591700842" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1589798911" rel="stylesheet">
+    <link href="/css/theme-mine.css?1591700842" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1589798911"></script>
+    <script src="/js/jquery-3.3.1.min.js?1591700842"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1589798911"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1589798911"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1591700842"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1591700842"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1589798911"></script>
+<script type="text/javascript" src="/js/search.js?1591700842"></script>
 
     
   </div>
@@ -134,32 +134,6 @@
           
           
         
-          
-                         
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/update/6.7/career/" title="Career stats" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/update/6.7/career/">
-          Career stats
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
           
                          
             
@@ -526,6 +500,32 @@
  
   
     
+    <li data-nav-id="/update/6.7/career/" title="Career stats" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/update/6.7/career/">
+          Career stats
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+                         
+            
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/update/6.7/region/" title="Stats by Region" class="dd-item 
         
         
@@ -601,6 +601,8 @@
           
           
         
+          
+            
           
             
           
@@ -868,7 +870,28 @@
 
 
 	<h2 id="highest-average-wr">Highest Average WR</h2>
-<p>This graph shows the tanks with the highest average WR during update 6.7. <strong>Player WR</strong> denotes the tank&rsquo;s players&rsquo; average WR across all the tanks during the update. Only tanks with more than 50 players are listed. This may filter out few upcoming tanks that are being tested.</p>
+<p>This graph shows the tanks with the highest average WR during update 6.7. <strong>Player WR</strong> denotes the tank&rsquo;s players&rsquo; average WR across all the tanks during the update.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Details
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>Only battles in maxed-out tanks are taken into account. It is assumed that a tank is maxed out if it is a) premium tank or b) player has more than certain number of  battles in it in the end of the update (tier dependent: Tier I: 0 battles, Tier X: 152 battles.</li>
+<li>Since the data is fetched once per update, the stats for just released new Tech-Tree tanks is lower than it should be since the battles  players ground the tanks from stock are included in the average.</li>
+<li>On the other hand new high tier tanks are often ground first by more active and also better players that distorts the average WR.</li>
+<li>Only tanks with more than 50 players are listed. This may filter out few upcoming tanks that are being tested.</li>
+</ul>
+
+    </div>
+</div>
 <p><img src="figure/fig_tanks_all_WR_topN-1.png" alt="plot of chunk fig_tanks_all_WR_topN"></p>
 <h4 id="highest-average-wr---table">Highest Average WR - Table</h4>
 <p><strong>Average WR</strong> denotes average WR in a tank accross all the players during the update. <strong>Player WR</strong> denotes the tank&rsquo;s players&rsquo; average WR accross all the tanks during the update.</p>
@@ -898,162 +921,162 @@
 <tbody>
 <tr>
 <td align="left">Type 98 Ke-Ni Otsu</td>
-<td align="right">67.0</td>
-<td align="right">55.2</td>
-<td align="right">708</td>
-<td align="right">13487</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Type 5 Ke-Ho</td>
-<td align="right">64.5</td>
-<td align="right">52.4</td>
-<td align="right">968</td>
-<td align="right">6917</td>
+<td align="right">67.2</td>
+<td align="right">56.4</td>
+<td align="right">155</td>
+<td align="right">11367</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Type 98 Ke-Ni</td>
-<td align="right">64.4</td>
-<td align="right">53.5</td>
-<td align="right">1347</td>
-<td align="right">17235</td>
+<td align="right">65.9</td>
+<td align="right">55.7</td>
+<td align="right">182</td>
+<td align="right">13150</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">SU-130PM</td>
-<td align="right">64.0</td>
-<td align="right">65.0</td>
-<td align="right">310</td>
-<td align="right">21729</td>
+<td align="right">65.3</td>
+<td align="right">65.8</td>
+<td align="right">248</td>
+<td align="right">21188</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">KV-220 Beta-Test</td>
-<td align="right">63.9</td>
-<td align="right">53.5</td>
-<td align="right">1605</td>
-<td align="right">23456</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Valentine Mk. IX</td>
-<td align="right">62.3</td>
-<td align="right">51.8</td>
-<td align="right">1572</td>
-<td align="right">6576</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Durchbruchswagen 2</td>
-<td align="right">62.3</td>
-<td align="right">51.7</td>
-<td align="right">6858</td>
-<td align="right">80128</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">SU-76I</td>
-<td align="right">61.9</td>
-<td align="right">51.5</td>
-<td align="right">5607</td>
-<td align="right">24941</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">IS-6 Fearless</td>
-<td align="right">60.7</td>
-<td align="right">58.4</td>
-<td align="right">67</td>
-<td align="right">516</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">LT vz. 38</td>
-<td align="right">60.4</td>
-<td align="right">49.6</td>
-<td align="right">3820</td>
-<td align="right">41430</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">Pz.Kpfw. 38 (t) n.A.</td>
-<td align="right">60.1</td>
-<td align="right">50.6</td>
-<td align="right">1224</td>
-<td align="right">10342</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Sherman V</td>
-<td align="right">60.1</td>
-<td align="right">52.1</td>
-<td align="right">1712</td>
-<td align="right">8249</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Object 252U</td>
-<td align="right">59.9</td>
-<td align="right">54.7</td>
-<td align="right">7052</td>
-<td align="right">185754</td>
+<td align="right">61.6</td>
+<td align="right">53.7</td>
+<td align="right">193</td>
+<td align="right">17677</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Chimera</td>
-<td align="right">59.8</td>
-<td align="right">54.1</td>
-<td align="right">2527</td>
-<td align="right">111892</td>
+<td align="right">60.4</td>
+<td align="right">55.0</td>
+<td align="right">1305</td>
+<td align="right">101560</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
-<td align="left">T40</td>
-<td align="right">59.6</td>
+<td align="left">LT vz. 38</td>
+<td align="right">60.0</td>
 <td align="right">50.9</td>
-<td align="right">1326</td>
-<td align="right">12546</td>
-<td align="left">Premium</td>
+<td align="right">691</td>
+<td align="right">31684</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">Churchill Gun Carrier</td>
-<td align="right">59.6</td>
-<td align="right">53.9</td>
-<td align="right">1910</td>
-<td align="right">11834</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">AMX 40</td>
-<td align="right">59.5</td>
-<td align="right">51.5</td>
-<td align="right">2885</td>
-<td align="right">10359</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Krupp-38(D)</td>
-<td align="right">59.3</td>
-<td align="right">52.1</td>
-<td align="right">5504</td>
-<td align="right">61583</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">VK 30.01 (H)</td>
+<td align="left">Smasher</td>
 <td align="right">59.2</td>
-<td align="right">51.3</td>
-<td align="right">3742</td>
-<td align="right">34912</td>
+<td align="right">55.2</td>
+<td align="right">5491</td>
+<td align="right">747696</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
-<td align="left">Scavenger</td>
+<td align="left">Object 252U</td>
 <td align="right">59.1</td>
-<td align="right">51.0</td>
-<td align="right">29349</td>
-<td align="right">245266</td>
+<td align="right">54.4</td>
+<td align="right">1977</td>
+<td align="right">154615</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Durchbruchswagen 2</td>
+<td align="right">59.0</td>
+<td align="right">51.3</td>
+<td align="right">993</td>
+<td align="right">60077</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Type 5 Ke-Ho</td>
+<td align="right">58.9</td>
+<td align="right">52.2</td>
+<td align="right">50</td>
+<td align="right">3992</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Valentine Mk. IX</td>
+<td align="right">58.9</td>
+<td align="right">50.9</td>
+<td align="right">77</td>
+<td align="right">2411</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Renault R35</td>
+<td align="right">58.6</td>
+<td align="right">50.1</td>
+<td align="right">533</td>
+<td align="right">22345</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">BT-2</td>
+<td align="right">58.3</td>
+<td align="right">50.1</td>
+<td align="right">894</td>
+<td align="right">43847</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Pz.Kpfw. B2 740 (f)</td>
+<td align="right">58.3</td>
+<td align="right">51.6</td>
+<td align="right">738</td>
+<td align="right">44624</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">T6 Dracula</td>
+<td align="right">57.8</td>
+<td align="right">54.8</td>
+<td align="right">7383</td>
+<td align="right">626096</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Progetto M35 mod. 46</td>
+<td align="right">57.8</td>
+<td align="right">55.9</td>
+<td align="right">3545</td>
+<td align="right">356223</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Cruiser Mk. II</td>
+<td align="right">57.8</td>
+<td align="right">49.5</td>
+<td align="right">777</td>
+<td align="right">34400</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Type 95 Ha-Go</td>
+<td align="right">57.5</td>
+<td align="right">50.0</td>
+<td align="right">352</td>
+<td align="right">13415</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Tetrarch</td>
+<td align="right">57.5</td>
+<td align="right">50.1</td>
+<td align="right">271</td>
+<td align="right">7489</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">WZ-120-1G FT</td>
+<td align="right">57.5</td>
+<td align="right">54.6</td>
+<td align="right">6340</td>
+<td align="right">712109</td>
 <td align="left">Premium</td>
 </tr>
 </tbody>
@@ -1062,7 +1085,7 @@
     </div>
 </div>
 <h2 id="highest-relative-wr">Highest Relative WR</h2>
-<p>The graph shows tanks with the highest average of players&rsquo; WR in the tank <em>compared to</em> the players&rsquo; WR at the tier in <em>other tanks</em>. This is a measure of the performance of the tank. 
+<p>The graph shows tanks with the highest average of players&rsquo; WR in the tank <em>compared to</em> the players&rsquo; WR at the same tier (in <em>all tanks</em>). This is a measure of the performance of the tank. 
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -1075,7 +1098,13 @@
     	</span>
     </div>
     <div class="expand-content" style="display: none;">
-        <p>The impact of &ldquo;Stock-grind battles&rdquo; is reduced based on tier-specific requirement for total battles at the end of the update. Only players with more than 5-30 (depending on the tier) battles in a tank and 10-60 battles at the tier during the update are included to eliminate the impact of the first battles in the tank (with sub-100% crew / modules).</p>
+        <ul>
+<li>All the statistics are about battles fought during the update 6.7 only.</li>
+<li>The impact of &ldquo;Stock-grind battles&rdquo; is reduced based on tier-specific requirement for total battles at the end of the update. Only players with more than 0-152 (depending on the tier) battles in a tank <em>in the end of the update</em> are included to eliminate the impact of the first battles in the tank (with sub-100% crew / modules).</li>
+<li>The players need to have 10-20 battles in a tank and 20-40 battles at the tier during the update.</li>
+<li><strong>Average WR</strong> is the players&rsquo;s average WR in the tank</li>
+<li><strong>Player WR at Tier</strong> is the average WR of the players of the tank at the tier. Since different tiers have different difficulty, it is more meaningful to compare players&rsquo; performance in the same tier tanks.</li>
+</ul>
 
     </div>
 </div></p>
@@ -1099,192 +1128,192 @@
 <th align="left">Tank</th>
 <th align="right">Relative WR</th>
 <th align="right">Average WR</th>
-<th align="right">Player WR</th>
 <th align="right">Players</th>
 <th align="right">Battles</th>
 <th align="left">Tank type</th>
+<th align="right">Player WR at Tier</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Pz.Kpfw. 38 (t) n.A.</td>
-<td align="right">6.5</td>
-<td align="right">61.0</td>
-<td align="right">54.7</td>
-<td align="right">228</td>
-<td align="right">2606</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Type 5 Ke-Ho</td>
-<td align="right">6.3</td>
-<td align="right">61.9</td>
-<td align="right">55.9</td>
-<td align="right">176</td>
-<td align="right">1344</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">KV-220 Beta-Test</td>
-<td align="right">6.3</td>
-<td align="right">61.0</td>
-<td align="right">55.5</td>
-<td align="right">328</td>
-<td align="right">9937</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
 <td align="left">Chimera</td>
-<td align="right">6.1</td>
-<td align="right">59.8</td>
-<td align="right">54.8</td>
-<td align="right">1790</td>
-<td align="right">92870</td>
+<td align="right">3.8</td>
+<td align="right">60.4</td>
+<td align="right">1280</td>
+<td align="right">100501</td>
 <td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Type 98 Ke-Ni</td>
-<td align="right">5.6</td>
-<td align="right">61.3</td>
-<td align="right">56.3</td>
-<td align="right">253</td>
-<td align="right">7354</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Jagdpanther</td>
-<td align="right">5.5</td>
-<td align="right">56.4</td>
-<td align="right">51.5</td>
-<td align="right">9314</td>
-<td align="right">318851</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">Sherman V</td>
-<td align="right">5.4</td>
-<td align="right">59.6</td>
-<td align="right">54.2</td>
-<td align="right">655</td>
-<td align="right">4968</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">K-91</td>
-<td align="right">5.4</td>
-<td align="right">57.4</td>
-<td align="right">52.5</td>
-<td align="right">4442</td>
-<td align="right">119043</td>
-<td align="left">Premium</td>
+<td align="right">56.5</td>
 </tr>
 <tr>
 <td align="left">Object 252U</td>
-<td align="right">5.4</td>
-<td align="right">60.5</td>
+<td align="right">3.6</td>
+<td align="right">59.1</td>
+<td align="right">1941</td>
+<td align="right">151473</td>
+<td align="left">Premium</td>
+<td align="right">55.5</td>
+</tr>
+<tr>
+<td align="left">T28 Concept</td>
+<td align="right">3.6</td>
 <td align="right">55.7</td>
-<td align="right">4736</td>
-<td align="right">153828</td>
+<td align="right">1767</td>
+<td align="right">107368</td>
 <td align="left">Premium</td>
+<td align="right">52.1</td>
 </tr>
 <tr>
-<td align="left">Tortoise</td>
-<td align="right">5.4</td>
-<td align="right">56.0</td>
-<td align="right">50.6</td>
-<td align="right">3142</td>
-<td align="right">89309</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">VK 45.02 (P) Ausf. B</td>
-<td align="right">5.3</td>
-<td align="right">57.0</td>
-<td align="right">51.7</td>
-<td align="right">4060</td>
-<td align="right">79593</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">AMX 50 Foch</td>
-<td align="right">5.3</td>
-<td align="right">57.9</td>
-<td align="right">52.8</td>
-<td align="right">2395</td>
-<td align="right">84890</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">T95</td>
-<td align="right">5.3</td>
-<td align="right">56.9</td>
-<td align="right">51.8</td>
-<td align="right">2686</td>
-<td align="right">61791</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">KV-13</td>
-<td align="right">5.2</td>
-<td align="right">58.2</td>
-<td align="right">53.0</td>
-<td align="right">3318</td>
-<td align="right">31663</td>
+<td align="left">KV-220 Beta-Test</td>
+<td align="right">3.1</td>
+<td align="right">61.4</td>
+<td align="right">164</td>
+<td align="right">16527</td>
 <td align="left">Premium</td>
+<td align="right">58.4</td>
 </tr>
 <tr>
-<td align="left">Pz.Sfl. IVc</td>
-<td align="right">5.0</td>
-<td align="right">59.0</td>
-<td align="right">54.2</td>
-<td align="right">870</td>
-<td align="right">15585</td>
+<td align="left">Valentine Mk. IX</td>
+<td align="right">2.7</td>
+<td align="right">58.4</td>
+<td align="right">67</td>
+<td align="right">2176</td>
 <td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Ferdinand</td>
-<td align="right">4.9</td>
-<td align="right">55.2</td>
-<td align="right">50.5</td>
-<td align="right">4385</td>
-<td align="right">135002</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">IS-4</td>
-<td align="right">4.9</td>
-<td align="right">57.3</td>
-<td align="right">52.7</td>
-<td align="right">11269</td>
-<td align="right">254471</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">E 75</td>
-<td align="right">4.8</td>
 <td align="right">55.7</td>
-<td align="right">51.1</td>
-<td align="right">11369</td>
-<td align="right">292236</td>
-<td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Maus</td>
-<td align="right">4.8</td>
-<td align="right">57.9</td>
-<td align="right">53.4</td>
-<td align="right">6971</td>
-<td align="right">122167</td>
+<td align="right">2.7</td>
+<td align="right">54.8</td>
+<td align="right">1719</td>
+<td align="right">101314</td>
 <td align="left">Researchable</td>
+<td align="right">52.0</td>
 </tr>
 <tr>
-<td align="left">ST-I</td>
-<td align="right">4.8</td>
-<td align="right">55.5</td>
-<td align="right">50.9</td>
-<td align="right">5390</td>
-<td align="right">126932</td>
+<td align="left">Jagdpanther</td>
+<td align="right">2.7</td>
+<td align="right">54.8</td>
+<td align="right">5087</td>
+<td align="right">372174</td>
 <td align="left">Researchable</td>
+<td align="right">52.2</td>
+</tr>
+<tr>
+<td align="left">K-91</td>
+<td align="right">2.6</td>
+<td align="right">54.0</td>
+<td align="right">1855</td>
+<td align="right">132727</td>
+<td align="left">Premium</td>
+<td align="right">51.5</td>
+</tr>
+<tr>
+<td align="left">WZ-112-2</td>
+<td align="right">2.5</td>
+<td align="right">57.0</td>
+<td align="right">893</td>
+<td align="right">51256</td>
+<td align="left">Premium</td>
+<td align="right">54.5</td>
+</tr>
+<tr>
+<td align="left">VK 36.01 (H)</td>
+<td align="right">2.2</td>
+<td align="right">54.2</td>
+<td align="right">7444</td>
+<td align="right">554110</td>
+<td align="left">Researchable</td>
+<td align="right">52.0</td>
+</tr>
+<tr>
+<td align="left">IS-3 Defender</td>
+<td align="right">2.2</td>
+<td align="right">56.0</td>
+<td align="right">5639</td>
+<td align="right">469794</td>
+<td align="left">Premium</td>
+<td align="right">53.9</td>
+</tr>
+<tr>
+<td align="left">IS-4</td>
+<td align="right">2.1</td>
+<td align="right">52.9</td>
+<td align="right">3581</td>
+<td align="right">233205</td>
+<td align="left">Researchable</td>
+<td align="right">50.8</td>
+</tr>
+<tr>
+<td align="left">WZ-120-1G FT</td>
+<td align="right">2.1</td>
+<td align="right">57.6</td>
+<td align="right">6098</td>
+<td align="right">693399</td>
+<td align="left">Premium</td>
+<td align="right">55.6</td>
+</tr>
+<tr>
+<td align="left">T110E3</td>
+<td align="right">2.1</td>
+<td align="right">53.1</td>
+<td align="right">1421</td>
+<td align="right">96549</td>
+<td align="left">Researchable</td>
+<td align="right">51.0</td>
+</tr>
+<tr>
+<td align="left">T-22 medium</td>
+<td align="right">2.0</td>
+<td align="right">56.3</td>
+<td align="right">2166</td>
+<td align="right">134410</td>
+<td align="left">Premium</td>
+<td align="right">54.3</td>
+</tr>
+<tr>
+<td align="left">Matilda IV</td>
+<td align="right">2.0</td>
+<td align="right">55.3</td>
+<td align="right">817</td>
+<td align="right">57811</td>
+<td align="left">Premium</td>
+<td align="right">53.3</td>
+</tr>
+<tr>
+<td align="left">Type 98 Ke-Ni Otsu</td>
+<td align="right">2.0</td>
+<td align="right">64.6</td>
+<td align="right">87</td>
+<td align="right">6475</td>
+<td align="left">Premium</td>
+<td align="right">62.6</td>
+</tr>
+<tr>
+<td align="left">T1 Heavy Tank</td>
+<td align="right">2.0</td>
+<td align="right">54.4</td>
+<td align="right">5623</td>
+<td align="right">418454</td>
+<td align="left">Researchable</td>
+<td align="right">52.4</td>
+</tr>
+<tr>
+<td align="left">E 100</td>
+<td align="right">2.0</td>
+<td align="right">51.7</td>
+<td align="right">7961</td>
+<td align="right">553503</td>
+<td align="left">Researchable</td>
+<td align="right">49.8</td>
+</tr>
+<tr>
+<td align="left">T28 Defender</td>
+<td align="right">1.9</td>
+<td align="right">55.1</td>
+<td align="right">6234</td>
+<td align="right">613746</td>
+<td align="left">Premium</td>
+<td align="right">53.2</td>
 </tr>
 </tbody>
 </table>
@@ -2114,163 +2143,163 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">M3 Light</td>
-<td align="right">47.4</td>
-<td align="right">48.4</td>
-<td align="right">1968</td>
-<td align="right">9551</td>
-<td align="left">Premium</td>
+<td align="left">VK 30.02 (D)</td>
+<td align="right">46.3</td>
+<td align="right">47.8</td>
+<td align="right">854</td>
+<td align="right">54325</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">BT-SV</td>
-<td align="right">48.1</td>
-<td align="right">48.4</td>
-<td align="right">36000</td>
-<td align="right">216511</td>
+<td align="right">46.4</td>
+<td align="right">46.6</td>
+<td align="right">2814</td>
+<td align="right">117098</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
-<td align="left">LTP</td>
-<td align="right">49.1</td>
-<td align="right">49.7</td>
-<td align="right">1122</td>
-<td align="right">5232</td>
-<td align="left">Premium</td>
+<td align="left">D2</td>
+<td align="right">46.6</td>
+<td align="right">47.5</td>
+<td align="right">586</td>
+<td align="right">16824</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">T7 Combat Car</td>
-<td align="right">49.2</td>
-<td align="right">49.1</td>
-<td align="right">2989</td>
-<td align="right">11688</td>
+<td align="left">AMX AC mle. 46</td>
+<td align="right">46.7</td>
+<td align="right">49.3</td>
+<td align="right">1743</td>
+<td align="right">112200</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">M3 Light</td>
+<td align="right">46.8</td>
+<td align="right">46.6</td>
+<td align="right">95</td>
+<td align="right">4539</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T25/2</td>
-<td align="right">49.6</td>
-<td align="right">49.6</td>
-<td align="right">8841</td>
-<td align="right">184119</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">Challenger</td>
-<td align="right">49.6</td>
-<td align="right">50.1</td>
-<td align="right">6804</td>
-<td align="right">168578</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">Bat.-Châtillon 25 t</td>
-<td align="right">49.6</td>
-<td align="right">54.3</td>
-<td align="right">17139</td>
-<td align="right">423154</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">FV215b (183)</td>
-<td align="right">49.7</td>
-<td align="right">52.9</td>
-<td align="right">28837</td>
-<td align="right">1080083</td>
+<td align="right">46.8</td>
+<td align="right">48.9</td>
+<td align="right">2474</td>
+<td align="right">148736</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Somua SAu 40</td>
-<td align="right">49.7</td>
-<td align="right">49.0</td>
-<td align="right">3834</td>
-<td align="right">36230</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">M41 Walker Bulldog</td>
-<td align="right">49.7</td>
-<td align="right">50.4</td>
-<td align="right">27550</td>
-<td align="right">1271842</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">Light Mk. VIC</td>
-<td align="right">49.9</td>
-<td align="right">49.7</td>
-<td align="right">5136</td>
-<td align="right">19602</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">AMX AC mle. 46</td>
-<td align="right">49.9</td>
-<td align="right">49.6</td>
-<td align="right">4628</td>
-<td align="right">129066</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">M60</td>
-<td align="right">49.9</td>
-<td align="right">53.3</td>
-<td align="right">8369</td>
-<td align="right">145346</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Sturer Emil</td>
-<td align="right">50.0</td>
-<td align="right">49.7</td>
-<td align="right">11005</td>
-<td align="right">345522</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">AMX 13 75</td>
-<td align="right">50.3</td>
-<td align="right">49.8</td>
-<td align="right">15951</td>
-<td align="right">302835</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">Indien-Panzer</td>
-<td align="right">50.5</td>
-<td align="right">49.2</td>
-<td align="right">5535</td>
-<td align="right">129015</td>
+<td align="right">46.8</td>
+<td align="right">48.6</td>
+<td align="right">775</td>
+<td align="right">20294</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Centurion Mk. I</td>
-<td align="right">50.5</td>
-<td align="right">49.6</td>
-<td align="right">7291</td>
-<td align="right">137468</td>
+<td align="right">46.9</td>
+<td align="right">48.7</td>
+<td align="right">1647</td>
+<td align="right">108180</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Challenger</td>
+<td align="right">46.9</td>
+<td align="right">49.5</td>
+<td align="right">2363</td>
+<td align="right">139657</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">T20</td>
+<td align="right">46.9</td>
+<td align="right">48.7</td>
+<td align="right">1394</td>
+<td align="right">87528</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">M26 Pershing</td>
+<td align="right">47.0</td>
+<td align="right">48.5</td>
+<td align="right">1408</td>
+<td align="right">91076</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Indien-Panzer</td>
+<td align="right">47.1</td>
+<td align="right">47.8</td>
+<td align="right">1436</td>
+<td align="right">106099</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">KV-4</td>
+<td align="right">47.1</td>
+<td align="right">48.1</td>
+<td align="right">3195</td>
+<td align="right">221557</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Leopard Prototyp A</td>
+<td align="right">47.1</td>
+<td align="right">49.0</td>
+<td align="right">3521</td>
+<td align="right">271156</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Sturer Emil</td>
+<td align="right">47.2</td>
+<td align="right">48.9</td>
+<td align="right">4141</td>
+<td align="right">305560</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">T69</td>
+<td align="right">47.3</td>
+<td align="right">48.1</td>
+<td align="right">1830</td>
+<td align="right">135076</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">T28</td>
+<td align="right">47.3</td>
+<td align="right">48.5</td>
+<td align="right">792</td>
+<td align="right">58153</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Type 2597 Chi-Ha</td>
+<td align="right">47.4</td>
+<td align="right">47.5</td>
+<td align="right">379</td>
+<td align="right">11776</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Panther II</td>
-<td align="right">50.5</td>
-<td align="right">50.0</td>
-<td align="right">8531</td>
-<td align="right">191182</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">Type 5 Chi-Ri</td>
-<td align="right">50.6</td>
-<td align="right">50.5</td>
-<td align="right">7317</td>
-<td align="right">135881</td>
+<td align="right">47.4</td>
+<td align="right">49.3</td>
+<td align="right">2196</td>
+<td align="right">158297</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Bat.-Châtillon 25 t AP</td>
-<td align="right">50.6</td>
-<td align="right">51.4</td>
-<td align="right">8513</td>
-<td align="right">228701</td>
+<td align="right">47.4</td>
+<td align="right">49.7</td>
+<td align="right">2412</td>
+<td align="right">192333</td>
 <td align="left">Researchable</td>
 </tr>
 </tbody>
@@ -2279,7 +2308,7 @@
     </div>
 </div>
 <h2 id="lowest-relative-wr">Lowest Relative WR</h2>
-<p>The graph shows tanks with the lowest average of players&rsquo; WR in the tank <em>compared to</em> the players&rsquo; WR at the tier in <em>other tanks</em>.</p>
+<p>The graph shows tanks with the lowest average of players&rsquo; WR in the tank <em>compared to</em> the players&rsquo; WR at the same tier (in <em>all tanks</em>). This is a measure of the performance of the tank.</p>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -2292,7 +2321,13 @@
     	</span>
     </div>
     <div class="expand-content" style="display: none;">
-        <p>The impact of &ldquo;Stock-grind battles&rdquo; is reduced based on tier-specific requirement for total battles at the end of the update. Only players with more than 5-30 (depending on the tier) battles in a tank and 10-60 battles at the tier during the update are included to eliminate the impact of the first battles in the tank (with sub-100% crew / modules).</p>
+        <ul>
+<li>All the statistics are about battles fought during the update 6.7 only.</li>
+<li>The impact of &ldquo;Stock-grind battles&rdquo; is reduced based on tier-specific requirement for total battles at the end of the update. Only players with more than 0-152 (depending on the tier) battles in a tank <em>in the end of the update</em> are included to eliminate the impact of the first battles in the tank (with sub-100% crew / modules).</li>
+<li>The players need to have 10-20 battles in a tank and 20-40 battles at the tier during the update.</li>
+<li><strong>Average WR</strong> is the players&rsquo;s average WR in the tank</li>
+<li><strong>Player WR at Tier</strong> is the average WR of the players of the tank at the tier. Since different tiers have different difficulty, it is more meaningful to compare players&rsquo; performance in the same tier tanks.</li>
+</ul>
 
     </div>
 </div>
@@ -2324,183 +2359,183 @@
 </thead>
 <tbody>
 <tr>
-<td align="left">Light Mk. VIC</td>
-<td align="right">-6.2</td>
-<td align="right">48.6</td>
-<td align="right">54.2</td>
-<td align="right">587</td>
-<td align="right">5559</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">BT-7 artillery</td>
-<td align="right">-5.8</td>
-<td align="right">48.0</td>
-<td align="right">53.5</td>
-<td align="right">667</td>
-<td align="right">10498</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Pz.Kpfw. II Ausf. J</td>
-<td align="right">-5.2</td>
-<td align="right">51.9</td>
-<td align="right">56.5</td>
-<td align="right">72</td>
-<td align="right">208</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">BT-SV</td>
-<td align="right">-4.9</td>
-<td align="right">47.4</td>
-<td align="right">51.6</td>
-<td align="right">3915</td>
-<td align="right">62949</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Pz.Kpfw. II</td>
-<td align="right">-4.6</td>
-<td align="right">51.8</td>
-<td align="right">55.7</td>
-<td align="right">1327</td>
-<td align="right">14628</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">T7 Combat Car</td>
-<td align="right">-4.4</td>
-<td align="right">50.0</td>
-<td align="right">53.8</td>
-<td align="right">442</td>
-<td align="right">4438</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">AC 1 Sentinel</td>
-<td align="right">-4.3</td>
-<td align="right">49.2</td>
-<td align="right">53.2</td>
-<td align="right">483</td>
-<td align="right">5835</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Valentine II</td>
-<td align="right">-4.1</td>
-<td align="right">49.8</td>
-<td align="right">53.5</td>
-<td align="right">523</td>
-<td align="right">3751</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">T82</td>
-<td align="right">-4.0</td>
-<td align="right">51.4</td>
-<td align="right">54.8</td>
-<td align="right">317</td>
-<td align="right">1922</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
 <td align="left">Somua SAu 40</td>
-<td align="right">-3.8</td>
-<td align="right">48.5</td>
-<td align="right">51.6</td>
-<td align="right">871</td>
-<td align="right">11663</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">LTP</td>
 <td align="right">-3.6</td>
-<td align="right">49.2</td>
-<td align="right">52.6</td>
-<td align="right">248</td>
-<td align="right">2547</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">E 25</td>
-<td align="right">-3.0</td>
-<td align="right">51.5</td>
-<td align="right">54.3</td>
-<td align="right">9590</td>
-<td align="right">152305</td>
-<td align="left">Premium</td>
+<td align="right">46.4</td>
+<td align="right">50.0</td>
+<td align="right">520</td>
+<td align="right">14203</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Bat.-Châtillon 25 t</td>
-<td align="right">-3.0</td>
-<td align="right">50.5</td>
-<td align="right">53.2</td>
-<td align="right">12381</td>
-<td align="right">341932</td>
+<td align="right">-2.9</td>
+<td align="right">48.1</td>
+<td align="right">51.0</td>
+<td align="right">4714</td>
+<td align="right">313823</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">Type 3 Chi-Nu Kai</td>
+<td align="left">BT-SV</td>
 <td align="right">-2.8</td>
-<td align="right">53.4</td>
-<td align="right">55.9</td>
-<td align="right">248</td>
-<td align="right">4945</td>
+<td align="right">46.1</td>
+<td align="right">48.8</td>
+<td align="right">1725</td>
+<td align="right">69220</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
-<td align="left">FCM 36 Pak 40</td>
-<td align="right">-2.8</td>
-<td align="right">50.8</td>
-<td align="right">53.2</td>
-<td align="right">312</td>
-<td align="right">2032</td>
+<td align="left">Light Mk. VIC</td>
+<td align="right">-2.7</td>
+<td align="right">48.4</td>
+<td align="right">51.0</td>
+<td align="right">257</td>
+<td align="right">6468</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
-<td align="left">Alecto</td>
+<td align="left">T7 Combat Car</td>
+<td align="right">-2.7</td>
+<td align="right">47.5</td>
+<td align="right">50.2</td>
+<td align="right">171</td>
+<td align="right">4135</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">T18</td>
 <td align="right">-2.6</td>
-<td align="right">48.9</td>
-<td align="right">51.1</td>
-<td align="right">1649</td>
-<td align="right">36904</td>
-<td align="left">Researchable</td>
-</tr>
-<tr>
-<td align="left">Renault FT AC</td>
-<td align="right">-2.5</td>
-<td align="right">53.2</td>
-<td align="right">55.0</td>
-<td align="right">83</td>
-<td align="right">487</td>
+<td align="right">47.1</td>
+<td align="right">49.7</td>
+<td align="right">57</td>
+<td align="right">1675</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
-<td align="left">XM551 Sheridan</td>
-<td align="right">-2.5</td>
-<td align="right">55.1</td>
-<td align="right">56.4</td>
-<td align="right">3064</td>
-<td align="right">950772</td>
+<td align="left">M22 Locust</td>
+<td align="right">-2.6</td>
+<td align="right">50.6</td>
+<td align="right">53.2</td>
+<td align="right">71</td>
+<td align="right">2780</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Challenger</td>
+<td align="right">-2.3</td>
+<td align="right">46.9</td>
+<td align="right">49.2</td>
+<td align="right">2154</td>
+<td align="right">126979</td>
 <td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Type T-34</td>
+<td align="right">-2.2</td>
+<td align="right">47.8</td>
+<td align="right">50.0</td>
+<td align="right">2180</td>
+<td align="right">99760</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Pz.Kpfw. II Luchs</td>
+<td align="right">-2.1</td>
+<td align="right">51.2</td>
+<td align="right">53.3</td>
+<td align="right">70</td>
+<td align="right">2174</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">leKpz M 41 90 mm</td>
+<td align="right">-2.1</td>
+<td align="right">53.8</td>
+<td align="right">55.8</td>
+<td align="right">1693</td>
+<td align="right">95579</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">T67</td>
+<td align="right">-2.0</td>
+<td align="right">49.3</td>
+<td align="right">51.3</td>
+<td align="right">169</td>
+<td align="right">8517</td>
+<td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">D2</td>
-<td align="right">-2.5</td>
-<td align="right">49.6</td>
-<td align="right">51.9</td>
-<td align="right">1454</td>
-<td align="right">16283</td>
+<td align="right">-1.9</td>
+<td align="right">47.2</td>
+<td align="right">49.1</td>
+<td align="right">445</td>
+<td align="right">13587</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">Cruiser Mk. IV</td>
-<td align="right">-2.3</td>
+<td align="left">T2 Light Tank</td>
+<td align="right">-1.9</td>
+<td align="right">51.7</td>
+<td align="right">53.5</td>
+<td align="right">91</td>
+<td align="right">2313</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">AMX AC mle. 46</td>
+<td align="right">-1.8</td>
+<td align="right">46.8</td>
+<td align="right">48.7</td>
+<td align="right">1577</td>
+<td align="right">99914</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">ISU-130</td>
+<td align="right">-1.8</td>
+<td align="right">50.1</td>
+<td align="right">51.9</td>
+<td align="right">555</td>
+<td align="right">29283</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Panzerjäger I</td>
+<td align="right">-1.8</td>
+<td align="right">51.0</td>
+<td align="right">52.8</td>
+<td align="right">83</td>
+<td align="right">2485</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">T-34-3</td>
+<td align="right">-1.8</td>
+<td align="right">53.3</td>
+<td align="right">55.1</td>
+<td align="right">8820</td>
+<td align="right">719155</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Type 2597 Chi-Ha</td>
+<td align="right">-1.7</td>
+<td align="right">47.5</td>
+<td align="right">49.2</td>
+<td align="right">278</td>
+<td align="right">9471</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">FV215b (183)</td>
+<td align="right">-1.7</td>
+<td align="right">48.8</td>
 <td align="right">50.5</td>
-<td align="right">52.4</td>
-<td align="right">2363</td>
-<td align="right">47087</td>
+<td align="right">10696</td>
+<td align="right">885091</td>
 <td align="left">Researchable</td>
 </tr>
 </tbody>
@@ -3432,6 +3467,11 @@
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -3482,19 +3522,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1589798911"></script>
-    <script src="/js/perfect-scrollbar.min.js?1589798911"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1589798911"></script>
-    <script src="/js/jquery.sticky.js?1589798911"></script>
-    <script src="/js/featherlight.min.js?1589798911"></script>
-    <script src="/js/highlight.pack.js?1589798911"></script>
+    <script src="/js/clipboard.min.js?1591700842"></script>
+    <script src="/js/perfect-scrollbar.min.js?1591700842"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1591700842"></script>
+    <script src="/js/jquery.sticky.js?1591700842"></script>
+    <script src="/js/featherlight.min.js?1591700842"></script>
+    <script src="/js/highlight.pack.js?1591700842"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1589798911"></script>
-    <script src="/js/learn.js?1589798911"></script>
-    <script src="/js/hugo-learn.js?1589798911"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1591700842"></script>
+    <script src="/js/learn.js?1591700842"></script>
+    <script src="/js/hugo-learn.js?1591700842"></script>
 
-    <link href="/mermaid/mermaid.css?1589798911" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1589798911"></script>
+    <link href="/mermaid/mermaid.css?1591700842" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1591700842"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

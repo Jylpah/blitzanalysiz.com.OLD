@@ -120,16 +120,37 @@ a:hover {
 	font-style: italic;	
 }
 
+ul.children {
+	list-style-type: none;	
+	display: block;	
+}
+
+#posts .children {
+	list-style-type: none;	
+	display: block;	
+}
+
 .children {
+	font-weight: normal;
+	font-style: normal;
+	font-size: x-large;	
+	
+}
+
+.children-li p {
+	font-weight: 300;
+	font-style: normal;
+	font-size: 16px;	
+}
+
+.children-posts {	
 	font-weight: normal;
 	font-style: normal;
 	font-size: large;	
 }
 
-.children-li p {
-	font-weight: normal;
-	font-style: normal;
-	font-size: normal;	
+#posts {
+	display: block	
 }
 
 .post_cards {
