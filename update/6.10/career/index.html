@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="generator" content="Hugo 0.74.1" />
     <meta name="description" content="Stats analysis of World Of Tanks Blitz">
 <meta name="author" content="Jylpah@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Career stats :: Home</title>
 
     
-    <link href="/css/nucleus.css?1593171750" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1593171750" rel="stylesheet">
-    <link href="/css/hybrid.css?1593171750" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1593171750" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1593171750" rel="stylesheet">
-    <link href="/css/auto-complete.css?1593171750" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1593171750" rel="stylesheet">
-    <link href="/css/theme.css?1593171750" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1593171750" rel="stylesheet">
+    <link href="/css/nucleus.css?1594906244" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1594906244" rel="stylesheet">
+    <link href="/css/hybrid.css?1594906244" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1594906244" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1594906244" rel="stylesheet">
+    <link href="/css/auto-complete.css?1594906244" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1594906244" rel="stylesheet">
+    <link href="/css/theme.css?1594906244" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1594906244" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1593171750" rel="stylesheet">
+    <link href="/css/theme-mine.css?1594906244" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1593171750"></script>
+    <script src="/js/jquery-3.3.1.min.js?1594906244"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1593171750"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1593171750"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1594906244"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1594906244"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1593171750"></script>
+<script type="text/javascript" src="/js/search.js?1594906244"></script>
 
     
   </div>
@@ -101,6 +101,8 @@
           
           
         
+          
+            
           
                          
             
@@ -372,6 +374,8 @@
           
             
           
+            
+          
         
         </ul>
               
@@ -498,11 +502,15 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://blitzstars.com"><i class='fas fa-snowplow'></i> BlitzStars</a>
+                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
               </li>
           
               <li> 
                   <a class="padding" href="https://wotinspector.com"><i class='fas fa-search'></i> WoTinspector</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://blitzhangar.com"><img margin=0px; src='/images/blitz_hangar16x16.png'></img> BlitzHangar</a>
               </li>
           
               <li> 
@@ -645,7 +653,7 @@
 <h2 id="battles-per-player">Battles per Player</h2>
 <p>Number of total battles per player in the end of the update 6.10.
 <img src="figure/fig_total_battle_count_histogram-1.png" alt="plot of chunk fig_total_battle_count_histogram">
-An average player has played 5183 battles by the end of update 6.10. Median battle count was 2529 and the largest number of battles recorded by a single player (in the dataset) was 142482 battles. The following tables shows battle counts by N% most inactive players during the update (i.e. &ldquo;90% most inactive&rdquo; == &ldquo;10% most active&rdquo;).</p>
+An average player has played 5183 battles by the end of update 6.10. Median battle count was 2529 and the largest number of battles recorded by a single player (in the dataset) was 142k battles. The following tables shows battle counts by N% most inactive players during the update (i.e. &ldquo;90% most inactive&rdquo; == &ldquo;10% most active&rdquo;).</p>
 <h3 id="battles-per-player-table">Battles per Player table</h3>
 <p>The table below shows the (max) number of battles played until the end of 6.10 by the X% most <em>inactive</em> players. Reading tip: 10% most <em>active</em> players have played more than the 90% most <em>inactive</em> players.</p>
 
@@ -720,6 +728,115 @@ An average player has played 5183 battles by the end of update 6.10. Median batt
 <h2 id="player-wr-distribution">Player WR distribution</h2>
 <p>The following graph shows a histogram of players (y-axis) with certain career WR (x-axis).</p>
 <p><img src="figure/fig_total_player_WR_histogram-1.png" alt="plot of chunk fig_total_player_WR_histogram"></p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Show table
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <table>
+<thead>
+<tr>
+<th align="left">% of Players</th>
+<th align="left">WR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0%</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">5%</td>
+<td align="left">40.4152249134948</td>
+</tr>
+<tr>
+<td align="left">10%</td>
+<td align="left">42.4958907102078</td>
+</tr>
+<tr>
+<td align="left">15%</td>
+<td align="left">43.8287153652393</td>
+</tr>
+<tr>
+<td align="left">20%</td>
+<td align="left">44.8905109489051</td>
+</tr>
+<tr>
+<td align="left">25%</td>
+<td align="left">45.8155375092611</td>
+</tr>
+<tr>
+<td align="left">30%</td>
+<td align="left">46.6485112348458</td>
+</tr>
+<tr>
+<td align="left">35%</td>
+<td align="left">47.4418604651163</td>
+</tr>
+<tr>
+<td align="left">40%</td>
+<td align="left">48.2020750022546</td>
+</tr>
+<tr>
+<td align="left">45%</td>
+<td align="left">48.9655172413793</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">49.7255762897914</td>
+</tr>
+<tr>
+<td align="left">55%</td>
+<td align="left">50.4874526095307</td>
+</tr>
+<tr>
+<td align="left">60%</td>
+<td align="left">51.2902344622243</td>
+</tr>
+<tr>
+<td align="left">65%</td>
+<td align="left">52.1519028614116</td>
+</tr>
+<tr>
+<td align="left">70%</td>
+<td align="left">53.0689842476915</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">54.1115190259859</td>
+</tr>
+<tr>
+<td align="left">80%</td>
+<td align="left">55.3216613525647</td>
+</tr>
+<tr>
+<td align="left">85%</td>
+<td align="left">56.8437789995566</td>
+</tr>
+<tr>
+<td align="left">90%</td>
+<td align="left">58.8873543499563</td>
+</tr>
+<tr>
+<td align="left">95%</td>
+<td align="left">62.1511499033345</td>
+</tr>
+<tr>
+<td align="left">100%</td>
+<td align="left">100</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
 <h2 id="average-tier">Average Tier</h2>
 <p>The following graph shows a histogram of share of players (y-axis) average tier (x-axis). Only players with more than 500 battles during their Blitz &ldquo;career&rdquo; are included.</p>
 <p><img src="figure/fig_total_player_avg_tier_histogram-1.png" alt="plot of chunk fig_total_player_avg_tier_histogram"></p>
@@ -761,140 +878,140 @@ An average player has played 5183 battles by the end of update 6.10. Median batt
 <td align="right">89008</td>
 <td align="right">49.7</td>
 <td align="left">Researchable</td>
-<td align="right">504.3</td>
+<td align="right">504</td>
 </tr>
 <tr>
 <td align="left">T49</td>
 <td align="right">82686</td>
 <td align="right">48.8</td>
 <td align="left">Researchable</td>
-<td align="right">383.8</td>
+<td align="right">384</td>
 </tr>
 <tr>
 <td align="left">VK 16.02 Leopard</td>
 <td align="right">79189</td>
 <td align="right">49.9</td>
 <td align="left">Researchable</td>
-<td align="right">392.7</td>
+<td align="right">393</td>
 </tr>
 <tr>
 <td align="left">SU-100Y</td>
 <td align="right">76337</td>
 <td align="right">53.0</td>
 <td align="left">Premium</td>
-<td align="right">333.7</td>
+<td align="right">334</td>
 </tr>
 <tr>
 <td align="left">Tiger II</td>
 <td align="right">75023</td>
 <td align="right">48.9</td>
 <td align="left">Researchable</td>
-<td align="right">254.5</td>
+<td align="right">254</td>
 </tr>
 <tr>
 <td align="left">IS-7</td>
 <td align="right">71515</td>
 <td align="right">48.6</td>
 <td align="left">Researchable</td>
-<td align="right">531.8</td>
+<td align="right">532</td>
 </tr>
 <tr>
 <td align="left">IS-5 (Object 730)</td>
 <td align="right">66713</td>
 <td align="right">53.5</td>
 <td align="left">Premium</td>
-<td align="right">336.2</td>
+<td align="right">336</td>
 </tr>
 <tr>
 <td align="left">Löwe</td>
 <td align="right">66603</td>
 <td align="right">52.0</td>
 <td align="left">Premium</td>
-<td align="right">461.1</td>
+<td align="right">461</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. V/IV</td>
 <td align="right">65017</td>
 <td align="right">54.3</td>
 <td align="left">Premium</td>
-<td align="right">127.1</td>
+<td align="right">127</td>
 </tr>
 <tr>
 <td align="left">E 100</td>
 <td align="right">65006</td>
 <td align="right">49.6</td>
 <td align="left">Researchable</td>
-<td align="right">560.6</td>
+<td align="right">561</td>
 </tr>
 <tr>
 <td align="left">IS-3</td>
 <td align="right">60951</td>
 <td align="right">48.6</td>
 <td align="left">Researchable</td>
-<td align="right">391.1</td>
+<td align="right">391</td>
 </tr>
 <tr>
 <td align="left">ISU-152</td>
 <td align="right">57888</td>
 <td align="right">47.2</td>
 <td align="left">Researchable</td>
-<td align="right">411.8</td>
+<td align="right">412</td>
 </tr>
 <tr>
 <td align="left">KV-1S</td>
 <td align="right">57702</td>
 <td align="right">49.6</td>
 <td align="left">Researchable</td>
-<td align="right">375.4</td>
+<td align="right">375</td>
 </tr>
 <tr>
 <td align="left">T92E1</td>
 <td align="right">57625</td>
 <td align="right">50.7</td>
 <td align="left">Researchable</td>
-<td align="right">202.8</td>
+<td align="right">203</td>
 </tr>
 <tr>
 <td align="left">SU-152</td>
 <td align="right">57502</td>
 <td align="right">50.3</td>
 <td align="left">Researchable</td>
-<td align="right">424.5</td>
+<td align="right">425</td>
 </tr>
 <tr>
 <td align="left">T-54</td>
 <td align="right">57189</td>
 <td align="right">49.5</td>
 <td align="left">Researchable</td>
-<td align="right">478.2</td>
+<td align="right">478</td>
 </tr>
 <tr>
 <td align="left">SU-122-44</td>
 <td align="right">55840</td>
 <td align="right">51.4</td>
 <td align="left">Premium</td>
-<td align="right">266.6</td>
+<td align="right">267</td>
 </tr>
 <tr>
 <td align="left">T-62A</td>
 <td align="right">55816</td>
 <td align="right">49.3</td>
 <td align="left">Researchable</td>
-<td align="right">479.5</td>
+<td align="right">479</td>
 </tr>
 <tr>
 <td align="left">Grille 15</td>
 <td align="right">54871</td>
 <td align="right">47.4</td>
 <td align="left">Researchable</td>
-<td align="right">598.7</td>
+<td align="right">599</td>
 </tr>
 <tr>
 <td align="left">Tiger I</td>
 <td align="right">54735</td>
 <td align="right">49.4</td>
 <td align="left">Researchable</td>
-<td align="right">342.4</td>
+<td align="right">342</td>
 </tr>
 </tbody>
 </table>
@@ -930,140 +1047,140 @@ An average player has played 5183 battles by the end of update 6.10. Median batt
 <tbody>
 <tr>
 <td align="left">Type 98 Ke-Ni Otsu</td>
-<td align="right">953.0</td>
+<td align="right">953</td>
 <td align="right">69.6</td>
 <td align="right">959</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">FV215b (183)</td>
-<td align="right">913.1</td>
+<td align="right">913</td>
 <td align="right">47.4</td>
 <td align="right">46220</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">IS-3 Defender</td>
-<td align="right">765.5</td>
+<td align="right">765</td>
 <td align="right">56.5</td>
 <td align="right">24473</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Helsing H0</td>
-<td align="right">730.7</td>
+<td align="right">731</td>
 <td align="right">57.0</td>
 <td align="right">26448</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T6 Dracula</td>
-<td align="right">728.9</td>
+<td align="right">729</td>
 <td align="right">58.2</td>
 <td align="right">22763</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Waffenträger auf Pz. IV</td>
-<td align="right">714.6</td>
+<td align="right">715</td>
 <td align="right">49.8</td>
 <td align="right">52018</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Durchbruchswagen 2</td>
-<td align="right">696.1</td>
+<td align="right">696</td>
 <td align="right">59.2</td>
 <td align="right">8822</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Grille 15</td>
-<td align="right">598.7</td>
+<td align="right">599</td>
 <td align="right">47.4</td>
 <td align="right">54871</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">IS-6</td>
-<td align="right">597.6</td>
+<td align="right">598</td>
 <td align="right">52.3</td>
 <td align="right">47359</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">E 100</td>
-<td align="right">560.6</td>
+<td align="right">561</td>
 <td align="right">49.6</td>
 <td align="right">65006</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Object 140</td>
-<td align="right">554.3</td>
+<td align="right">554</td>
 <td align="right">50.4</td>
 <td align="right">35802</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. III/IV</td>
-<td align="right">549.2</td>
+<td align="right">549</td>
 <td align="right">52.6</td>
 <td align="right">4850</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Smasher</td>
-<td align="right">537.1</td>
+<td align="right">537</td>
 <td align="right">59.9</td>
 <td align="right">10938</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">IS-7</td>
-<td align="right">531.8</td>
+<td align="right">532</td>
 <td align="right">48.6</td>
 <td align="right">71515</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T34 Independence</td>
-<td align="right">525.4</td>
+<td align="right">525</td>
 <td align="right">53.6</td>
 <td align="right">20297</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Jagdpanzer E 100</td>
-<td align="right">520.3</td>
+<td align="right">520</td>
 <td align="right">49.2</td>
 <td align="right">42018</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">VK 28.01</td>
-<td align="right">512.4</td>
+<td align="right">512</td>
 <td align="right">51.3</td>
 <td align="right">42496</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">KV-2</td>
-<td align="right">504.3</td>
+<td align="right">504</td>
 <td align="right">49.7</td>
 <td align="right">89008</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Leopard 1</td>
-<td align="right">495.7</td>
+<td align="right">496</td>
 <td align="right">48.4</td>
 <td align="right">39509</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Rhm.-Borsig Waffenträger</td>
-<td align="right">486.8</td>
+<td align="right">487</td>
 <td align="right">49.0</td>
 <td align="right">51287</td>
 <td align="left">Researchable</td>
@@ -1179,6 +1296,11 @@ An average player has played 5183 battles by the end of update 6.10. Median batt
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -1199,6 +1321,11 @@ An average player has played 5183 battles by the end of update 6.10. Median batt
                     
                     
 
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -1297,26 +1424,46 @@ An average player has played 5183 battles by the end of update 6.10. Median batt
 	 
     </div>
 
-	<div style="text-align: center; margin: 50px 50px 20px 50px;"><p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" /></a>
-	This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. World of Tanks Blitz and Wargaming are trademarks of <a href="https://wargaming.net">Wargaming.net Limited</a>.</p></div>
+	<div id="footer" style="text-align: center; margin: 20px;">
+	<ul class="banners">
+	<li class="cc">
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+			<img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" />
+		</a>
+		<p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p> 
+	</li>
+	<li class="wot-blitz">
+        <a target="_blank" rel="nofollow" href="https://wotblitz.com/">
+			<img src="/images/wot-blitz.png">
+		</a>
+    </li>
+	<li class="wg-customer-support">
+            <a target="_blank" rel="nofollow" href="https://wargaming.net/support">
+				<img src="/images/wg-customer-support.png">
+			</a>
+        </li>
+    </ul>
+	<p>Blitzanalysiz() is a player-created website for World of Tanks: Blitz and developed in accordance with <a target="_blank" rel="nofollow" href="https://developers.wargaming.net/documentation/rules/agreement/">WG DPP</a>. This site is not an official Wargaming or World of Tanks: Blitz website. World of Tanks Blitz and Wargaming are trademarks of <a target="_blank" rel="nofollow" href="https://wargaming.net">Wargaming.net Limited</a>. Game content and materials copyright <a target="_blank" rel="nofollow" href="https://wargaming.net/">© Wargaming.net. All rights reserved</a>. 	
+	</p>
+	</div>
     </section>
     
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1593171750"></script>
-    <script src="/js/perfect-scrollbar.min.js?1593171750"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1593171750"></script>
-    <script src="/js/jquery.sticky.js?1593171750"></script>
-    <script src="/js/featherlight.min.js?1593171750"></script>
-    <script src="/js/highlight.pack.js?1593171750"></script>
+    <script src="/js/clipboard.min.js?1594906244"></script>
+    <script src="/js/perfect-scrollbar.min.js?1594906244"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1594906244"></script>
+    <script src="/js/jquery.sticky.js?1594906244"></script>
+    <script src="/js/featherlight.min.js?1594906244"></script>
+    <script src="/js/highlight.pack.js?1594906244"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1593171750"></script>
-    <script src="/js/learn.js?1593171750"></script>
-    <script src="/js/hugo-learn.js?1593171750"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1594906244"></script>
+    <script src="/js/learn.js?1594906244"></script>
+    <script src="/js/hugo-learn.js?1594906244"></script>
 
-    <link href="/mermaid/mermaid.css?1593171750" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1593171750"></script>
+    <link href="/mermaid/mermaid.css?1594906244" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1594906244"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

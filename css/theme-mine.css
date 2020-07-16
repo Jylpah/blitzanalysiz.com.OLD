@@ -42,6 +42,9 @@ h2, h3, h4, h5 {
 .hanchor { font-size: 50%; visibility: hidden; color:silver; margin-left: 0.3em;}
 h1:hover a, h2:hover a, h3:hover a, h4:hover a { visibility: visible}
 
+.fa-fw {
+	vertical-align: baseline;	
+}
 
 a {
     color: var(--MAIN-LINK-color);
@@ -130,23 +133,27 @@ ul.children {
 	display: block;	
 }
 
-.children {
+.children-li li {
 	font-weight: normal;
 	font-style: normal;
-	font-size: x-large;	
-	
+	font-size: x-large;		
 }
 
 .children-li p {
-	font-weight: 300;
 	font-style: normal;
 	font-size: 16px;	
+	font-weight: 300;	
 }
 
-.children-posts {	
-	font-weight: normal;
+.children-posts posts {	
 	font-style: normal;
-	font-size: large;	
+	font-size: 20px;
+	font-weight: normal;	
+}
+
+.children-posts p {
+	font-size: 16px;	
+	font-weight: 300;	
 }
 
 #posts {
@@ -163,8 +170,8 @@ ul.children {
 }
 
 .post_header {
-	font-weight: bold;
-	font-size: large;
+	font-weight: normal;
+	font-size: 20px;
 }
 .post_img {
   width: 100%;
@@ -176,3 +183,44 @@ ul.children {
 
 .post_text {}
 
+#footer ul.banners {
+  margin: 20px 0;
+  padding: 0;
+}
+#footer ul.banners > li {
+  list-style: 	none;
+  display: 		inline-block;
+  margin: 		20px;
+}
+
+#footer ul.banners > li.cc {
+  display: 		block;
+}
+
+
+#footer ul.banners > li > a {
+  display: inline-block;
+}
+#footer ul.banners > li > a > img {
+  height: 100%;
+  display: block;
+  margin: 	20px;
+}
+#footer .banners > li > a:hover,
+#footer .banners > li > a:focus {
+  opacity: 0.8;
+}
+#footer .banners > li > a:active {
+  opacity: 0.7;
+}
+#footer .banners > li.wot-blitz > a {
+  height: 90px;
+  vertical-align: top;
+}
+
+#footer .banners > li.wg-customer-support > a {
+  margin-left: 50px;
+  margin-top: 24px;
+  height: 50px;
+  vertical-align: top;
+}
