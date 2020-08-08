@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.74.1" />
+    <meta name="generator" content="Hugo 0.74.3" />
     <meta name="description" content="Stats analysis of World Of Tanks Blitz">
 <meta name="author" content="Jylpah@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Career stats :: Home</title>
 
     
-    <link href="/css/nucleus.css?1594910568" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1594910568" rel="stylesheet">
-    <link href="/css/hybrid.css?1594910568" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1594910568" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1594910568" rel="stylesheet">
-    <link href="/css/auto-complete.css?1594910568" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1594910568" rel="stylesheet">
-    <link href="/css/theme.css?1594910568" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1594910568" rel="stylesheet">
+    <link href="/css/nucleus.css?1596929604" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596929604" rel="stylesheet">
+    <link href="/css/hybrid.css?1596929604" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596929604" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596929604" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596929604" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596929604" rel="stylesheet">
+    <link href="/css/theme.css?1596929604" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596929604" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1594910568" rel="stylesheet">
+    <link href="/css/theme-mine.css?1596929604" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1594910568"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596929604"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1594910568"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1594910568"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1596929604"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1596929604"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1594910568"></script>
+<script type="text/javascript" src="/js/search.js?1596929604"></script>
 
     
   </div>
@@ -498,11 +498,11 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://wotblitz.com"><i class='fas fa-snowplow'></i> WoT Blitz game site</a>
+                  <a class="padding" href="https://wotblitz.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/wg.png'></img> WoT Blitz game site</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
+                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
               </li>
           
               <li> 
@@ -603,17 +603,24 @@
       </ul>
     </li>
     <li><a href="#player-wr-distribution">Player WR distribution</a></li>
+    <li><a href="#current-wr-vs-career-battles-played">Current WR vs. Career Battles played</a></li>
+    <li><a href="#career-wr-vs-career-battles-played">Career WR vs. Career Battles played</a></li>
     <li><a href="#average-tier">Average Tier</a></li>
     <li><a href="#wr-vs-average-tier">WR vs Average Tier</a></li>
     <li><a href="#battles-per-tier">Battles per Tier</a></li>
-    <li><a href="#most-popular-tanks">Most popular Tanks</a>
+    <li><a href="#most-popular-tanks-by-players">Most popular Tanks by Players</a>
       <ul>
         <li><a href="#most-popular-tanks---table">Most popular Tanks - Table</a></li>
       </ul>
     </li>
     <li><a href="#most-played-tanks">Most played Tanks</a>
       <ul>
-        <li><a href="#most-played-tanks---table">Most Played Tanks - Table</a></li>
+        <li><a href="#most-played-tanks---table">Most played Tanks - Table</a></li>
+      </ul>
+    </li>
+    <li><a href="#most-battles-by-player">Most Battles by Player</a>
+      <ul>
+        <li><a href="#most-played-tanks---table-1">Most Played Tanks - Table</a></li>
       </ul>
     </li>
   </ul>
@@ -651,9 +658,9 @@
 
 	<p>This page shows statistics of players&rsquo; battles fought during their Blitz &ldquo;career&rdquo; until the end of <strong>update 6.7</strong>.</p>
 <h2 id="battles-per-player">Battles per Player</h2>
-<p>Number of total battles per player in the end of the update 6.7.
-<img src="figure/fig_total_battle_count_histogram-1.png" alt="plot of chunk fig_total_battle_count_histogram">
-An average player has played 4918 battles by the end of update 6.7. Median battle count was 2420 and the largest number of battles recorded by a single player (in the dataset) was 148k battles. The following tables shows battle counts by N% most inactive players during the update (i.e. &ldquo;90% most inactive&rdquo; == &ldquo;10% most active&rdquo;).</p>
+<p>Number of career/cumulative battles per player in the end of the update 6.7.</p>
+<p><img src="figure/fig_career_battle_count_histogram-1.svg" alt="plot of chunk fig_career_battle_count_histogram"></p>
+<p>An average player has played 9727 battles by the end of update 6.7. Median battle count was 5668 and the largest number of battles recorded by a single player (in the dataset) was 179k battles. The following tables shows battle counts by N% most inactive players during the update (i.e. &ldquo;90% most inactive&rdquo; == &ldquo;10% most active&rdquo;).</p>
 <h3 id="battles-per-player-table">Battles per Player table</h3>
 <p>The table below shows the (max) number of battles played until the end of 6.7 by the X% most <em>inactive</em> players. Reading tip: 10% most <em>active</em> players have played more than the 90% most <em>inactive</em> players.</p>
 
@@ -672,7 +679,7 @@ An average player has played 4918 battles by the end of update 6.7. Median battl
 <thead>
 <tr>
 <th align="left">% of Players</th>
-<th align="left">Max battles</th>
+<th align="left">Battles</th>
 </tr>
 </thead>
 <tbody>
@@ -681,44 +688,84 @@ An average player has played 4918 battles by the end of update 6.7. Median battl
 <td align="left">1</td>
 </tr>
 <tr>
+<td align="left">5%</td>
+<td align="left">203</td>
+</tr>
+<tr>
 <td align="left">10%</td>
-<td align="left">283</td>
+<td align="left">539</td>
+</tr>
+<tr>
+<td align="left">15%</td>
+<td align="left">969</td>
 </tr>
 <tr>
 <td align="left">20%</td>
-<td align="left">656</td>
+<td align="left">1 466</td>
+</tr>
+<tr>
+<td align="left">25%</td>
+<td align="left">1 981</td>
 </tr>
 <tr>
 <td align="left">30%</td>
-<td align="left">1109</td>
+<td align="left">2 554</td>
+</tr>
+<tr>
+<td align="left">35%</td>
+<td align="left">3 218</td>
 </tr>
 <tr>
 <td align="left">40%</td>
-<td align="left">1681</td>
+<td align="left">3 965</td>
+</tr>
+<tr>
+<td align="left">45%</td>
+<td align="left">4 817</td>
 </tr>
 <tr>
 <td align="left">50%</td>
-<td align="left">2420</td>
+<td align="left">5 668</td>
+</tr>
+<tr>
+<td align="left">55%</td>
+<td align="left">6 659</td>
 </tr>
 <tr>
 <td align="left">60%</td>
-<td align="left">3450</td>
+<td align="left">7 859</td>
+</tr>
+<tr>
+<td align="left">65%</td>
+<td align="left">9 281</td>
 </tr>
 <tr>
 <td align="left">70%</td>
-<td align="left">4994</td>
+<td align="left">11 027</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">13 148</td>
 </tr>
 <tr>
 <td align="left">80%</td>
-<td align="left">7504</td>
+<td align="left">15 845</td>
+</tr>
+<tr>
+<td align="left">85%</td>
+<td align="left">19 351</td>
 </tr>
 <tr>
 <td align="left">90%</td>
-<td align="left">12576</td>
+<td align="left">24 469</td>
+</tr>
+<tr>
+<td align="left">95%</td>
+<td align="left">33 255</td>
 </tr>
 <tr>
 <td align="left">100%</td>
-<td align="left">147971</td>
+<td align="left">179 454</td>
 </tr>
 </tbody>
 </table>
@@ -727,7 +774,7 @@ An average player has played 4918 battles by the end of update 6.7. Median battl
 </div>
 <h2 id="player-wr-distribution">Player WR distribution</h2>
 <p>The following graph shows a histogram of players (y-axis) with certain career WR (x-axis).</p>
-<p><img src="figure/fig_total_player_WR_histogram-1.png" alt="plot of chunk fig_total_player_WR_histogram"></p>
+<p><img src="figure/fig_career_player_WR_histogram-1.svg" alt="plot of chunk fig_career_player_WR_histogram"></p>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -743,112 +790,340 @@ An average player has played 4918 battles by the end of update 6.7. Median battl
         <table>
 <thead>
 <tr>
-<th align="left">% of Players</th>
-<th align="left">WR</th>
+<th align="left">Career WR</th>
+<th align="left">Share %</th>
+<th align="left">Cumulative share %</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">0%</td>
-<td align="left">0</td>
-</tr>
-<tr>
-<td align="left">5%</td>
-<td align="left">40.4396702564591</td>
-</tr>
-<tr>
-<td align="left">10%</td>
-<td align="left">42.4892703862661</td>
-</tr>
-<tr>
-<td align="left">15%</td>
-<td align="left">43.8095238095238</td>
-</tr>
-<tr>
 <td align="left">20%</td>
-<td align="left">44.8770094906062</td>
+<td align="left">0%</td>
+<td align="left">0%</td>
+</tr>
+<tr>
+<td align="left">21%</td>
+<td align="left">0%</td>
+<td align="left">0%</td>
+</tr>
+<tr>
+<td align="left">22%</td>
+<td align="left">0%</td>
+<td align="left">0%</td>
+</tr>
+<tr>
+<td align="left">23%</td>
+<td align="left">0%</td>
+<td align="left">0%</td>
+</tr>
+<tr>
+<td align="left">24%</td>
+<td align="left">0%</td>
+<td align="left">0%</td>
 </tr>
 <tr>
 <td align="left">25%</td>
-<td align="left">45.7862641922387</td>
+<td align="left">0%</td>
+<td align="left">0%</td>
+</tr>
+<tr>
+<td align="left">26%</td>
+<td align="left">0%</td>
+<td align="left">0%</td>
+</tr>
+<tr>
+<td align="left">27%</td>
+<td align="left">0%</td>
+<td align="left">0%</td>
+</tr>
+<tr>
+<td align="left">28%</td>
+<td align="left">0%</td>
+<td align="left">0.01%</td>
+</tr>
+<tr>
+<td align="left">29%</td>
+<td align="left">0%</td>
+<td align="left">0.01%</td>
 </tr>
 <tr>
 <td align="left">30%</td>
-<td align="left">46.6206974496477</td>
+<td align="left">0%</td>
+<td align="left">0.01%</td>
+</tr>
+<tr>
+<td align="left">31%</td>
+<td align="left">0%</td>
+<td align="left">0.01%</td>
+</tr>
+<tr>
+<td align="left">32%</td>
+<td align="left">0.01%</td>
+<td align="left">0.02%</td>
+</tr>
+<tr>
+<td align="left">33%</td>
+<td align="left">0%</td>
+<td align="left">0.02%</td>
+</tr>
+<tr>
+<td align="left">34%</td>
+<td align="left">0.01%</td>
+<td align="left">0.03%</td>
 </tr>
 <tr>
 <td align="left">35%</td>
-<td align="left">47.4137931034483</td>
+<td align="left">0.01%</td>
+<td align="left">0.04%</td>
+</tr>
+<tr>
+<td align="left">36%</td>
+<td align="left">0.03%</td>
+<td align="left">0.07%</td>
+</tr>
+<tr>
+<td align="left">37%</td>
+<td align="left">0.05%</td>
+<td align="left">0.12%</td>
+</tr>
+<tr>
+<td align="left">38%</td>
+<td align="left">0.11%</td>
+<td align="left">0.23%</td>
+</tr>
+<tr>
+<td align="left">39%</td>
+<td align="left">0.24%</td>
+<td align="left">0.47%</td>
 </tr>
 <tr>
 <td align="left">40%</td>
-<td align="left">48.1876332622601</td>
+<td align="left">0.49%</td>
+<td align="left">0.96%</td>
+</tr>
+<tr>
+<td align="left">41%</td>
+<td align="left">0.88%</td>
+<td align="left">1.85%</td>
+</tr>
+<tr>
+<td align="left">42%</td>
+<td align="left">1.52%</td>
+<td align="left">3.36%</td>
+</tr>
+<tr>
+<td align="left">43%</td>
+<td align="left">2.36%</td>
+<td align="left">5.72%</td>
+</tr>
+<tr>
+<td align="left">44%</td>
+<td align="left">3.37%</td>
+<td align="left">9.08%</td>
 </tr>
 <tr>
 <td align="left">45%</td>
-<td align="left">48.9459166158057</td>
+<td align="left">4.5%</td>
+<td align="left">13.6%</td>
+</tr>
+<tr>
+<td align="left">46%</td>
+<td align="left">5.76%</td>
+<td align="left">19.3%</td>
+</tr>
+<tr>
+<td align="left">47%</td>
+<td align="left">6.63%</td>
+<td align="left">26%</td>
+</tr>
+<tr>
+<td align="left">48%</td>
+<td align="left">7.24%</td>
+<td align="left">33.2%</td>
+</tr>
+<tr>
+<td align="left">49%</td>
+<td align="left">7.64%</td>
+<td align="left">40.8%</td>
 </tr>
 <tr>
 <td align="left">50%</td>
-<td align="left">49.6980904201987</td>
+<td align="left">7.73%</td>
+<td align="left">48.6%</td>
+</tr>
+<tr>
+<td align="left">51%</td>
+<td align="left">7.63%</td>
+<td align="left">56.2%</td>
+</tr>
+<tr>
+<td align="left">52%</td>
+<td align="left">7.23%</td>
+<td align="left">63.4%</td>
+</tr>
+<tr>
+<td align="left">53%</td>
+<td align="left">6.28%</td>
+<td align="left">69.7%</td>
+</tr>
+<tr>
+<td align="left">54%</td>
+<td align="left">5.37%</td>
+<td align="left">75.1%</td>
 </tr>
 <tr>
 <td align="left">55%</td>
-<td align="left">50.4475001019514</td>
+<td align="left">4.59%</td>
+<td align="left">79.7%</td>
+</tr>
+<tr>
+<td align="left">56%</td>
+<td align="left">3.87%</td>
+<td align="left">83.5%</td>
+</tr>
+<tr>
+<td align="left">57%</td>
+<td align="left">3.15%</td>
+<td align="left">86.7%</td>
+</tr>
+<tr>
+<td align="left">58%</td>
+<td align="left">2.57%</td>
+<td align="left">89.3%</td>
+</tr>
+<tr>
+<td align="left">59%</td>
+<td align="left">2.01%</td>
+<td align="left">91.3%</td>
 </tr>
 <tr>
 <td align="left">60%</td>
-<td align="left">51.2562814070352</td>
+<td align="left">1.68%</td>
+<td align="left">93%</td>
+</tr>
+<tr>
+<td align="left">61%</td>
+<td align="left">1.57%</td>
+<td align="left">94.5%</td>
+</tr>
+<tr>
+<td align="left">62%</td>
+<td align="left">1.24%</td>
+<td align="left">95.8%</td>
+</tr>
+<tr>
+<td align="left">63%</td>
+<td align="left">0.99%</td>
+<td align="left">96.8%</td>
+</tr>
+<tr>
+<td align="left">64%</td>
+<td align="left">0.74%</td>
+<td align="left">97.5%</td>
 </tr>
 <tr>
 <td align="left">65%</td>
-<td align="left">52.1008403361345</td>
+<td align="left">0.58%</td>
+<td align="left">98.1%</td>
+</tr>
+<tr>
+<td align="left">66%</td>
+<td align="left">0.44%</td>
+<td align="left">98.5%</td>
+</tr>
+<tr>
+<td align="left">67%</td>
+<td align="left">0.34%</td>
+<td align="left">98.9%</td>
+</tr>
+<tr>
+<td align="left">68%</td>
+<td align="left">0.27%</td>
+<td align="left">99.1%</td>
+</tr>
+<tr>
+<td align="left">69%</td>
+<td align="left">0.21%</td>
+<td align="left">99.3%</td>
 </tr>
 <tr>
 <td align="left">70%</td>
-<td align="left">53.023971895864</td>
+<td align="left">0.17%</td>
+<td align="left">99.5%</td>
+</tr>
+<tr>
+<td align="left">71%</td>
+<td align="left">0.16%</td>
+<td align="left">99.7%</td>
+</tr>
+<tr>
+<td align="left">72%</td>
+<td align="left">0.11%</td>
+<td align="left">99.8%</td>
+</tr>
+<tr>
+<td align="left">73%</td>
+<td align="left">0.07%</td>
+<td align="left">99.9%</td>
+</tr>
+<tr>
+<td align="left">74%</td>
+<td align="left">0.05%</td>
+<td align="left">99.9%</td>
 </tr>
 <tr>
 <td align="left">75%</td>
-<td align="left">54.0342298288509</td>
+<td align="left">0.03%</td>
+<td align="left">99.9%</td>
+</tr>
+<tr>
+<td align="left">76%</td>
+<td align="left">0.02%</td>
+<td align="left">100%</td>
+</tr>
+<tr>
+<td align="left">77%</td>
+<td align="left">0.01%</td>
+<td align="left">100%</td>
+</tr>
+<tr>
+<td align="left">78%</td>
+<td align="left">0.01%</td>
+<td align="left">100%</td>
+</tr>
+<tr>
+<td align="left">79%</td>
+<td align="left">0.01%</td>
+<td align="left">100%</td>
 </tr>
 <tr>
 <td align="left">80%</td>
-<td align="left">55.2366175329713</td>
-</tr>
-<tr>
-<td align="left">85%</td>
-<td align="left">56.7257065393718</td>
-</tr>
-<tr>
-<td align="left">90%</td>
-<td align="left">58.7078834031125</td>
-</tr>
-<tr>
-<td align="left">95%</td>
-<td align="left">61.8877235847573</td>
-</tr>
-<tr>
+<td align="left">0%</td>
 <td align="left">100%</td>
-<td align="left">100</td>
 </tr>
 </tbody>
 </table>
 
     </div>
 </div>
+<h2 id="current-wr-vs-career-battles-played">Current WR vs. Career Battles played</h2>
+<p>This graph shows Player WR during the update 6.7 vs. player career battles. Average tier is not taken into account.</p>
+<p><img src="figure/fig_career_battles_vs_current_WR-1.svg" alt="plot of chunk fig_career_battles_vs_current_WR"></p>
+<h2 id="career-wr-vs-career-battles-played">Career WR vs. Career Battles played</h2>
+<p>This graph shows Player career WR vs. career battles. Average tier is not taken into account.</p>
+<p><img src="figure/fig_career_battles_vs_WR-1.svg" alt="plot of chunk fig_career_battles_vs_WR"></p>
 <h2 id="average-tier">Average Tier</h2>
 <p>The following graph shows a histogram of share of players (y-axis) average tier (x-axis). Only players with more than 500 battles during their Blitz &ldquo;career&rdquo; are included.</p>
-<p><img src="figure/fig_total_player_avg_tier_histogram-1.png" alt="plot of chunk fig_total_player_avg_tier_histogram"></p>
+<p><img src="figure/fig_career_player_avg_tier_histogram-1.svg" alt="plot of chunk fig_career_player_avg_tier_histogram"></p>
 <h2 id="wr-vs-average-tier">WR vs Average Tier</h2>
 <p>This graph shows player Career WR vs. average tier until the end of update 6.7. Minimum 500 battles required.</p>
-<p><img src="figure/fig_total_WR_vs_avg_tier-1.png" alt="plot of chunk fig_total_WR_vs_avg_tier"></p>
+<p><img src="figure/fig_career_WR_vs_avg_tier-1.svg" alt="plot of chunk fig_career_WR_vs_avg_tier"></p>
 <h2 id="battles-per-tier">Battles per Tier</h2>
 <p>This graph shows average number of career battles per tier.</p>
-<p><img src="figure/fig_total_battles_per_tier-1.png" alt="plot of chunk fig_total_battles_per_tier"></p>
-<h2 id="most-popular-tanks">Most popular Tanks</h2>
-<p>This graph shows the most played tanks by players during their career. More <a href="../tanks">Tank Statistics here</a>.</p>
-<p><img src="figure/fig_total_tanks_most_popular-1.png" alt="plot of chunk fig_total_tanks_most_popular"></p>
+<p><img src="figure/fig_career_battles_per_tier-1.svg" alt="plot of chunk fig_career_battles_per_tier"></p>
+<h2 id="most-popular-tanks-by-players">Most popular Tanks by Players</h2>
+<p>This graph shows the tanks with the most players. This counts all the battles played until the end of the update. More <a href="../tanks">Tank Statistics here</a>.</p>
+<p><img src="figure/fig_career_tanks_most_popular-1.svg" alt="plot of chunk fig_career_tanks_most_popular"></p>
 <h3 id="most-popular-tanks---table">Most popular Tanks - Table</h3>
 
 <div class="expand">
@@ -866,152 +1141,152 @@ An average player has played 4918 battles by the end of update 6.7. Median battl
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Players</th>
-<th align="right">Average WR</th>
+<th align="left">Players</th>
+<th align="left">Average WR</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
-<th align="right">Battles/Player</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Pz.Kpfw. V/IV</td>
-<td align="right">77309</td>
-<td align="right">53.7</td>
-<td align="left">Premium</td>
-<td align="right">77</td>
+<td align="left">Pz.Kpfw. II</td>
+<td align="left">473 036</td>
+<td align="left">56.3%</td>
+<td align="left">33</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">T49</td>
-<td align="right">70663</td>
-<td align="right">48.8</td>
+<td align="left">T-26</td>
+<td align="left">443 195</td>
+<td align="left">51.4%</td>
+<td align="left">16</td>
 <td align="left">Researchable</td>
-<td align="right">397</td>
 </tr>
 <tr>
-<td align="left">KV-2</td>
-<td align="right">68352</td>
-<td align="right">49.8</td>
+<td align="left">BT-7</td>
+<td align="left">441 074</td>
+<td align="left">50.6%</td>
+<td align="left">39</td>
 <td align="left">Researchable</td>
-<td align="right">533</td>
+</tr>
+<tr>
+<td align="left">KV-1</td>
+<td align="left">433 200</td>
+<td align="left">53.3%</td>
+<td align="left">181</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">A-20</td>
+<td align="left">431 107</td>
+<td align="left">51.7%</td>
+<td align="left">76</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">BT-2</td>
+<td align="left">427 419</td>
+<td align="left">54.2%</td>
+<td align="left">22</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Hetzer</td>
+<td align="left">407 047</td>
+<td align="left">53.2%</td>
+<td align="left">95</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Leichttraktor</td>
+<td align="left">390 183</td>
+<td align="left">52.3%</td>
+<td align="left">17</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">MS-1</td>
+<td align="left">387 264</td>
+<td align="left">56.4%</td>
+<td align="left">20</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Cruiser Mk. IV</td>
+<td align="left">366 857</td>
+<td align="left">58.1%</td>
+<td align="left">62</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">VK 16.02 Leopard</td>
-<td align="right">62943</td>
-<td align="right">49.9</td>
+<td align="left">366 624</td>
+<td align="left">52%</td>
+<td align="left">222</td>
 <td align="left">Researchable</td>
-<td align="right">411</td>
 </tr>
 <tr>
-<td align="left">Type 64</td>
-<td align="right">61737</td>
-<td align="right">51.2</td>
-<td align="left">Premium</td>
-<td align="right">41</td>
-</tr>
-<tr>
-<td align="left">Löwe</td>
-<td align="right">53398</td>
-<td align="right">51.8</td>
-<td align="left">Premium</td>
-<td align="right">447</td>
-</tr>
-<tr>
-<td align="left">IS-7</td>
-<td align="right">53328</td>
-<td align="right">48.4</td>
+<td align="left">M5 Stuart</td>
+<td align="left">365 703</td>
+<td align="left">51.9%</td>
+<td align="left">40</td>
 <td align="left">Researchable</td>
-<td align="right">566</td>
 </tr>
 <tr>
-<td align="left">Nightmare</td>
-<td align="right">52974</td>
-<td align="right">53.1</td>
-<td align="left">Premium</td>
-<td align="right">59</td>
-</tr>
-<tr>
-<td align="left">IS-5 (Object 730)</td>
-<td align="right">50807</td>
-<td align="right">53.5</td>
-<td align="left">Premium</td>
-<td align="right">359</td>
-</tr>
-<tr>
-<td align="left">SU-100Y</td>
-<td align="right">50650</td>
-<td align="right">52.8</td>
-<td align="left">Premium</td>
-<td align="right">391</td>
-</tr>
-<tr>
-<td align="left">SU-122-44</td>
-<td align="right">48562</td>
-<td align="right">51.6</td>
-<td align="left">Premium</td>
-<td align="right">260</td>
-</tr>
-<tr>
-<td align="left">T92E1</td>
-<td align="right">48410</td>
-<td align="right">50.7</td>
+<td align="left">T1 Cunningham</td>
+<td align="left">361 828</td>
+<td align="left">55%</td>
+<td align="left">20</td>
 <td align="left">Researchable</td>
-<td align="right">121</td>
 </tr>
 <tr>
-<td align="left">IS-3</td>
-<td align="right">47347</td>
-<td align="right">48.5</td>
+<td align="left">Pz.Kpfw. IV Ausf. G</td>
+<td align="left">360 182</td>
+<td align="left">49.4%</td>
+<td align="left">113</td>
 <td align="left">Researchable</td>
-<td align="right">419</td>
 </tr>
 <tr>
-<td align="left">Tiger II</td>
-<td align="right">45381</td>
-<td align="right">48.3</td>
+<td align="left">Cruiser Mk. III</td>
+<td align="left">360 040</td>
+<td align="left">56.1%</td>
+<td align="left">26</td>
 <td align="left">Researchable</td>
-<td align="right">280</td>
 </tr>
 <tr>
-<td align="left">T-54</td>
-<td align="right">43938</td>
-<td align="right">49.3</td>
+<td align="left">T-34</td>
+<td align="left">354 553</td>
+<td align="left">51.3%</td>
+<td align="left">121</td>
 <td align="left">Researchable</td>
-<td align="right">513</td>
 </tr>
 <tr>
-<td align="left">E 100</td>
-<td align="right">43924</td>
-<td align="right">49.2</td>
+<td align="left">Pz.Kpfw. III</td>
+<td align="left">350 857</td>
+<td align="left">53.2%</td>
+<td align="left">53</td>
 <td align="left">Researchable</td>
-<td align="right">637</td>
+</tr>
+<tr>
+<td align="left">Pz.Kpfw. IV Ausf. D</td>
+<td align="left">349 159</td>
+<td align="left">52%</td>
+<td align="left">61</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Pz.Kpfw. 35 (t)</td>
+<td align="left">347 407</td>
+<td align="left">53.3%</td>
+<td align="left">17</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">KV-1S</td>
-<td align="right">43295</td>
-<td align="right">49.6</td>
+<td align="left">347 071</td>
+<td align="left">51.6%</td>
+<td align="left">242</td>
 <td align="left">Researchable</td>
-<td align="right">409</td>
-</tr>
-<tr>
-<td align="left">ISU-152</td>
-<td align="right">41601</td>
-<td align="right">46.9</td>
-<td align="left">Researchable</td>
-<td align="right">444</td>
-</tr>
-<tr>
-<td align="left">Grille 15</td>
-<td align="right">41590</td>
-<td align="right">47.6</td>
-<td align="left">Researchable</td>
-<td align="right">643</td>
-</tr>
-<tr>
-<td align="left">SU-152</td>
-<td align="right">41290</td>
-<td align="right">50.3</td>
-<td align="left">Researchable</td>
-<td align="right">460</td>
 </tr>
 </tbody>
 </table>
@@ -1019,9 +1294,9 @@ An average player has played 4918 battles by the end of update 6.7. Median battl
     </div>
 </div>
 <h2 id="most-played-tanks">Most played Tanks</h2>
-<p>This graph shows the most played tanks by players during their career. More <a href="../tanks">Tank Statistics here</a>.</p>
-<p><img src="figure/fig_total_tanks_most_played-1.png" alt="plot of chunk fig_total_tanks_most_played"></p>
-<h3 id="most-played-tanks---table">Most Played Tanks - Table</h3>
+<p>This graph shows the most played tanks by their owners during their career. More <a href="../tanks">Tank Statistics here</a>.</p>
+<p><img src="figure/fig_career_tanks_most_battles-1.svg" alt="plot of chunk fig_career_tanks_most_battles"></p>
+<h3 id="most-played-tanks---table">Most played Tanks - Table</h3>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -1038,152 +1313,345 @@ An average player has played 4918 battles by the end of update 6.7. Median battl
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Battles/Player</th>
-<th align="right">Average WR</th>
-<th align="right">Players</th>
+<th align="left">Battles</th>
+<th align="left">Average WR</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Type 98 Ke-Ni Otsu</td>
-<td align="right">1084</td>
-<td align="right">69.4</td>
-<td align="right">708</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">FV215b (183)</td>
-<td align="right">998</td>
-<td align="right">47.6</td>
-<td align="right">35183</td>
+<td align="left">KV-2</td>
+<td align="left">92M</td>
+<td align="left">52.9%</td>
+<td align="left">272 758</td>
+<td align="left">336</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">Durchbruchswagen 2</td>
-<td align="right">777</td>
-<td align="right">59.4</td>
-<td align="right">6858</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">IS-3 Defender</td>
-<td align="right">774</td>
-<td align="right">56.3</td>
-<td align="right">18689</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Waffenträger auf Pz. IV</td>
-<td align="right">734</td>
-<td align="right">49.6</td>
-<td align="right">38104</td>
+<td align="left">T-54</td>
+<td align="left">88M</td>
+<td align="left">51.5%</td>
+<td align="left">170 295</td>
+<td align="left">516</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">T6 Dracula</td>
-<td align="right">671</td>
-<td align="right">57.7</td>
-<td align="right">22508</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">IS-6 Fearless</td>
-<td align="right">671</td>
-<td align="right">62.8</td>
-<td align="right">67</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Helsing H0</td>
-<td align="right">650</td>
-<td align="right">56.5</td>
-<td align="right">26786</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Grille 15</td>
-<td align="right">643</td>
-<td align="right">47.6</td>
-<td align="right">41590</td>
+<td align="left">IS-3</td>
+<td align="left">86M</td>
+<td align="left">50.5%</td>
+<td align="left">249 799</td>
+<td align="left">344</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">E 100</td>
-<td align="right">637</td>
-<td align="right">49.2</td>
-<td align="right">43924</td>
+<td align="left">KV-1S</td>
+<td align="left">84M</td>
+<td align="left">51.6%</td>
+<td align="left">347 071</td>
+<td align="left">242</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">Object 140</td>
-<td align="right">599</td>
-<td align="right">50.1</td>
-<td align="right">27542</td>
+<td align="left">VK 16.02 Leopard</td>
+<td align="left">82M</td>
+<td align="left">52%</td>
+<td align="left">366 624</td>
+<td align="left">222</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">IS-6</td>
-<td align="right">580</td>
-<td align="right">52.2</td>
-<td align="right">40895</td>
-<td align="left">Premium</td>
+<td align="left">KV-1</td>
+<td align="left">78M</td>
+<td align="left">53.3%</td>
+<td align="left">433 200</td>
+<td align="left">181</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">T34 Independence</td>
-<td align="right">579</td>
-<td align="right">53.9</td>
-<td align="right">14966</td>
-<td align="left">Premium</td>
+<td align="left">IS-8</td>
+<td align="left">68M</td>
+<td align="left">49.3%</td>
+<td align="left">182 550</td>
+<td align="left">374</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">Pz.Kpfw. III/IV</td>
-<td align="right">574</td>
-<td align="right">52.4</td>
-<td align="right">4292</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Jagdpanzer E 100</td>
-<td align="right">568</td>
-<td align="right">49.0</td>
-<td align="right">29529</td>
+<td align="left">IS</td>
+<td align="left">67M</td>
+<td align="left">50.3%</td>
+<td align="left">296 130</td>
+<td align="left">226</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">IS-7</td>
-<td align="right">566</td>
-<td align="right">48.4</td>
-<td align="right">53328</td>
+<td align="left">63M</td>
+<td align="left">50.4%</td>
+<td align="left">129 841</td>
+<td align="left">481</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
-<td align="left">BT-7 artillery</td>
-<td align="right">566</td>
-<td align="right">54.4</td>
-<td align="right">5206</td>
-<td align="left">Premium</td>
+<td align="left">SU-152</td>
+<td align="left">61M</td>
+<td align="left">51.9%</td>
+<td align="left">208 419</td>
+<td align="left">292</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">VK 28.01</td>
-<td align="right">562</td>
-<td align="right">51.2</td>
-<td align="right">33045</td>
+<td align="left">58M</td>
+<td align="left">52.9%</td>
+<td align="left">257 296</td>
+<td align="left">227</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Waffenträger auf Pz. IV</td>
+<td align="left">58M</td>
+<td align="left">51.3%</td>
+<td align="left">112 644</td>
+<td align="left">511</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">ISU-152</td>
+<td align="left">57M</td>
+<td align="left">49.5%</td>
+<td align="left">164 520</td>
+<td align="left">345</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Rhm.-Borsig Waffenträger</td>
+<td align="left">55M</td>
+<td align="left">50.3%</td>
+<td align="left">140 183</td>
+<td align="left">392</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">FV215b (183)</td>
+<td align="left">55M</td>
+<td align="left">49.3%</td>
+<td align="left">64 205</td>
+<td align="left">851</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">IS-6</td>
+<td align="left">54M</td>
+<td align="left">54.9%</td>
+<td align="left">106 423</td>
+<td align="left">511</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Tiger II</td>
+<td align="left">54M</td>
+<td align="left">48.3%</td>
+<td align="left">209 053</td>
+<td align="left">257</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">E 75</td>
+<td align="left">54M</td>
+<td align="left">50.4%</td>
+<td align="left">146 816</td>
+<td align="left">365</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">T-44</td>
+<td align="left">53M</td>
+<td align="left">50.6%</td>
+<td align="left">162 075</td>
+<td align="left">325</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">T-34-85</td>
+<td align="left">52M</td>
+<td align="left">52.4%</td>
+<td align="left">235 161</td>
+<td align="left">221</td>
+<td align="left">Researchable</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
+<h2 id="most-battles-by-player">Most Battles by Player</h2>
+<p>This graph shows the most played tanks by their owners during their career (=battles/players). More <a href="../tanks">Tank Statistics here</a>.</p>
+<p><img src="figure/fig_career_tanks_most_played-1.svg" alt="plot of chunk fig_career_tanks_most_played"></p>
+<h3 id="most-played-tanks---table-1">Most Played Tanks - Table</h3>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Show table
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <table>
+<thead>
+<tr>
+<th align="left">Tank</th>
+<th align="left">Battles/Player</th>
+<th align="left">Average WR</th>
+<th align="left">Players</th>
+<th align="left">Tank type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">FV215b (183)</td>
+<td align="left">851</td>
+<td align="left">49.3%</td>
+<td align="left">64 205</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">IS-3 Defender</td>
+<td align="left">698</td>
+<td align="left">58.3%</td>
+<td align="left">40 358</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">T6 Dracula</td>
+<td align="left">565</td>
+<td align="left">60.2%</td>
+<td align="left">42 809</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Helsing H0</td>
+<td align="left">561</td>
+<td align="left">57.8%</td>
+<td align="left">46 633</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Type 98 Ke-Ni Otsu</td>
+<td align="left">541</td>
+<td align="left">71.2%</td>
+<td align="left">2 946</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Grille 15</td>
+<td align="left">538</td>
+<td align="left">49.5%</td>
+<td align="left">77 511</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">E 100</td>
+<td align="left">526</td>
+<td align="left">50.8%</td>
+<td align="left">98 742</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">T-54</td>
+<td align="left">516</td>
+<td align="left">51.5%</td>
+<td align="left">170 295</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Waffenträger auf Pz. IV</td>
+<td align="left">511</td>
+<td align="left">51.3%</td>
+<td align="left">112 644</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">IS-6</td>
+<td align="left">511</td>
+<td align="left">54.9%</td>
+<td align="left">106 423</td>
+<td align="left">Premium</td>
+</tr>
+<tr>
+<td align="left">Jagdpanzer E 100</td>
+<td align="left">492</td>
+<td align="left">50%</td>
+<td align="left">62 646</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">IS-7</td>
+<td align="left">481</td>
+<td align="left">50.4%</td>
+<td align="left">129 841</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Object 140</td>
+<td align="left">474</td>
+<td align="left">52.4%</td>
+<td align="left">71 659</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">T-62A</td>
+<td align="left">454</td>
+<td align="left">50%</td>
+<td align="left">93 989</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T34</td>
-<td align="right">554</td>
-<td align="right">52.0</td>
-<td align="right">26804</td>
+<td align="left">449</td>
+<td align="left">53.2%</td>
+<td align="left">67 104</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Leopard 1</td>
-<td align="right">540</td>
-<td align="right">48.3</td>
-<td align="right">29821</td>
+<td align="left">438</td>
+<td align="left">50.1%</td>
+<td align="left">66 789</td>
 <td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Object 268</td>
+<td align="left">415</td>
+<td align="left">50.3%</td>
+<td align="left">66 446</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Rhm.-Borsig Waffenträger</td>
+<td align="left">392</td>
+<td align="left">50.3%</td>
+<td align="left">140 183</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">T30</td>
+<td align="left">391</td>
+<td align="left">52.6%</td>
+<td align="left">68 316</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">T34 Independence</td>
+<td align="left">386</td>
+<td align="left">54.5%</td>
+<td align="left">38 764</td>
+<td align="left">Premium</td>
 </tr>
 </tbody>
 </table>
@@ -1451,19 +1919,19 @@ An average player has played 4918 battles by the end of update 6.7. Median battl
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1594910568"></script>
-    <script src="/js/perfect-scrollbar.min.js?1594910568"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1594910568"></script>
-    <script src="/js/jquery.sticky.js?1594910568"></script>
-    <script src="/js/featherlight.min.js?1594910568"></script>
-    <script src="/js/highlight.pack.js?1594910568"></script>
+    <script src="/js/clipboard.min.js?1596929604"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596929604"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596929604"></script>
+    <script src="/js/jquery.sticky.js?1596929604"></script>
+    <script src="/js/featherlight.min.js?1596929604"></script>
+    <script src="/js/highlight.pack.js?1596929604"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1594910568"></script>
-    <script src="/js/learn.js?1594910568"></script>
-    <script src="/js/hugo-learn.js?1594910568"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596929604"></script>
+    <script src="/js/learn.js?1596929604"></script>
+    <script src="/js/hugo-learn.js?1596929604"></script>
 
-    <link href="/mermaid/mermaid.css?1594910568" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1594910568"></script>
+    <link href="/mermaid/mermaid.css?1596929604" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596929604"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

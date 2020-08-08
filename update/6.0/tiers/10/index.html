@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.74.1" />
+    <meta name="generator" content="Hugo 0.74.3" />
     <meta name="description" content="Stats analysis of World Of Tanks Blitz">
 <meta name="author" content="Jylpah@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tier X stats :: Home</title>
 
     
-    <link href="/css/nucleus.css?1594910567" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1594910567" rel="stylesheet">
-    <link href="/css/hybrid.css?1594910567" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1594910567" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1594910567" rel="stylesheet">
-    <link href="/css/auto-complete.css?1594910567" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1594910567" rel="stylesheet">
-    <link href="/css/theme.css?1594910567" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1594910567" rel="stylesheet">
+    <link href="/css/nucleus.css?1596929603" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596929603" rel="stylesheet">
+    <link href="/css/hybrid.css?1596929603" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596929603" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596929603" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596929603" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596929603" rel="stylesheet">
+    <link href="/css/theme.css?1596929603" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596929603" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1594910567" rel="stylesheet">
+    <link href="/css/theme-mine.css?1596929603" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1594910567"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596929603"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1594910567"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1594910567"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1596929603"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1596929603"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1594910567"></script>
+<script type="text/javascript" src="/js/search.js?1596929603"></script>
 
     
   </div>
@@ -634,11 +634,11 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://wotblitz.com"><i class='fas fa-snowplow'></i> WoT Blitz game site</a>
+                  <a class="padding" href="https://wotblitz.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/wg.png'></img> WoT Blitz game site</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
+                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
               </li>
           
               <li> 
@@ -744,7 +744,11 @@
         <li><a href="#battles-per-player-table">Battles per Player table</a></li>
       </ul>
     </li>
-    <li><a href="#player-wr-distribution">Player WR distribution</a></li>
+    <li><a href="#player-wr-distribution">Player WR distribution</a>
+      <ul>
+        <li><a href="#player-wr-distribution-all-players">Player WR distribution (all players)</a></li>
+      </ul>
+    </li>
     <li><a href="#share-of-battles-per-nation-per-vehicle-class">Share of Battles per Nation per Vehicle Class</a></li>
   </ul>
 </nav>
@@ -784,7 +788,7 @@
 	<p>This page list statistics of battles fought at <strong>tier X during update 6.0</strong>.</p>
 <h2 id="battles-per-player">Battles per Player</h2>
 <p>Number of battles fought per player during the update 6.0.</p>
-<p><img src="figure/fig_tier_battle_count_histogram-1.png" alt="plot of chunk fig_tier_battle_count_histogram"></p>
+<p><img src="figure/fig_tier_battle_count_histogram-1.svg" alt="plot of chunk fig_tier_battle_count_histogram"></p>
 <p>On average, players played 127 battles. Median was 53 and the largest number of battles recorded by a single player (in the dataset) during the update 6.0 was 16 694 battles. The following tables shows battle counts by N% most inactive players during the update.</p>
 <h3 id="battles-per-player-table">Battles per Player table</h3>
 <p>The table below shows the (max) number of battles played during 6.0 by the X% most <em>inactive</em> players. A reading tip: 10% most <em>active</em> players played more than the 90% most <em>inactive</em> players.</p>
@@ -803,38 +807,51 @@
         <table>
 <thead>
 <tr>
-<th align="left">% of Players</th>
-<th align="left">Battles during the update</th>
+<th align="left">Battles</th>
+<th align="left">Share %</th>
+<th align="left">Cumulative share %</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">0%</td>
-<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">22%</td>
+<td align="left">22%</td>
 </tr>
 <tr>
-<td align="left">10%</td>
-<td align="left">3</td>
+<td align="left">25</td>
+<td align="left">13.5%</td>
+<td align="left">35.5%</td>
 </tr>
 <tr>
-<td align="left">25%</td>
-<td align="left">13</td>
+<td align="left">50</td>
+<td align="left">13.3%</td>
+<td align="left">48.8%</td>
 </tr>
 <tr>
-<td align="left">50%</td>
-<td align="left">53</td>
+<td align="left">100</td>
+<td align="left">15.3%</td>
+<td align="left">64.2%</td>
 </tr>
 <tr>
-<td align="left">75%</td>
-<td align="left">160</td>
+<td align="left">250</td>
+<td align="left">20.5%</td>
+<td align="left">84.7%</td>
 </tr>
 <tr>
-<td align="left">90%</td>
-<td align="left">333</td>
+<td align="left">500</td>
+<td align="left">10.7%</td>
+<td align="left">95.4%</td>
 </tr>
 <tr>
-<td align="left">100%</td>
-<td align="left">16694</td>
+<td align="left">750</td>
+<td align="left">2.94%</td>
+<td align="left">98.4%</td>
+</tr>
+<tr>
+<td align="left">1 000</td>
+<td align="left">0.96%</td>
+<td align="left">99.3%</td>
 </tr>
 </tbody>
 </table>
@@ -842,12 +859,371 @@
     </div>
 </div>
 <h2 id="player-wr-distribution">Player WR distribution</h2>
-<p>The following graph shows a histogram of players (y-axis) with certain WR during the update 6.0 (x-axis). This graph includes all the players who have played during the update, even a single game. Therefore there are peaks around 25%, 33%, 50%, 67% and 75% and players with 0% or 100% WR</p>
-<p><img src="figure/fig_tier_player_WR_histogram-1.png" alt="plot of chunk fig_tier_player_WR_histogram"></p>
+<p>The following graph shows a histogram of players (y-axis) with certain WR during the update 6.0 (x-axis). This graph includes all the players who have played more than 40 battles during the update. Therefore there are peaks around 25%, 33%, 50%, 67% and 75% and players with 0% or 100% WR.</p>
+<p><img src="figure/fig_tier_player_WR_histogram-1.svg" alt="plot of chunk fig_tier_player_WR_histogram"></p>
+<h3 id="player-wr-distribution-all-players">Player WR distribution (all players)</h3>
+<p>The following graph shows a histogram of players (y-axis) with certain WR during the update 6.0 (x-axis). This graph includes all the players who have played during the update, even a single game. Therefore there are peaks around 25%, 33%, 50%, 67% and 75% and players with 0% or 100% WR.</p>
+<p><img src="figure/fig_tier_player_WR_histogram_unfiltered-1.svg" alt="plot of chunk fig_tier_player_WR_histogram_unfiltered"></p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Show table
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <table>
+<thead>
+<tr>
+<th align="left">WR</th>
+<th align="left">Share %</th>
+<th align="left">Cumulative share %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">20%</td>
+<td align="left">0%</td>
+<td align="left">0.01%</td>
+</tr>
+<tr>
+<td align="left">21%</td>
+<td align="left">0.01%</td>
+<td align="left">0.01%</td>
+</tr>
+<tr>
+<td align="left">22%</td>
+<td align="left">0.02%</td>
+<td align="left">0.03%</td>
+</tr>
+<tr>
+<td align="left">23%</td>
+<td align="left">0.01%</td>
+<td align="left">0.05%</td>
+</tr>
+<tr>
+<td align="left">24%</td>
+<td align="left">0.03%</td>
+<td align="left">0.07%</td>
+</tr>
+<tr>
+<td align="left">25%</td>
+<td align="left">0.03%</td>
+<td align="left">0.11%</td>
+</tr>
+<tr>
+<td align="left">26%</td>
+<td align="left">0.05%</td>
+<td align="left">0.15%</td>
+</tr>
+<tr>
+<td align="left">27%</td>
+<td align="left">0.08%</td>
+<td align="left">0.23%</td>
+</tr>
+<tr>
+<td align="left">28%</td>
+<td align="left">0.1%</td>
+<td align="left">0.33%</td>
+</tr>
+<tr>
+<td align="left">29%</td>
+<td align="left">0.13%</td>
+<td align="left">0.46%</td>
+</tr>
+<tr>
+<td align="left">30%</td>
+<td align="left">0.18%</td>
+<td align="left">0.64%</td>
+</tr>
+<tr>
+<td align="left">31%</td>
+<td align="left">0.23%</td>
+<td align="left">0.87%</td>
+</tr>
+<tr>
+<td align="left">32%</td>
+<td align="left">0.33%</td>
+<td align="left">1.2%</td>
+</tr>
+<tr>
+<td align="left">33%</td>
+<td align="left">0.44%</td>
+<td align="left">1.64%</td>
+</tr>
+<tr>
+<td align="left">34%</td>
+<td align="left">0.52%</td>
+<td align="left">2.16%</td>
+</tr>
+<tr>
+<td align="left">35%</td>
+<td align="left">0.76%</td>
+<td align="left">2.92%</td>
+</tr>
+<tr>
+<td align="left">36%</td>
+<td align="left">0.94%</td>
+<td align="left">3.87%</td>
+</tr>
+<tr>
+<td align="left">37%</td>
+<td align="left">1.15%</td>
+<td align="left">5.02%</td>
+</tr>
+<tr>
+<td align="left">38%</td>
+<td align="left">1.38%</td>
+<td align="left">6.4%</td>
+</tr>
+<tr>
+<td align="left">39%</td>
+<td align="left">1.73%</td>
+<td align="left">8.12%</td>
+</tr>
+<tr>
+<td align="left">40%</td>
+<td align="left">2.41%</td>
+<td align="left">10.5%</td>
+</tr>
+<tr>
+<td align="left">41%</td>
+<td align="left">2.31%</td>
+<td align="left">12.8%</td>
+</tr>
+<tr>
+<td align="left">42%</td>
+<td align="left">3.04%</td>
+<td align="left">15.9%</td>
+</tr>
+<tr>
+<td align="left">43%</td>
+<td align="left">3.2%</td>
+<td align="left">19.1%</td>
+</tr>
+<tr>
+<td align="left">44%</td>
+<td align="left">3.9%</td>
+<td align="left">23%</td>
+</tr>
+<tr>
+<td align="left">45%</td>
+<td align="left">4.01%</td>
+<td align="left">27%</td>
+</tr>
+<tr>
+<td align="left">46%</td>
+<td align="left">4.32%</td>
+<td align="left">31.3%</td>
+</tr>
+<tr>
+<td align="left">47%</td>
+<td align="left">4.65%</td>
+<td align="left">36%</td>
+</tr>
+<tr>
+<td align="left">48%</td>
+<td align="left">5.08%</td>
+<td align="left">41%</td>
+</tr>
+<tr>
+<td align="left">49%</td>
+<td align="left">4.97%</td>
+<td align="left">46%</td>
+</tr>
+<tr>
+<td align="left">50%</td>
+<td align="left">6.02%</td>
+<td align="left">52%</td>
+</tr>
+<tr>
+<td align="left">51%</td>
+<td align="left">3.72%</td>
+<td align="left">55.8%</td>
+</tr>
+<tr>
+<td align="left">52%</td>
+<td align="left">4.82%</td>
+<td align="left">60.6%</td>
+</tr>
+<tr>
+<td align="left">53%</td>
+<td align="left">4.4%</td>
+<td align="left">65%</td>
+</tr>
+<tr>
+<td align="left">54%</td>
+<td align="left">4.48%</td>
+<td align="left">69.5%</td>
+</tr>
+<tr>
+<td align="left">55%</td>
+<td align="left">3.9%</td>
+<td align="left">73.4%</td>
+</tr>
+<tr>
+<td align="left">56%</td>
+<td align="left">3.6%</td>
+<td align="left">77%</td>
+</tr>
+<tr>
+<td align="left">57%</td>
+<td align="left">3.32%</td>
+<td align="left">80.3%</td>
+</tr>
+<tr>
+<td align="left">58%</td>
+<td align="left">3.01%</td>
+<td align="left">83.3%</td>
+</tr>
+<tr>
+<td align="left">59%</td>
+<td align="left">2.65%</td>
+<td align="left">85.9%</td>
+</tr>
+<tr>
+<td align="left">60%</td>
+<td align="left">2.44%</td>
+<td align="left">88.4%</td>
+</tr>
+<tr>
+<td align="left">61%</td>
+<td align="left">1.82%</td>
+<td align="left">90.2%</td>
+</tr>
+<tr>
+<td align="left">62%</td>
+<td align="left">1.75%</td>
+<td align="left">91.9%</td>
+</tr>
+<tr>
+<td align="left">63%</td>
+<td align="left">1.45%</td>
+<td align="left">93.4%</td>
+</tr>
+<tr>
+<td align="left">64%</td>
+<td align="left">1.34%</td>
+<td align="left">94.7%</td>
+</tr>
+<tr>
+<td align="left">65%</td>
+<td align="left">1.06%</td>
+<td align="left">95.8%</td>
+</tr>
+<tr>
+<td align="left">66%</td>
+<td align="left">0.87%</td>
+<td align="left">96.7%</td>
+</tr>
+<tr>
+<td align="left">67%</td>
+<td align="left">0.68%</td>
+<td align="left">97.3%</td>
+</tr>
+<tr>
+<td align="left">68%</td>
+<td align="left">0.62%</td>
+<td align="left">98%</td>
+</tr>
+<tr>
+<td align="left">69%</td>
+<td align="left">0.44%</td>
+<td align="left">98.4%</td>
+</tr>
+<tr>
+<td align="left">70%</td>
+<td align="left">0.42%</td>
+<td align="left">98.8%</td>
+</tr>
+<tr>
+<td align="left">71%</td>
+<td align="left">0.28%</td>
+<td align="left">99.1%</td>
+</tr>
+<tr>
+<td align="left">72%</td>
+<td align="left">0.21%</td>
+<td align="left">99.3%</td>
+</tr>
+<tr>
+<td align="left">73%</td>
+<td align="left">0.14%</td>
+<td align="left">99.5%</td>
+</tr>
+<tr>
+<td align="left">74%</td>
+<td align="left">0.16%</td>
+<td align="left">99.6%</td>
+</tr>
+<tr>
+<td align="left">75%</td>
+<td align="left">0.11%</td>
+<td align="left">99.7%</td>
+</tr>
+<tr>
+<td align="left">76%</td>
+<td align="left">0.07%</td>
+<td align="left">99.8%</td>
+</tr>
+<tr>
+<td align="left">77%</td>
+<td align="left">0.05%</td>
+<td align="left">99.8%</td>
+</tr>
+<tr>
+<td align="left">78%</td>
+<td align="left">0.03%</td>
+<td align="left">99.9%</td>
+</tr>
+<tr>
+<td align="left">79%</td>
+<td align="left">0.03%</td>
+<td align="left">99.9%</td>
+</tr>
+<tr>
+<td align="left">80%</td>
+<td align="left">0.03%</td>
+<td align="left">99.9%</td>
+</tr>
+<tr>
+<td align="left">81%</td>
+<td align="left">0.01%</td>
+<td align="left">100%</td>
+</tr>
+<tr>
+<td align="left">82%</td>
+<td align="left">0.02%</td>
+<td align="left">100%</td>
+</tr>
+<tr>
+<td align="left">83%</td>
+<td align="left">0.01%</td>
+<td align="left">100%</td>
+</tr>
+<tr>
+<td align="left">84%</td>
+<td align="left">0.01%</td>
+<td align="left">100%</td>
+</tr>
+<tr>
+<td align="left">85%</td>
+<td align="left">0%</td>
+<td align="left">100%</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
 <h2 id="share-of-battles-per-nation-per-vehicle-class">Share of Battles per Nation per Vehicle Class</h2>
 <p>This chart shows share of battles per nation per vehicle class at tier X.</p>
-<p><img src="figure/fig_tier_battles_nation_vehicle_class-1.png" alt="plot of chunk fig_tier_battles_nation_vehicle_class"></p>
-<p><img src="figure/fig_tier_WR_per_nation-1.png" alt="plot of chunk fig_tier_WR_per_nation"></p>
+<p><img src="figure/fig_tier_battles_nation_vehicle_class-1.svg" alt="plot of chunk fig_tier_battles_nation_vehicle_class"></p>
+<p><img src="figure/fig_tier_WR_per_nation-1.svg" alt="plot of chunk fig_tier_WR_per_nation"></p>
 
 
 
@@ -1109,19 +1485,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1594910567"></script>
-    <script src="/js/perfect-scrollbar.min.js?1594910567"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1594910567"></script>
-    <script src="/js/jquery.sticky.js?1594910567"></script>
-    <script src="/js/featherlight.min.js?1594910567"></script>
-    <script src="/js/highlight.pack.js?1594910567"></script>
+    <script src="/js/clipboard.min.js?1596929603"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596929603"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596929603"></script>
+    <script src="/js/jquery.sticky.js?1596929603"></script>
+    <script src="/js/featherlight.min.js?1596929603"></script>
+    <script src="/js/highlight.pack.js?1596929603"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1594910567"></script>
-    <script src="/js/learn.js?1594910567"></script>
-    <script src="/js/hugo-learn.js?1594910567"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596929603"></script>
+    <script src="/js/learn.js?1596929603"></script>
+    <script src="/js/hugo-learn.js?1596929603"></script>
 
-    <link href="/mermaid/mermaid.css?1594910567" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1594910567"></script>
+    <link href="/mermaid/mermaid.css?1596929603" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596929603"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

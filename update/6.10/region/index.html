@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.74.1" />
+    <meta name="generator" content="Hugo 0.74.3" />
     <meta name="description" content="Stats analysis of World Of Tanks Blitz">
 <meta name="author" content="Jylpah@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Stats by Region :: Home</title>
 
     
-    <link href="/css/nucleus.css?1594910567" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1594910567" rel="stylesheet">
-    <link href="/css/hybrid.css?1594910567" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1594910567" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1594910567" rel="stylesheet">
-    <link href="/css/auto-complete.css?1594910567" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1594910567" rel="stylesheet">
-    <link href="/css/theme.css?1594910567" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1594910567" rel="stylesheet">
+    <link href="/css/nucleus.css?1596929603" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596929603" rel="stylesheet">
+    <link href="/css/hybrid.css?1596929603" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596929603" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596929603" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596929603" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596929603" rel="stylesheet">
+    <link href="/css/theme.css?1596929603" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596929603" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1594910567" rel="stylesheet">
+    <link href="/css/theme-mine.css?1596929603" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1594910567"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596929603"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1594910567"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1594910567"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1596929603"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1596929603"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1594910567"></script>
+<script type="text/javascript" src="/js/search.js?1596929603"></script>
 
     
   </div>
@@ -498,11 +498,11 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://wotblitz.com"><i class='fas fa-snowplow'></i> WoT Blitz game site</a>
+                  <a class="padding" href="https://wotblitz.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/wg.png'></img> WoT Blitz game site</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
+                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
               </li>
           
               <li> 
@@ -600,6 +600,7 @@
     <li><a href="#number-of-players">Number of players</a></li>
     <li><a href="#wr-distribution">WR Distribution</a></li>
     <li><a href="#cumulative-distribution-function">Cumulative distribution function</a></li>
+    <li><a href="#popularity-of-tank-nations">Popularity of Tank Nations</a></li>
   </ul>
 </nav>
     </div>
@@ -633,20 +634,23 @@
 
 
 
-	<p>This page shows statistics per Blitz servers/regions (EU, NA, ASIA, Russia) <strong>during  update 6.10</strong>. Statistics for the Chinese server are not available via <a href="https://developers.wargaming.net/">WG API</a>.</p>
+	<p>This page shows statistics per Blitz servers/regions (EU, North America, Asia, Russia) <strong>during  update 6.10</strong>. Statistics for the Chinese server are not available via <a href="https://developers.wargaming.net/">WG API</a>.</p>
 <h2 id="number-of-players">Number of players</h2>
 <p>This graphs shows players by region <em>in the dataset</em> who have played at least one game. Please note, this does <strong>not</strong> mean all the players per server, but just those who have been recorded in the BlitzAnalysiz database.</p>
-<p><img src="../figure/fig_update_players_per_server-1.png" alt="Players per region"></p>
+<p><img src="figure/fig_region_players_per_server-1.svg" alt="plot of chunk fig_region_players_per_server"></p>
 <h2 id="wr-distribution">WR Distribution</h2>
 <p>This graph shows players&rsquo; overall WR distribution during update 6.10 on different regions.</p>
-<p><img src="figure/fig_region_WR_distribution-1.png" alt="plot of chunk fig_region_WR_distribution"></p>
+<p><img src="figure/fig_region_WR_distribution-1.svg" alt="plot of chunk fig_region_WR_distribution"></p>
 
 <div class="notices note" ><p>These graphs cannot be used to say <em>anything</em> about the skill-level differences between the servers. Instead, the graphs tell more about the player sampling per server. BlitzAnalysiz() database has relatively more players from EU and NA (com) servers vs. RU and Asia servers. In all the servers the players sampled are on average more active and better than the true player average due to the way how the player account_ids are being harvested.</p>
 </div>
 
 <h2 id="cumulative-distribution-function">Cumulative distribution function</h2>
 <p>This graphs shows the same information than the previous in different format. The curve tells how large share of players (y-axis) had WR less than (x-axis) during update 6.10.</p>
-<p><img src="figure/fig_region_WR_cum_distribution-1.png" alt="plot of chunk fig_region_WR_cum_distribution"></p>
+<p><img src="figure/fig_region_WR_cum_distribution-1.svg" alt="plot of chunk fig_region_WR_cum_distribution"></p>
+<h2 id="popularity-of-tank-nations">Popularity of Tank Nations</h2>
+<p>This graph shows the popularity of tank nations by region/server.</p>
+<p><img src="figure/fig_region_nations-1.svg" alt="plot of chunk fig_region_nations"></p>
 
 
 
@@ -908,19 +912,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1594910567"></script>
-    <script src="/js/perfect-scrollbar.min.js?1594910567"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1594910567"></script>
-    <script src="/js/jquery.sticky.js?1594910567"></script>
-    <script src="/js/featherlight.min.js?1594910567"></script>
-    <script src="/js/highlight.pack.js?1594910567"></script>
+    <script src="/js/clipboard.min.js?1596929603"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596929603"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596929603"></script>
+    <script src="/js/jquery.sticky.js?1596929603"></script>
+    <script src="/js/featherlight.min.js?1596929603"></script>
+    <script src="/js/highlight.pack.js?1596929603"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1594910567"></script>
-    <script src="/js/learn.js?1594910567"></script>
-    <script src="/js/hugo-learn.js?1594910567"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596929603"></script>
+    <script src="/js/learn.js?1596929603"></script>
+    <script src="/js/hugo-learn.js?1596929603"></script>
 
-    <link href="/mermaid/mermaid.css?1594910567" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1594910567"></script>
+    <link href="/mermaid/mermaid.css?1596929603" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596929603"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
