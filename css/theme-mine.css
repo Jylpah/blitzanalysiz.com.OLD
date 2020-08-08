@@ -42,10 +42,13 @@ h2, h3, h4, h5 {
 .hanchor { font-size: 50%; visibility: hidden; color:silver; margin-left: 0.3em;}
 h1:hover a, h2:hover a, h3:hover a, h4:hover a { visibility: visible}
 
-.fa-fw {
+.va-bl {
 	vertical-align: baseline;	
 }
 
+.va-bo {
+	vertical-align: text-bottom;	
+}
 a {
     color: var(--MAIN-LINK-color);
 }
@@ -165,7 +168,7 @@ ul.children {
 	flex-flow: row wrap;
 }
 .post_card {
-	width: 300px;
+	width: 100%;
 	margin-right: 30px;	
 }
 

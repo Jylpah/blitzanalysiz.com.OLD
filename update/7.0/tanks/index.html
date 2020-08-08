@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.74.1" />
+    <meta name="generator" content="Hugo 0.74.3" />
     <meta name="description" content="Stats analysis of World Of Tanks Blitz">
 <meta name="author" content="Jylpah@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tank stats :: Home</title>
 
     
-    <link href="/css/nucleus.css?1594910568" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1594910568" rel="stylesheet">
-    <link href="/css/hybrid.css?1594910568" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1594910568" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1594910568" rel="stylesheet">
-    <link href="/css/auto-complete.css?1594910568" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1594910568" rel="stylesheet">
-    <link href="/css/theme.css?1594910568" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1594910568" rel="stylesheet">
+    <link href="/css/nucleus.css?1596929604" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596929604" rel="stylesheet">
+    <link href="/css/hybrid.css?1596929604" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596929604" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596929604" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596929604" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596929604" rel="stylesheet">
+    <link href="/css/theme.css?1596929604" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596929604" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1594910568" rel="stylesheet">
+    <link href="/css/theme-mine.css?1596929604" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1594910568"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596929604"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1594910568"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1594910568"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1596929604"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1596929604"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1594910568"></script>
+<script type="text/javascript" src="/js/search.js?1596929604"></script>
 
     
   </div>
@@ -563,8 +563,6 @@
           
             
           
-            
-          
         
         </ul>
               
@@ -602,10 +600,6 @@
           
           
         
-          
-            
-          
-            
           
             
           
@@ -938,11 +932,11 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://wotblitz.com"><i class='fas fa-snowplow'></i> WoT Blitz game site</a>
+                  <a class="padding" href="https://wotblitz.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/wg.png'></img> WoT Blitz game site</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
+                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
               </li>
           
               <li> 
@@ -1154,11 +1148,12 @@
 <li>The players need to have 10-20 battles in a tank and 20-40 battles at the tier during the update.</li>
 <li><strong>Average WR</strong> is the players&rsquo;s average WR in the tank</li>
 <li><strong>Player WR at Tier</strong> is the average WR of the players of the tank at the tier. Since different tiers have different difficulty, it is more meaningful to compare players&rsquo; performance in the same tier tanks.</li>
+<li>Only tanks with more than 400 players are listed. This may filter out few upcoming tanks that are being tested.</li>
 </ul>
 
     </div>
 </div>
-<p><img src="figure/fig_tanks_all_Relative_WR_topN-1.png" alt="plot of chunk fig_tanks_all_Relative_WR_topN"></p>
+<p><img src="figure/fig_tanks_all_Relative_WR_topN-1.svg" alt="plot of chunk fig_tanks_all_Relative_WR_topN"></p>
 <h4 id="highest-relative-wr---table">Highest Relative WR - Table</h4>
 
 <div class="expand">
@@ -1176,193 +1171,193 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Relative WR</th>
-<th align="right">Average WR</th>
-<th align="right">Player WR at Tier</th>
-<th align="right">Players</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Relative WR</th>
+<th align="left">Average WR</th>
+<th align="left">Player WR at Tier</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">Object 252U</td>
-<td align="right">3.0</td>
-<td align="right">59.0</td>
-<td align="right">56.0</td>
-<td align="right">4679</td>
-<td align="right">75</td>
+<td align="left">2.98%</td>
+<td align="left">59%</td>
+<td align="left">56%</td>
+<td align="left">4 679</td>
+<td align="left">75</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T28 Concept</td>
-<td align="right">2.8</td>
-<td align="right">56.2</td>
-<td align="right">53.4</td>
-<td align="right">2607</td>
-<td align="right">54</td>
+<td align="left">2.83%</td>
+<td align="left">56.2%</td>
+<td align="left">53.4%</td>
+<td align="left">2 607</td>
+<td align="left">54</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Chimera</td>
-<td align="right">2.8</td>
-<td align="right">60.6</td>
-<td align="right">57.8</td>
-<td align="right">2895</td>
-<td align="right">86</td>
+<td align="left">2.82%</td>
+<td align="left">60.6%</td>
+<td align="left">57.8%</td>
+<td align="left">2 895</td>
+<td align="left">86</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">VK 168.01 (P)</td>
-<td align="right">2.3</td>
-<td align="right">53.3</td>
-<td align="right">51.0</td>
-<td align="right">432</td>
-<td align="right">57</td>
+<td align="left">2.29%</td>
+<td align="left">53.3%</td>
+<td align="left">51%</td>
+<td align="left">432</td>
+<td align="left">57</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Maus</td>
-<td align="right">2.3</td>
-<td align="right">55.8</td>
-<td align="right">53.5</td>
-<td align="right">2600</td>
-<td align="right">62</td>
+<td align="left">2.27%</td>
+<td align="left">55.8%</td>
+<td align="left">53.5%</td>
+<td align="left">2 600</td>
+<td align="left">62</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">E 75 TS</td>
-<td align="right">2.2</td>
-<td align="right">56.7</td>
-<td align="right">54.5</td>
-<td align="right">1124</td>
-<td align="right">53</td>
+<td align="left">2.24%</td>
+<td align="left">56.7%</td>
+<td align="left">54.5%</td>
+<td align="left">1 124</td>
+<td align="left">53</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T-150</td>
-<td align="right">2.1</td>
-<td align="right">55.6</td>
-<td align="right">53.4</td>
-<td align="right">434</td>
-<td align="right">59</td>
+<td align="left">2.15%</td>
+<td align="left">55.6%</td>
+<td align="left">53.4%</td>
+<td align="left">434</td>
+<td align="left">59</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">WZ-112-2</td>
-<td align="right">2.1</td>
-<td align="right">57.7</td>
-<td align="right">55.6</td>
-<td align="right">902</td>
-<td align="right">58</td>
+<td align="left">2.13%</td>
+<td align="left">57.7%</td>
+<td align="left">55.6%</td>
+<td align="left">902</td>
+<td align="left">58</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">WZ-120-1G FT</td>
-<td align="right">2.0</td>
-<td align="right">58.0</td>
-<td align="right">56.1</td>
-<td align="right">3938</td>
-<td align="right">81</td>
+<td align="left">1.96%</td>
+<td align="left">58%</td>
+<td align="left">56.1%</td>
+<td align="left">3 938</td>
+<td align="left">81</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">IS-4</td>
-<td align="right">2.0</td>
-<td align="right">54.7</td>
-<td align="right">52.8</td>
-<td align="right">5228</td>
-<td align="right">71</td>
+<td align="left">1.95%</td>
+<td align="left">54.7%</td>
+<td align="left">52.8%</td>
+<td align="left">5 228</td>
+<td align="left">71</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Defender Mk. 1</td>
-<td align="right">1.9</td>
-<td align="right">56.3</td>
-<td align="right">54.4</td>
-<td align="right">563</td>
-<td align="right">63</td>
+<td align="left">1.95%</td>
+<td align="left">56.3%</td>
+<td align="left">54.4%</td>
+<td align="left">563</td>
+<td align="left">63</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">BDR G1 B</td>
-<td align="right">1.9</td>
-<td align="right">54.7</td>
-<td align="right">52.8</td>
-<td align="right">4518</td>
-<td align="right">66</td>
+<td align="left">1.89%</td>
+<td align="left">54.7%</td>
+<td align="left">52.8%</td>
+<td align="left">4 518</td>
+<td align="left">66</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Lupus</td>
-<td align="right">1.9</td>
-<td align="right">57.0</td>
-<td align="right">55.2</td>
-<td align="right">443</td>
-<td align="right">59</td>
+<td align="left">1.85%</td>
+<td align="left">57%</td>
+<td align="left">55.2%</td>
+<td align="left">443</td>
+<td align="left">59</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. III</td>
-<td align="right">1.8</td>
-<td align="right">56.7</td>
-<td align="right">54.9</td>
-<td align="right">3232</td>
-<td align="right">69</td>
+<td align="left">1.78%</td>
+<td align="left">56.7%</td>
+<td align="left">54.9%</td>
+<td align="left">3 232</td>
+<td align="left">69</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T26E5</td>
-<td align="right">1.7</td>
-<td align="right">56.3</td>
-<td align="right">54.5</td>
-<td align="right">1292</td>
-<td align="right">53</td>
+<td align="left">1.73%</td>
+<td align="left">56.3%</td>
+<td align="left">54.5%</td>
+<td align="left">1 292</td>
+<td align="left">53</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Gravedigger</td>
-<td align="right">1.7</td>
-<td align="right">55.2</td>
-<td align="right">53.5</td>
-<td align="right">1233</td>
-<td align="right">60</td>
+<td align="left">1.72%</td>
+<td align="left">55.2%</td>
+<td align="left">53.5%</td>
+<td align="left">1 233</td>
+<td align="left">60</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Churchill Mk. VI</td>
-<td align="right">1.7</td>
-<td align="right">54.5</td>
-<td align="right">52.8</td>
-<td align="right">808</td>
-<td align="right">62</td>
+<td align="left">1.71%</td>
+<td align="left">54.5%</td>
+<td align="left">52.8%</td>
+<td align="left">808</td>
+<td align="left">62</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T-22 medium</td>
-<td align="right">1.7</td>
-<td align="right">57.6</td>
-<td align="right">55.9</td>
-<td align="right">1407</td>
-<td align="right">58</td>
+<td align="left">1.7%</td>
+<td align="left">57.6%</td>
+<td align="left">55.9%</td>
+<td align="left">1 407</td>
+<td align="left">58</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T28 Defender</td>
-<td align="right">1.6</td>
-<td align="right">54.7</td>
-<td align="right">53.0</td>
-<td align="right">4161</td>
-<td align="right">70</td>
+<td align="left">1.65%</td>
+<td align="left">54.7%</td>
+<td align="left">53%</td>
+<td align="left">4 161</td>
+<td align="left">70</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">AMX M4 mle. 49</td>
-<td align="right">1.6</td>
-<td align="right">58.5</td>
-<td align="right">56.9</td>
-<td align="right">2201</td>
-<td align="right">59</td>
+<td align="left">1.64%</td>
+<td align="left">58.5%</td>
+<td align="left">56.9%</td>
+<td align="left">2 201</td>
+<td align="left">59</td>
 <td align="left">Premium</td>
 </tr>
 </tbody>
@@ -1393,9 +1388,9 @@
 
     </div>
 </div>
-<p><img src="figure/fig_tanks_all_WR_topN-1.png" alt="plot of chunk fig_tanks_all_WR_topN"></p>
+<p><img src="figure/fig_tanks_all_WR_topN-1.svg" alt="plot of chunk fig_tanks_all_WR_topN"></p>
 <h4 id="highest-average-wr---table">Highest Average WR - Table</h4>
-<p><strong>Average WR</strong> denotes average WR in a tank accross all the players during the update. <strong>Player WR</strong> denotes the tank&rsquo;s players&rsquo; average WR accross all the tanks during the update.</p>
+<p><strong>Average WR</strong> denotes average WR in a tank across all the players during the update. <strong>Player WR</strong> denotes the tank&rsquo;s players&rsquo; average WR across all the tanks during the update.</p>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -1412,172 +1407,172 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Average WR</th>
-<th align="right">Player WR</th>
-<th align="right">Players</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Average WR</th>
+<th align="left">Player WR</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">Pz.Kpfw. B2 740 (f)</td>
-<td align="right">61.3</td>
-<td align="right">54.1</td>
-<td align="right">832</td>
-<td align="right">63</td>
+<td align="left">61.3%</td>
+<td align="left">54.1%</td>
+<td align="left">832</td>
+<td align="left">63</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Smasher</td>
-<td align="right">61.2</td>
-<td align="right">55.9</td>
-<td align="right">4052</td>
-<td align="right">104</td>
+<td align="left">61.2%</td>
+<td align="left">55.9%</td>
+<td align="left">4 052</td>
+<td align="left">104</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Chimera</td>
-<td align="right">60.6</td>
-<td align="right">56.1</td>
-<td align="right">2976</td>
-<td align="right">85</td>
+<td align="left">60.6%</td>
+<td align="left">56.1%</td>
+<td align="left">2 976</td>
+<td align="left">85</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T6 Dracula</td>
-<td align="right">60.0</td>
-<td align="right">55.6</td>
-<td align="right">4184</td>
-<td align="right">73</td>
+<td align="left">60%</td>
+<td align="left">55.6%</td>
+<td align="left">4 184</td>
+<td align="left">73</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">LT vz. 38</td>
-<td align="right">59.6</td>
-<td align="right">51.1</td>
-<td align="right">884</td>
-<td align="right">45</td>
+<td align="left">59.6%</td>
+<td align="left">51.1%</td>
+<td align="left">884</td>
+<td align="left">45</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
+<td align="left">Vickers Light 105</td>
+<td align="left">59.4%</td>
+<td align="left">61.3%</td>
+<td align="left">779</td>
+<td align="left">247</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Vickers Cruiser</td>
-<td align="right">59.4</td>
-<td align="right">57.3</td>
-<td align="right">2220</td>
-<td align="right">201</td>
+<td align="left">59.4%</td>
+<td align="left">57.3%</td>
+<td align="left">2 220</td>
+<td align="left">201</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">BT-2</td>
-<td align="right">59.0</td>
-<td align="right">50.8</td>
-<td align="right">1291</td>
-<td align="right">48</td>
+<td align="left">59%</td>
+<td align="left">50.8%</td>
+<td align="left">1 291</td>
+<td align="left">48</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Object 252U</td>
-<td align="right">58.9</td>
-<td align="right">54.4</td>
-<td align="right">4930</td>
-<td align="right">75</td>
+<td align="left">58.9%</td>
+<td align="left">54.4%</td>
+<td align="left">4 930</td>
+<td align="left">75</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Progetto M35 mod. 46</td>
-<td align="right">58.7</td>
-<td align="right">56.5</td>
-<td align="right">3546</td>
-<td align="right">70</td>
+<td align="left">58.7%</td>
+<td align="left">56.5%</td>
+<td align="left">3 546</td>
+<td align="left">70</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">AMX M4 mle. 49</td>
-<td align="right">58.6</td>
-<td align="right">55.7</td>
-<td align="right">2274</td>
-<td align="right">59</td>
+<td align="left">58.6%</td>
+<td align="left">55.7%</td>
+<td align="left">2 274</td>
+<td align="left">59</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Type 62</td>
-<td align="right">58.4</td>
-<td align="right">55.3</td>
-<td align="right">3392</td>
-<td align="right">56</td>
+<td align="left">58.4%</td>
+<td align="left">55.3%</td>
+<td align="left">3 392</td>
+<td align="left">56</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Durchbruchswagen 2</td>
-<td align="right">58.3</td>
-<td align="right">51.9</td>
-<td align="right">874</td>
-<td align="right">64</td>
+<td align="left">58.3%</td>
+<td align="left">51.9%</td>
+<td align="left">874</td>
+<td align="left">64</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T-26</td>
-<td align="right">58.0</td>
-<td align="right">50.2</td>
-<td align="right">1059</td>
-<td align="right">42</td>
+<td align="left">58%</td>
+<td align="left">50.2%</td>
+<td align="left">1 059</td>
+<td align="left">42</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">WZ-120-1G FT</td>
-<td align="right">57.9</td>
-<td align="right">54.6</td>
-<td align="right">4232</td>
-<td align="right">80</td>
+<td align="left">57.9%</td>
+<td align="left">54.6%</td>
+<td align="left">4 232</td>
+<td align="left">80</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">AMX 30 1er prototype</td>
-<td align="right">57.8</td>
-<td align="right">56.6</td>
-<td align="right">2036</td>
-<td align="right">51</td>
+<td align="left">57.8%</td>
+<td align="left">56.6%</td>
+<td align="left">2 036</td>
+<td align="left">51</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">WZ-112-2</td>
-<td align="right">57.7</td>
-<td align="right">54.3</td>
-<td align="right">940</td>
-<td align="right">58</td>
+<td align="left">57.7%</td>
+<td align="left">54.3%</td>
+<td align="left">940</td>
+<td align="left">58</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">M4A1 Revalorisé</td>
-<td align="right">57.6</td>
-<td align="right">56.2</td>
-<td align="right">3223</td>
-<td align="right">52</td>
+<td align="left">57.6%</td>
+<td align="left">56.2%</td>
+<td align="left">3 223</td>
+<td align="left">52</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Type 95 Ha-Go</td>
-<td align="right">57.4</td>
-<td align="right">50.0</td>
-<td align="right">438</td>
-<td align="right">35</td>
+<td align="left">57.4%</td>
+<td align="left">50%</td>
+<td align="left">438</td>
+<td align="left">35</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Cromwell B</td>
-<td align="right">57.4</td>
-<td align="right">53.6</td>
-<td align="right">3466</td>
-<td align="right">57</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Caernarvon Action X</td>
-<td align="right">57.4</td>
-<td align="right">54.6</td>
-<td align="right">4218</td>
-<td align="right">69</td>
+<td align="left">57.4%</td>
+<td align="left">53.6%</td>
+<td align="left">3 466</td>
+<td align="left">57</td>
 <td align="left">Premium</td>
 </tr>
 </tbody>
@@ -1587,7 +1582,7 @@
 </div>
 <h2 id="highest-average-damage-tier-for-tier">Highest Average Damage (tier-for-tier)</h2>
 <p>This graph shows the tanks with the highest average damage vs tier average during update 7.0. For the overall highest average damage chart, please see <a href="10/#highest-average-damage">Tier X Average Damage rankings</a>.</p>
-<p><img src="figure/fig_tanks_all_avg_dmg_highest-1.png" alt="plot of chunk fig_tanks_all_avg_dmg_highest"></p>
+<p><img src="figure/fig_tanks_all_avg_dmg_highest-1.svg" alt="plot of chunk fig_tanks_all_avg_dmg_highest"></p>
 <h4 id="highest-average-damage-tier-for-tier---table">Highest Average Damage (tier-for-tier) - Table</h4>
 
 <div class="expand">
@@ -1605,10 +1600,10 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Damage/Tier Average</th>
-<th align="right">Average WR</th>
+<th align="left">Damage/Tier Average %</th>
+<th align="left">Average WR</th>
 <th align="right">Average Damage</th>
-<th align="right">Players</th>
+<th align="left">Players</th>
 <th align="right">Tier</th>
 <th align="left">Vehicle Class</th>
 <th align="left">Tank type</th>
@@ -1617,202 +1612,202 @@
 <tbody>
 <tr>
 <td align="left">Type 98 Ke-Ni Otsu</td>
-<td align="right">62.95</td>
-<td align="right">64.48</td>
+<td align="left">63%</td>
+<td align="left">64.5%</td>
 <td align="right">625</td>
-<td align="right">604</td>
+<td align="left">604</td>
 <td align="right">3</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Smasher</td>
-<td align="right">49.78</td>
-<td align="right">60.59</td>
+<td align="left">49.8%</td>
+<td align="left">60.6%</td>
 <td align="right">1595</td>
-<td align="right">10054</td>
+<td align="left">10 054</td>
 <td align="right">7</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Type 98 Ke-Ni</td>
-<td align="right">46.27</td>
-<td align="right">62.45</td>
+<td align="left">46.3%</td>
+<td align="left">62.4%</td>
 <td align="right">561</td>
-<td align="right">1433</td>
+<td align="left">1 433</td>
 <td align="right">3</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. B2 740 (f)</td>
-<td align="right">38.26</td>
-<td align="right">60.32</td>
+<td align="left">38.3%</td>
+<td align="left">60.3%</td>
 <td align="right">595</td>
-<td align="right">5091</td>
+<td align="left">5 091</td>
 <td align="right">4</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Durchbruchswagen 2</td>
-<td align="right">34.54</td>
-<td align="right">58.97</td>
+<td align="left">34.5%</td>
+<td align="left">59%</td>
 <td align="right">579</td>
-<td align="right">5175</td>
+<td align="left">5 175</td>
 <td align="right">4</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T6E1</td>
-<td align="right">31.99</td>
-<td align="right">59.05</td>
+<td align="left">32%</td>
+<td align="left">59%</td>
 <td align="right">568</td>
-<td align="right">4946</td>
+<td align="left">4 946</td>
 <td align="right">4</td>
 <td align="left">Medium Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">AMX M4 mle. 49</td>
-<td align="right">31.88</td>
-<td align="right">60.34</td>
+<td align="left">31.9%</td>
+<td align="left">60.3%</td>
 <td align="right">1734</td>
-<td align="right">9774</td>
+<td align="left">9 774</td>
 <td align="right">8</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Vickers Cruiser</td>
-<td align="right">31.27</td>
-<td align="right">59.37</td>
+<td align="left">31.3%</td>
+<td align="left">59.4%</td>
 <td align="right">2026</td>
-<td align="right">2220</td>
+<td align="left">2 220</td>
 <td align="right">9</td>
 <td align="left">Light Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Chimera</td>
-<td align="right">30.81</td>
-<td align="right">59.85</td>
+<td align="left">30.8%</td>
+<td align="left">59.8%</td>
 <td align="right">1720</td>
-<td align="right">7542</td>
+<td align="left">7 542</td>
 <td align="right">8</td>
 <td align="left">Medium Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">WZ-120-1G FT</td>
-<td align="right">29.82</td>
-<td align="right">59.41</td>
+<td align="left">29.8%</td>
+<td align="left">59.4%</td>
 <td align="right">1707</td>
-<td align="right">12911</td>
+<td align="left">12 911</td>
 <td align="right">8</td>
 <td align="left">Tank Destroyer</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Object 252U</td>
-<td align="right">29.60</td>
-<td align="right">59.43</td>
+<td align="left">29.6%</td>
+<td align="left">59.4%</td>
 <td align="right">1704</td>
-<td align="right">15716</td>
+<td align="left">15 716</td>
 <td align="right">8</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Lupus</td>
-<td align="right">28.74</td>
-<td align="right">61.12</td>
+<td align="left">28.7%</td>
+<td align="left">61.1%</td>
 <td align="right">1371</td>
-<td align="right">6332</td>
+<td align="left">6 332</td>
 <td align="right">7</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
+<td align="left">Vickers Light 105</td>
+<td align="left">28.7%</td>
+<td align="left">59.4%</td>
+<td align="right">2514</td>
+<td align="left">780</td>
+<td align="right">10</td>
+<td align="left">Light Tank</td>
+<td align="left">Researchable</td>
+</tr>
+<tr>
 <td align="left">Lycan</td>
-<td align="right">26.58</td>
-<td align="right">57.59</td>
+<td align="left">26.6%</td>
+<td align="left">57.6%</td>
 <td align="right">1348</td>
-<td align="right">19771</td>
+<td align="left">19 771</td>
 <td align="right">7</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Excelsior</td>
-<td align="right">25.31</td>
-<td align="right">56.15</td>
+<td align="left">25.3%</td>
+<td align="left">56.2%</td>
 <td align="right">758</td>
-<td align="right">15929</td>
+<td align="left">15 929</td>
 <td align="right">5</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Type 5 Ke-Ho</td>
-<td align="right">25.25</td>
-<td align="right">61.95</td>
+<td align="left">25.2%</td>
+<td align="left">62%</td>
 <td align="right">539</td>
-<td align="right">811</td>
+<td align="left">811</td>
 <td align="right">4</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">ARL 44</td>
-<td align="right">24.78</td>
-<td align="right">56.08</td>
+<td align="left">24.8%</td>
+<td align="left">56.1%</td>
 <td align="right">1091</td>
-<td align="right">38423</td>
+<td align="left">38 423</td>
 <td align="right">6</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Nameless</td>
-<td align="right">24.52</td>
-<td align="right">60.28</td>
+<td align="left">24.5%</td>
+<td align="left">60.3%</td>
 <td align="right">1326</td>
-<td align="right">3952</td>
+<td align="left">3 952</td>
 <td align="right">7</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Großtraktor - Krupp</td>
-<td align="right">24.10</td>
-<td align="right">53.61</td>
+<td align="left">24.1%</td>
+<td align="left">53.6%</td>
 <td align="right">476</td>
-<td align="right">2265</td>
+<td align="left">2 265</td>
 <td align="right">3</td>
 <td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Helsing H0</td>
-<td align="right">24.05</td>
-<td align="right">58.44</td>
+<td align="left">24%</td>
+<td align="left">58.4%</td>
 <td align="right">1321</td>
-<td align="right">23096</td>
+<td align="left">23 096</td>
 <td align="right">7</td>
 <td align="left">Tank Destroyer</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Tankenstein</td>
-<td align="right">24.05</td>
-<td align="right">58.44</td>
-<td align="right">1321</td>
-<td align="right">11104</td>
-<td align="right">7</td>
-<td align="left">Heavy Tank</td>
 <td align="left">Premium</td>
 </tr>
 </tbody>
@@ -1821,7 +1816,7 @@
     </div>
 </div>
 <h2 id="highest-spot-rate">Highest Spot Rate</h2>
-<p><img src="figure/fig_tanks_all_spot_rate_topN-1.png" alt="plot of chunk fig_tanks_all_spot_rate_topN"></p>
+<p><img src="figure/fig_tanks_all_spot_rate_topN-1.svg" alt="plot of chunk fig_tanks_all_spot_rate_topN"></p>
 <h4 id="highest-spot-rate---table">Highest Spot Rate - Table</h4>
 
 <div class="expand">
@@ -1840,192 +1835,192 @@
 <tr>
 <th align="left">Tank</th>
 <th align="right">Spot Rate</th>
-<th align="right">Average WR</th>
-<th align="right">Player WR</th>
-<th align="right">Players</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Average WR</th>
+<th align="left">Player WR</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">Vickers Light 105</td>
-<td align="right">2.14</td>
-<td align="right">55.32</td>
-<td align="right">58.58</td>
-<td align="right">9389</td>
-<td align="right">57</td>
-<td align="left">Premium</td>
+<td align="right">2.40</td>
+<td align="left">59.4%</td>
+<td align="left">61.3%</td>
+<td align="left">780</td>
+<td align="left">246</td>
+<td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T6 Dracula</td>
 <td align="right">2.12</td>
-<td align="right">59.27</td>
-<td align="right">54.75</td>
-<td align="right">19572</td>
-<td align="right">20</td>
+<td align="left">59.3%</td>
+<td align="left">54.8%</td>
+<td align="left">19 572</td>
+<td align="left">20</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">LTTB</td>
 <td align="right">2.01</td>
-<td align="right">53.55</td>
-<td align="right">51.25</td>
-<td align="right">33142</td>
-<td align="right">22</td>
+<td align="left">53.6%</td>
+<td align="left">51.3%</td>
+<td align="left">33 142</td>
+<td align="left">22</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">leKpz M 41 90 mm</td>
 <td align="right">1.94</td>
-<td align="right">52.54</td>
-<td align="right">55.12</td>
-<td align="right">15053</td>
-<td align="right">19</td>
+<td align="left">52.5%</td>
+<td align="left">55.1%</td>
+<td align="left">15 053</td>
+<td align="left">19</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Cromwell B</td>
 <td align="right">1.93</td>
-<td align="right">57.77</td>
-<td align="right">53.44</td>
-<td align="right">26768</td>
-<td align="right">12</td>
+<td align="left">57.8%</td>
+<td align="left">53.4%</td>
+<td align="left">26 768</td>
+<td align="left">12</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Type 62</td>
 <td align="right">1.92</td>
-<td align="right">58.06</td>
-<td align="right">54.66</td>
-<td align="right">23064</td>
-<td align="right">13</td>
+<td align="left">58.1%</td>
+<td align="left">54.7%</td>
+<td align="left">23 064</td>
+<td align="left">13</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">AMX Chasseur de chars</td>
 <td align="right">1.92</td>
-<td align="right">55.23</td>
-<td align="right">54.41</td>
-<td align="right">26771</td>
-<td align="right">13</td>
+<td align="left">55.2%</td>
+<td align="left">54.4%</td>
+<td align="left">26 771</td>
+<td align="left">13</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">AMX 30 B</td>
 <td align="right">1.92</td>
-<td align="right">53.36</td>
-<td align="right">54.92</td>
-<td align="right">9225</td>
-<td align="right">15</td>
+<td align="left">53.4%</td>
+<td align="left">54.9%</td>
+<td align="left">9 225</td>
+<td align="left">15</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">XM551 Sheridan</td>
 <td align="right">1.90</td>
-<td align="right">51.52</td>
-<td align="right">55.44</td>
-<td align="right">20299</td>
-<td align="right">59</td>
+<td align="left">51.5%</td>
+<td align="left">55.4%</td>
+<td align="left">20 299</td>
+<td align="left">59</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">AMX ELC bis</td>
 <td align="right">1.87</td>
-<td align="right">53.00</td>
-<td align="right">50.02</td>
-<td align="right">15662</td>
-<td align="right">15</td>
+<td align="left">53%</td>
+<td align="left">50%</td>
+<td align="left">15 662</td>
+<td align="left">15</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. II Luchs</td>
 <td align="right">1.85</td>
-<td align="right">53.93</td>
-<td align="right">50.66</td>
-<td align="right">2195</td>
-<td align="right">7</td>
+<td align="left">53.9%</td>
+<td align="left">50.7%</td>
+<td align="left">2 195</td>
+<td align="left">7</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">FV301</td>
 <td align="right">1.85</td>
-<td align="right">53.83</td>
-<td align="right">55.67</td>
-<td align="right">6135</td>
-<td align="right">125</td>
+<td align="left">53.8%</td>
+<td align="left">55.7%</td>
+<td align="left">6 135</td>
+<td align="left">125</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Vickers Cruiser</td>
 <td align="right">1.85</td>
-<td align="right">59.37</td>
-<td align="right">57.33</td>
-<td align="right">2220</td>
-<td align="right">201</td>
+<td align="left">59.4%</td>
+<td align="left">57.3%</td>
+<td align="left">2 220</td>
+<td align="left">201</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Bat.-Châtillon 25 t</td>
 <td align="right">1.84</td>
-<td align="right">52.04</td>
-<td align="right">54.90</td>
-<td align="right">20641</td>
-<td align="right">23</td>
+<td align="left">52%</td>
+<td align="left">54.9%</td>
+<td align="left">20 641</td>
+<td align="left">23</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">AMX 30 1er prototype</td>
 <td align="right">1.83</td>
-<td align="right">57.52</td>
-<td align="right">55.71</td>
-<td align="right">11147</td>
-<td align="right">14</td>
+<td align="left">57.5%</td>
+<td align="left">55.7%</td>
+<td align="left">11 147</td>
+<td align="left">14</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">M22 Locust</td>
 <td align="right">1.83</td>
-<td align="right">54.50</td>
-<td align="right">50.55</td>
-<td align="right">1412</td>
-<td align="right">5</td>
+<td align="left">54.5%</td>
+<td align="left">50.6%</td>
+<td align="left">1 412</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">VK 28.01</td>
 <td align="right">1.83</td>
-<td align="right">54.97</td>
-<td align="right">50.85</td>
-<td align="right">28585</td>
-<td align="right">22</td>
+<td align="left">55%</td>
+<td align="left">50.9%</td>
+<td align="left">28 585</td>
+<td align="left">22</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Spähpanzer Ru 251</td>
 <td align="right">1.80</td>
-<td align="right">51.95</td>
-<td align="right">51.99</td>
-<td align="right">23195</td>
-<td align="right">19</td>
+<td align="left">52%</td>
+<td align="left">52%</td>
+<td align="left">23 195</td>
+<td align="left">19</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Type 64</td>
 <td align="right">1.78</td>
-<td align="right">52.96</td>
-<td align="right">51.42</td>
-<td align="right">36717</td>
-<td align="right">11</td>
+<td align="left">53%</td>
+<td align="left">51.4%</td>
+<td align="left">36 717</td>
+<td align="left">11</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T-15</td>
 <td align="right">1.77</td>
-<td align="right">50.65</td>
-<td align="right">49.26</td>
-<td align="right">3604</td>
-<td align="right">5</td>
+<td align="left">50.6%</td>
+<td align="left">49.3%</td>
+<td align="left">3 604</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 </tbody>
@@ -2035,7 +2030,7 @@
 </div>
 <h2 id="most-played-tanks-players">Most played tanks (Players)</h2>
 <p>This graph shows the most played tanks by players during the update 7.0.</p>
-<p><img src="figure/fig_tanks_all_most_played_players-1.png" alt="plot of chunk fig_tanks_all_most_played_players"></p>
+<p><img src="figure/fig_tanks_all_most_played_players-1.svg" alt="plot of chunk fig_tanks_all_most_played_players"></p>
 <h3 id="most-played-tanks-players--table">Most Played Tanks (Players)- Table</h3>
 
 <div class="expand">
@@ -2053,151 +2048,151 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Players</th>
-<th align="right">Average WR</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Players</th>
+<th align="left">Average WR</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">P.43/06 anniversario</td>
-<td align="right">149110</td>
-<td align="right">52.6</td>
-<td align="right">16</td>
+<td align="left">149 110</td>
+<td align="left">52.6%</td>
+<td align="left">16</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">KV-2</td>
-<td align="right">74376</td>
-<td align="right">50.7</td>
-<td align="right">22</td>
+<td align="left">74 376</td>
+<td align="left">50.7%</td>
+<td align="left">22</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T49</td>
-<td align="right">74183</td>
-<td align="right">49.9</td>
-<td align="right">32</td>
+<td align="left">74 183</td>
+<td align="left">49.9%</td>
+<td align="left">32</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Tiger II</td>
-<td align="right">69303</td>
-<td align="right">51.5</td>
-<td align="right">23</td>
+<td align="left">69 303</td>
+<td align="left">51.5%</td>
+<td align="left">23</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">IS-7</td>
-<td align="right">65962</td>
-<td align="right">52.2</td>
-<td align="right">18</td>
+<td align="left">65 962</td>
+<td align="left">52.2%</td>
+<td align="left">18</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Löwe</td>
-<td align="right">65382</td>
-<td align="right">53.9</td>
-<td align="right">24</td>
+<td align="left">65 382</td>
+<td align="left">53.9%</td>
+<td align="left">24</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">SU-100Y</td>
-<td align="right">64685</td>
-<td align="right">53.9</td>
-<td align="right">20</td>
+<td align="left">64 685</td>
+<td align="left">53.9%</td>
+<td align="left">20</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">E 100</td>
-<td align="right">62992</td>
-<td align="right">52.5</td>
-<td align="right">25</td>
+<td align="left">62 992</td>
+<td align="left">52.5%</td>
+<td align="left">25</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. V/IV</td>
-<td align="right">61871</td>
-<td align="right">57.5</td>
-<td align="right">9</td>
+<td align="left">61 871</td>
+<td align="left">57.5%</td>
+<td align="left">9</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">IS-5 (Object 730)</td>
-<td align="right">61329</td>
-<td align="right">54.7</td>
-<td align="right">17</td>
+<td align="left">61 329</td>
+<td align="left">54.7%</td>
+<td align="left">17</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">VK 16.02 Leopard</td>
-<td align="right">60291</td>
-<td align="right">50.4</td>
-<td align="right">16</td>
+<td align="left">60 291</td>
+<td align="left">50.4%</td>
+<td align="left">16</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">ISU-152</td>
-<td align="right">53497</td>
-<td align="right">50.0</td>
-<td align="right">31</td>
+<td align="left">53 497</td>
+<td align="left">50%</td>
+<td align="left">31</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Grille 15</td>
-<td align="right">52705</td>
-<td align="right">49.1</td>
-<td align="right">27</td>
+<td align="left">52 705</td>
+<td align="left">49.1%</td>
+<td align="left">27</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">IS-3</td>
-<td align="right">52395</td>
-<td align="right">52.0</td>
-<td align="right">21</td>
+<td align="left">52 395</td>
+<td align="left">52%</td>
+<td align="left">21</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T26E4 SuperPershing</td>
-<td align="right">52234</td>
-<td align="right">52.5</td>
-<td align="right">18</td>
+<td align="left">52 234</td>
+<td align="left">52.5%</td>
+<td align="left">18</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T-62A</td>
-<td align="right">52102</td>
-<td align="right">52.3</td>
-<td align="right">20</td>
+<td align="left">52 102</td>
+<td align="left">52.3%</td>
+<td align="left">20</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">SU-152</td>
-<td align="right">51006</td>
-<td align="right">51.9</td>
-<td align="right">30</td>
+<td align="left">51 006</td>
+<td align="left">51.9%</td>
+<td align="left">30</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T-54</td>
-<td align="right">50709</td>
-<td align="right">52.1</td>
-<td align="right">26</td>
+<td align="left">50 709</td>
+<td align="left">52.1%</td>
+<td align="left">26</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">E 75</td>
-<td align="right">50178</td>
-<td align="right">51.7</td>
-<td align="right">27</td>
+<td align="left">50 178</td>
+<td align="left">51.7%</td>
+<td align="left">27</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T92E1</td>
-<td align="right">49903</td>
-<td align="right">51.1</td>
-<td align="right">41</td>
+<td align="left">49 903</td>
+<td align="left">51.1%</td>
+<td align="left">41</td>
 <td align="left">Researchable</td>
 </tr>
 </tbody>
@@ -2207,7 +2202,7 @@
 </div>
 <h2 id="most-played-tanks-battles">Most played tanks (Battles)</h2>
 <p>This graph shows the most played tanks by number of battles during the update 7.0.</p>
-<p><img src="figure/fig_tanks_all_most_played_battles-1.png" alt="plot of chunk fig_tanks_all_most_played_battles"></p>
+<p><img src="figure/fig_tanks_all_most_played_battles-1.svg" alt="plot of chunk fig_tanks_all_most_played_battles"></p>
 <h3 id="most-played-tanks---table">Most Played Tanks - Table</h3>
 
 <div class="expand">
@@ -2225,172 +2220,172 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Battles</th>
-<th align="right">Average WR</th>
-<th align="right">Players</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Battles</th>
+<th align="left">Average WR</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">Waffenträger auf Pz. IV</td>
-<td align="right">2595733</td>
-<td align="right">52.0</td>
-<td align="right">49605</td>
-<td align="right">52</td>
+<td align="left">2.6M</td>
+<td align="left">52%</td>
+<td align="left">49 605</td>
+<td align="left">52</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">P.43/06 anniversario</td>
-<td align="right">2413116</td>
-<td align="right">52.6</td>
-<td align="right">149110</td>
-<td align="right">16</td>
+<td align="left">2.4M</td>
+<td align="left">52.6%</td>
+<td align="left">149 110</td>
+<td align="left">16</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T49</td>
-<td align="right">2361085</td>
-<td align="right">49.9</td>
-<td align="right">74183</td>
-<td align="right">32</td>
+<td align="left">2.4M</td>
+<td align="left">49.9%</td>
+<td align="left">74 183</td>
+<td align="left">32</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T92E1</td>
-<td align="right">2047810</td>
-<td align="right">51.1</td>
-<td align="right">49903</td>
-<td align="right">41</td>
+<td align="left">2.0M</td>
+<td align="left">51.1%</td>
+<td align="left">49 903</td>
+<td align="left">41</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">FV301</td>
-<td align="right">1848060</td>
-<td align="right">51.6</td>
-<td align="right">39701</td>
-<td align="right">47</td>
+<td align="left">1.8M</td>
+<td align="left">51.6%</td>
+<td align="left">39 701</td>
+<td align="left">47</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">XM551 Sheridan</td>
-<td align="right">1697872</td>
-<td align="right">48.6</td>
-<td align="right">46419</td>
-<td align="right">37</td>
+<td align="left">1.7M</td>
+<td align="left">48.6%</td>
+<td align="left">46 419</td>
+<td align="left">37</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">ISU-152</td>
-<td align="right">1671881</td>
-<td align="right">50.0</td>
-<td align="right">53497</td>
-<td align="right">31</td>
+<td align="left">1.7M</td>
+<td align="left">50%</td>
+<td align="left">53 497</td>
+<td align="left">31</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">KV-2</td>
-<td align="right">1632559</td>
-<td align="right">50.7</td>
-<td align="right">74376</td>
-<td align="right">22</td>
+<td align="left">1.6M</td>
+<td align="left">50.7%</td>
+<td align="left">74 376</td>
+<td align="left">22</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Rhm.-Borsig Waffenträger</td>
-<td align="right">1605073</td>
-<td align="right">50.9</td>
-<td align="right">46988</td>
-<td align="right">34</td>
+<td align="left">1.6M</td>
+<td align="left">50.9%</td>
+<td align="left">46 988</td>
+<td align="left">34</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">E 100</td>
-<td align="right">1591559</td>
-<td align="right">52.5</td>
-<td align="right">62992</td>
-<td align="right">25</td>
+<td align="left">1.6M</td>
+<td align="left">52.5%</td>
+<td align="left">62 992</td>
+<td align="left">25</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Tiger II</td>
-<td align="right">1564937</td>
-<td align="right">51.5</td>
-<td align="right">69303</td>
-<td align="right">23</td>
+<td align="left">1.6M</td>
+<td align="left">51.5%</td>
+<td align="left">69 303</td>
+<td align="left">23</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Löwe</td>
-<td align="right">1556620</td>
-<td align="right">53.9</td>
-<td align="right">65382</td>
-<td align="right">24</td>
+<td align="left">1.6M</td>
+<td align="left">53.9%</td>
+<td align="left">65 382</td>
+<td align="left">24</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">FV215b (183)</td>
-<td align="right">1528907</td>
-<td align="right">48.7</td>
-<td align="right">44788</td>
-<td align="right">34</td>
+<td align="left">1.5M</td>
+<td align="left">48.7%</td>
+<td align="left">44 788</td>
+<td align="left">34</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">SU-152</td>
-<td align="right">1522042</td>
-<td align="right">51.9</td>
-<td align="right">51006</td>
-<td align="right">30</td>
+<td align="left">1.5M</td>
+<td align="left">51.9%</td>
+<td align="left">51 006</td>
+<td align="left">30</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Grille 15</td>
-<td align="right">1438217</td>
-<td align="right">49.1</td>
-<td align="right">52705</td>
-<td align="right">27</td>
+<td align="left">1.4M</td>
+<td align="left">49.1%</td>
+<td align="left">52 705</td>
+<td align="left">27</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">E 75</td>
-<td align="right">1340196</td>
-<td align="right">51.7</td>
-<td align="right">50178</td>
-<td align="right">27</td>
+<td align="left">1.3M</td>
+<td align="left">51.7%</td>
+<td align="left">50 178</td>
+<td align="left">27</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T-54</td>
-<td align="right">1310339</td>
-<td align="right">52.1</td>
-<td align="right">50709</td>
-<td align="right">26</td>
+<td align="left">1.3M</td>
+<td align="left">52.1%</td>
+<td align="left">50 709</td>
+<td align="left">26</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">SU-100Y</td>
-<td align="right">1284361</td>
-<td align="right">53.9</td>
-<td align="right">64685</td>
-<td align="right">20</td>
+<td align="left">1.3M</td>
+<td align="left">53.9%</td>
+<td align="left">64 685</td>
+<td align="left">20</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Vickers Cruiser</td>
-<td align="right">1279657</td>
-<td align="right">58.0</td>
-<td align="right">18783</td>
-<td align="right">68</td>
+<td align="left">1.3M</td>
+<td align="left">58%</td>
+<td align="left">18 783</td>
+<td align="left">68</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T57 Heavy Tank</td>
-<td align="right">1229140</td>
-<td align="right">52.0</td>
-<td align="right">48828</td>
-<td align="right">25</td>
+<td align="left">1.2M</td>
+<td align="left">52%</td>
+<td align="left">48 828</td>
+<td align="left">25</td>
 <td align="left">Researchable</td>
 </tr>
 </tbody>
@@ -2423,7 +2418,7 @@
 
     </div>
 </div>
-<p><img src="figure/fig_tanks_all_Relative_WR_bottomN-1.png" alt="plot of chunk fig_tanks_all_Relative_WR_bottomN"></p>
+<p><img src="figure/fig_tanks_all_Relative_WR_bottomN-1.svg" alt="plot of chunk fig_tanks_all_Relative_WR_bottomN"></p>
 <h4 id="lowest-relative-wr---table">Lowest Relative WR - Table</h4>
 
 <div class="expand">
@@ -2441,193 +2436,193 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Relative WR</th>
-<th align="right">Average WR</th>
-<th align="right">Player WR at Tier</th>
-<th align="right">Players</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Relative WR</th>
+<th align="left">Average WR</th>
+<th align="left">Player WR at Tier</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">BT-SV</td>
-<td align="right">-2.7</td>
-<td align="right">45.7</td>
-<td align="right">48.4</td>
-<td align="right">653</td>
-<td align="right">36</td>
+<td align="left">-2.71%</td>
+<td align="left">45.7%</td>
+<td align="left">48.4%</td>
+<td align="left">653</td>
+<td align="left">36</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">ISU-130</td>
-<td align="right">-2.4</td>
-<td align="right">50.5</td>
-<td align="right">52.9</td>
-<td align="right">1342</td>
-<td align="right">54</td>
+<td align="left">-2.43%</td>
+<td align="left">50.5%</td>
+<td align="left">52.9%</td>
+<td align="left">1 342</td>
+<td align="left">54</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">leKpz M 41 90 mm</td>
-<td align="right">-2.4</td>
-<td align="right">53.0</td>
-<td align="right">55.4</td>
-<td align="right">3472</td>
-<td align="right">58</td>
+<td align="left">-2.39%</td>
+<td align="left">53%</td>
+<td align="left">55.4%</td>
+<td align="left">3 472</td>
+<td align="left">58</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Type 4 Chi-To</td>
-<td align="right">-2.1</td>
-<td align="right">48.2</td>
-<td align="right">50.4</td>
-<td align="right">2140</td>
-<td align="right">49</td>
+<td align="left">-2.13%</td>
+<td align="left">48.2%</td>
+<td align="left">50.4%</td>
+<td align="left">2 140</td>
+<td align="left">49</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Type 3 Chi-Nu</td>
-<td align="right">-2.0</td>
-<td align="right">48.3</td>
-<td align="right">50.3</td>
-<td align="right">1305</td>
-<td align="right">41</td>
+<td align="left">-2.03%</td>
+<td align="left">48.3%</td>
+<td align="left">50.3%</td>
+<td align="left">1 305</td>
+<td align="left">41</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Somua SAu 40</td>
-<td align="right">-2.0</td>
-<td align="right">48.9</td>
-<td align="right">50.9</td>
-<td align="right">407</td>
-<td align="right">29</td>
+<td align="left">-2.02%</td>
+<td align="left">48.9%</td>
+<td align="left">50.9%</td>
+<td align="left">407</td>
+<td align="left">29</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Bat.-Châtillon 25 t</td>
-<td align="right">-2.0</td>
-<td align="right">51.6</td>
-<td align="right">53.7</td>
-<td align="right">5326</td>
-<td align="right">62</td>
+<td align="left">-2.02%</td>
+<td align="left">51.6%</td>
+<td align="left">53.7%</td>
+<td align="left">5 326</td>
+<td align="left">62</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">AMX AC mle. 46</td>
-<td align="right">-2.0</td>
-<td align="right">47.0</td>
-<td align="right">48.9</td>
-<td align="right">1203</td>
-<td align="right">58</td>
+<td align="left">-1.97%</td>
+<td align="left">47%</td>
+<td align="left">48.9%</td>
+<td align="left">1 203</td>
+<td align="left">58</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">ARL V39</td>
-<td align="right">-1.9</td>
-<td align="right">47.7</td>
-<td align="right">49.6</td>
-<td align="right">1336</td>
-<td align="right">49</td>
+<td align="left">-1.91%</td>
+<td align="left">47.7%</td>
+<td align="left">49.6%</td>
+<td align="left">1 336</td>
+<td align="left">49</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">FV215b (183)</td>
-<td align="right">-1.9</td>
-<td align="right">49.2</td>
-<td align="right">51.1</td>
-<td align="right">11850</td>
-<td align="right">85</td>
+<td align="left">-1.91%</td>
+<td align="left">49.2%</td>
+<td align="left">51.1%</td>
+<td align="left">11 850</td>
+<td align="left">85</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Bat.-Châtillon 25 t AP</td>
-<td align="right">-1.8</td>
-<td align="right">48.4</td>
-<td align="right">50.2</td>
-<td align="right">1462</td>
-<td align="right">74</td>
+<td align="left">-1.77%</td>
+<td align="left">48.4%</td>
+<td align="left">50.2%</td>
+<td align="left">1 462</td>
+<td align="left">74</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. II</td>
-<td align="right">-1.8</td>
-<td align="right">50.9</td>
-<td align="right">52.7</td>
-<td align="right">485</td>
-<td align="right">36</td>
+<td align="left">-1.77%</td>
+<td align="left">50.9%</td>
+<td align="left">52.7%</td>
+<td align="left">485</td>
+<td align="left">36</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Challenger</td>
-<td align="right">-1.7</td>
-<td align="right">47.9</td>
-<td align="right">49.6</td>
-<td align="right">1724</td>
-<td align="right">57</td>
+<td align="left">-1.74%</td>
+<td align="left">47.9%</td>
+<td align="left">49.6%</td>
+<td align="left">1 724</td>
+<td align="left">57</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">SU-101</td>
-<td align="right">-1.7</td>
-<td align="right">48.0</td>
-<td align="right">49.7</td>
-<td align="right">1380</td>
-<td align="right">72</td>
+<td align="left">-1.69%</td>
+<td align="left">48%</td>
+<td align="left">49.7%</td>
+<td align="left">1 380</td>
+<td align="left">72</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T-34-3</td>
-<td align="right">-1.6</td>
-<td align="right">52.4</td>
-<td align="right">54.0</td>
-<td align="right">2412</td>
-<td align="right">59</td>
+<td align="left">-1.64%</td>
+<td align="left">52.4%</td>
+<td align="left">54%</td>
+<td align="left">2 412</td>
+<td align="left">59</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Charioteer</td>
-<td align="right">-1.6</td>
-<td align="right">49.7</td>
-<td align="right">51.3</td>
-<td align="right">2333</td>
-<td align="right">68</td>
+<td align="left">-1.61%</td>
+<td align="left">49.7%</td>
+<td align="left">51.3%</td>
+<td align="left">2 333</td>
+<td align="left">68</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Y5 ELC bis</td>
-<td align="right">-1.6</td>
-<td align="right">48.9</td>
-<td align="right">50.4</td>
-<td align="right">1531</td>
-<td align="right">49</td>
+<td align="left">-1.58%</td>
+<td align="left">48.9%</td>
+<td align="left">50.4%</td>
+<td align="left">1 531</td>
+<td align="left">49</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Centurion Mk. I</td>
-<td align="right">-1.6</td>
-<td align="right">47.2</td>
-<td align="right">48.8</td>
-<td align="right">1307</td>
-<td align="right">64</td>
+<td align="left">-1.57%</td>
+<td align="left">47.2%</td>
+<td align="left">48.8%</td>
+<td align="left">1 307</td>
+<td align="left">64</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T25/2</td>
-<td align="right">-1.5</td>
-<td align="right">47.5</td>
-<td align="right">49.0</td>
-<td align="right">1866</td>
-<td align="right">59</td>
+<td align="left">-1.54%</td>
+<td align="left">47.5%</td>
+<td align="left">49%</td>
+<td align="left">1 866</td>
+<td align="left">59</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Type T-34</td>
-<td align="right">-1.5</td>
-<td align="right">49.2</td>
-<td align="right">50.7</td>
-<td align="right">1646</td>
-<td align="right">42</td>
+<td align="left">-1.51%</td>
+<td align="left">49.2%</td>
+<td align="left">50.7%</td>
+<td align="left">1 646</td>
+<td align="left">42</td>
 <td align="left">Researchable</td>
 </tr>
 </tbody>
@@ -2637,7 +2632,7 @@
 </div>
 <h2 id="lowest-average-wr">Lowest Average WR</h2>
 <p>This graph shows the tanks with the lowest average WR during update 7.0. <strong>Player WR</strong> denotes the tank&rsquo;s players&rsquo; average WR across all the tanks during the update. Only tanks with more than 400 players are listed. This may filter out few upcoming tanks that are being tested.</p>
-<p><img src="figure/fig_tanks_all_WR_bottomN-1.png" alt="plot of chunk fig_tanks_all_WR_bottomN"></p>
+<p><img src="figure/fig_tanks_all_WR_bottomN-1.svg" alt="plot of chunk fig_tanks_all_WR_bottomN"></p>
 <h4 id="lowest-average-wr---table">Lowest Average WR - Table</h4>
 <p><strong>Average WR</strong> denotes average WR in a tank accross all the players during the update. <strong>Player WR</strong> denotes the tank&rsquo;s players&rsquo; average WR accross all the tanks during the update.</p>
 
@@ -2656,172 +2651,172 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Average WR</th>
-<th align="right">Player WR</th>
-<th align="right">Players</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Average WR</th>
+<th align="left">Player WR</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">BT-SV</td>
-<td align="right">45.7</td>
-<td align="right">46.5</td>
-<td align="right">1040</td>
-<td align="right">37</td>
+<td align="left">45.7%</td>
+<td align="left">46.5%</td>
+<td align="left">1 040</td>
+<td align="left">37</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">VK 30.02 (D)</td>
-<td align="right">46.2</td>
-<td align="right">47.4</td>
-<td align="right">802</td>
-<td align="right">60</td>
+<td align="left">46.2%</td>
+<td align="left">47.4%</td>
+<td align="left">802</td>
+<td align="left">60</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Indien-Panzer</td>
-<td align="right">46.5</td>
-<td align="right">47.7</td>
-<td align="right">1320</td>
-<td align="right">70</td>
+<td align="left">46.5%</td>
+<td align="left">47.7%</td>
+<td align="left">1 320</td>
+<td align="left">70</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Centurion Mk. I</td>
-<td align="right">46.5</td>
-<td align="right">48.7</td>
-<td align="right">1586</td>
-<td align="right">67</td>
+<td align="left">46.5%</td>
+<td align="left">48.7%</td>
+<td align="left">1 586</td>
+<td align="left">67</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">AMX AC mle. 46</td>
-<td align="right">46.8</td>
-<td align="right">49.1</td>
-<td align="right">1428</td>
-<td align="right">59</td>
+<td align="left">46.8%</td>
+<td align="left">49.1%</td>
+<td align="left">1 428</td>
+<td align="left">59</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">M26 Pershing</td>
-<td align="right">46.8</td>
-<td align="right">48.5</td>
-<td align="right">1299</td>
-<td align="right">67</td>
+<td align="left">46.8%</td>
+<td align="left">48.5%</td>
+<td align="left">1 299</td>
+<td align="left">67</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Caernarvon</td>
-<td align="right">46.8</td>
-<td align="right">48.9</td>
-<td align="right">1586</td>
-<td align="right">70</td>
+<td align="left">46.8%</td>
+<td align="left">48.9%</td>
+<td align="left">1 586</td>
+<td align="left">70</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">D2</td>
-<td align="right">47.0</td>
-<td align="right">47.9</td>
-<td align="right">549</td>
-<td align="right">36</td>
+<td align="left">47%</td>
+<td align="left">47.9%</td>
+<td align="left">549</td>
+<td align="left">36</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T28</td>
-<td align="right">47.1</td>
-<td align="right">48.7</td>
-<td align="right">880</td>
-<td align="right">70</td>
+<td align="left">47.1%</td>
+<td align="left">48.7%</td>
+<td align="left">880</td>
+<td align="left">70</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T20</td>
-<td align="right">47.2</td>
-<td align="right">48.5</td>
-<td align="right">1281</td>
-<td align="right">63</td>
+<td align="left">47.2%</td>
+<td align="left">48.5%</td>
+<td align="left">1 281</td>
+<td align="left">63</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Leopard Prototyp A</td>
-<td align="right">47.4</td>
-<td align="right">49.0</td>
-<td align="right">3575</td>
-<td align="right">86</td>
+<td align="left">47.4%</td>
+<td align="left">49%</td>
+<td align="left">3 575</td>
+<td align="left">86</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T69</td>
-<td align="right">47.5</td>
-<td align="right">48.2</td>
-<td align="right">1770</td>
-<td align="right">68</td>
+<td align="left">47.5%</td>
+<td align="left">48.2%</td>
+<td align="left">1 770</td>
+<td align="left">68</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T25/2</td>
-<td align="right">47.5</td>
-<td align="right">48.9</td>
-<td align="right">2269</td>
-<td align="right">59</td>
+<td align="left">47.5%</td>
+<td align="left">48.9%</td>
+<td align="left">2 269</td>
+<td align="left">59</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">VK 45.02 (P) Ausf. A</td>
-<td align="right">47.5</td>
-<td align="right">48.4</td>
-<td align="right">1845</td>
-<td align="right">67</td>
+<td align="left">47.5%</td>
+<td align="left">48.4%</td>
+<td align="left">1 845</td>
+<td align="left">67</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">KV-4</td>
-<td align="right">47.5</td>
-<td align="right">48.4</td>
-<td align="right">3397</td>
-<td align="right">69</td>
+<td align="left">47.5%</td>
+<td align="left">48.4%</td>
+<td align="left">3 397</td>
+<td align="left">69</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Challenger</td>
-<td align="right">47.6</td>
-<td align="right">49.5</td>
-<td align="right">2056</td>
-<td align="right">58</td>
+<td align="left">47.6%</td>
+<td align="left">49.5%</td>
+<td align="left">2 056</td>
+<td align="left">58</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Sturer Emil</td>
-<td align="right">47.7</td>
-<td align="right">48.9</td>
-<td align="right">4389</td>
-<td align="right">67</td>
+<td align="left">47.7%</td>
+<td align="left">48.9%</td>
+<td align="left">4 389</td>
+<td align="left">67</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">ARL V39</td>
-<td align="right">47.7</td>
-<td align="right">48.9</td>
-<td align="right">1475</td>
-<td align="right">48</td>
+<td align="left">47.7%</td>
+<td align="left">48.9%</td>
+<td align="left">1 475</td>
+<td align="left">48</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">AMX M4 mle. 45</td>
-<td align="right">47.8</td>
-<td align="right">48.6</td>
-<td align="right">3175</td>
-<td align="right">63</td>
+<td align="left">47.8%</td>
+<td align="left">48.6%</td>
+<td align="left">3 175</td>
+<td align="left">63</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">SU-101</td>
-<td align="right">47.8</td>
-<td align="right">49.8</td>
-<td align="right">1528</td>
-<td align="right">73</td>
+<td align="left">47.8%</td>
+<td align="left">49.8%</td>
+<td align="left">1 528</td>
+<td align="left">73</td>
 <td align="left">Researchable</td>
 </tr>
 </tbody>
@@ -2831,7 +2826,7 @@
 </div>
 <h2 id="lowest-average-damage-tier-for-tier">Lowest Average Damage (tier-for-tier)</h2>
 <p>This graph shows the tanks with the lowest average damage vs tier average during update 7.0.</p>
-<p><img src="figure/fig_tanks_all_avg_dmg_lowest-1.png" alt="plot of chunk fig_tanks_all_avg_dmg_lowest"></p>
+<p><img src="figure/fig_tanks_all_avg_dmg_lowest-1.svg" alt="plot of chunk fig_tanks_all_avg_dmg_lowest"></p>
 <h4 id="lowest-average-damage-tier-for-tier---table">Lowest Average Damage (tier-for-tier) - Table</h4>
 
 <div class="expand">
@@ -2849,10 +2844,10 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Damage/Tier Average</th>
-<th align="right">Average WR</th>
+<th align="left">Damage/Tier Average %</th>
+<th align="left">Average WR</th>
 <th align="right">Average Damage</th>
-<th align="right">Players</th>
+<th align="left">Players</th>
 <th align="right">Tier</th>
 <th align="left">Vehicle Class</th>
 <th align="left">Tank type</th>
@@ -2861,200 +2856,200 @@
 <tbody>
 <tr>
 <td align="left">Pz.Kpfw. II Ausf. J</td>
-<td align="right">-49.68</td>
-<td align="right">49.36</td>
+<td align="left">-49.7%</td>
+<td align="left">49.4%</td>
 <td align="right">193</td>
-<td align="right">1269</td>
+<td align="left">1 269</td>
 <td align="right">3</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">M3 Light</td>
-<td align="right">-34.04</td>
-<td align="right">53.13</td>
+<td align="left">-34%</td>
+<td align="left">53.1%</td>
 <td align="right">253</td>
-<td align="right">3971</td>
+<td align="left">3 971</td>
 <td align="right">3</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Light Mk. VIC</td>
-<td align="right">-32.79</td>
-<td align="right">54.17</td>
+<td align="left">-32.8%</td>
+<td align="left">54.2%</td>
 <td align="right">224</td>
-<td align="right">4823</td>
+<td align="left">4 823</td>
 <td align="right">2</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T-15</td>
-<td align="right">-31.43</td>
-<td align="right">50.65</td>
+<td align="left">-31.4%</td>
+<td align="left">50.6%</td>
 <td align="right">263</td>
-<td align="right">3604</td>
+<td align="left">3 604</td>
 <td align="right">3</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T7 Combat Car</td>
-<td align="right">-29.48</td>
-<td align="right">55.00</td>
+<td align="left">-29.5%</td>
+<td align="left">55%</td>
 <td align="right">235</td>
-<td align="right">4437</td>
+<td align="left">4 437</td>
 <td align="right">2</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">BT-SV</td>
-<td align="right">-27.26</td>
-<td align="right">51.54</td>
+<td align="left">-27.3%</td>
+<td align="left">51.5%</td>
 <td align="right">279</td>
-<td align="right">23455</td>
+<td align="left">23 455</td>
 <td align="right">3</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">VK 16.02 Leopard</td>
-<td align="right">-26.93</td>
-<td align="right">50.71</td>
+<td align="left">-26.9%</td>
+<td align="left">50.7%</td>
 <td align="right">442</td>
-<td align="right">56618</td>
+<td align="left">56 618</td>
 <td align="right">5</td>
 <td align="left">Light Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">M41 Walker Bulldog</td>
-<td align="right">-26.29</td>
-<td align="right">50.08</td>
+<td align="left">-26.3%</td>
+<td align="left">50.1%</td>
 <td align="right">785</td>
-<td align="right">28258</td>
+<td align="left">28 258</td>
 <td align="right">7</td>
 <td align="left">Light Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T-46</td>
-<td align="right">-25.95</td>
-<td align="right">46.20</td>
+<td align="left">-26%</td>
+<td align="left">46.2%</td>
 <td align="right">284</td>
-<td align="right">1720</td>
+<td align="left">1 720</td>
 <td align="right">3</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">M26 Pershing</td>
-<td align="right">-24.93</td>
-<td align="right">50.91</td>
+<td align="left">-24.9%</td>
+<td align="left">50.9%</td>
 <td align="right">987</td>
-<td align="right">5729</td>
+<td align="left">5 729</td>
 <td align="right">8</td>
 <td align="left">Medium Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Valentine II</td>
-<td align="right">-24.25</td>
-<td align="right">50.82</td>
+<td align="left">-24.2%</td>
+<td align="left">50.8%</td>
 <td align="right">326</td>
-<td align="right">2193</td>
+<td align="left">2 193</td>
 <td align="right">4</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T2 Medium Tank</td>
-<td align="right">-24.08</td>
-<td align="right">50.00</td>
+<td align="left">-24.1%</td>
+<td align="left">50%</td>
 <td align="right">253</td>
-<td align="right">570</td>
+<td align="left">570</td>
 <td align="right">2</td>
 <td align="left">Medium Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. II</td>
-<td align="right">-23.91</td>
-<td align="right">51.02</td>
+<td align="left">-23.9%</td>
+<td align="left">51%</td>
 <td align="right">197</td>
-<td align="right">9603</td>
+<td align="left">9 603</td>
 <td align="right">1</td>
 <td align="left">Light Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Centurion Mk. I</td>
-<td align="right">-23.34</td>
-<td align="right">49.88</td>
+<td align="left">-23.3%</td>
+<td align="left">49.9%</td>
 <td align="right">1008</td>
-<td align="right">7305</td>
+<td align="left">7 305</td>
 <td align="right">8</td>
 <td align="left">Medium Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">VK 30.02 (D)</td>
-<td align="right">-23.19</td>
-<td align="right">50.20</td>
+<td align="left">-23.2%</td>
+<td align="left">50.2%</td>
 <td align="right">818</td>
-<td align="right">3394</td>
+<td align="left">3 394</td>
 <td align="right">7</td>
 <td align="left">Medium Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">AMX 13 75</td>
-<td align="right">-23.00</td>
-<td align="right">51.45</td>
+<td align="left">-23%</td>
+<td align="left">51.4%</td>
 <td align="right">820</td>
-<td align="right">15835</td>
+<td align="left">15 835</td>
 <td align="right">7</td>
 <td align="left">Light Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. II Luchs</td>
-<td align="right">-22.62</td>
-<td align="right">53.93</td>
+<td align="left">-22.6%</td>
+<td align="left">53.9%</td>
 <td align="right">333</td>
-<td align="right">2195</td>
+<td align="left">2 195</td>
 <td align="right">4</td>
 <td align="left">Light Tank</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Indien-Panzer</td>
-<td align="right">-20.60</td>
-<td align="right">50.13</td>
+<td align="left">-20.6%</td>
+<td align="left">50.1%</td>
 <td align="right">1044</td>
-<td align="right">5812</td>
+<td align="left">5 812</td>
 <td align="right">8</td>
 <td align="left">Medium Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T37</td>
-<td align="right">-20.40</td>
-<td align="right">51.90</td>
+<td align="left">-20.4%</td>
+<td align="left">51.9%</td>
 <td align="right">696</td>
-<td align="right">9295</td>
+<td align="left">9 295</td>
 <td align="right">6</td>
 <td align="left">Light Tank</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">A-20</td>
-<td align="right">-20.06</td>
-<td align="right">52.77</td>
+<td align="left">-20.1%</td>
+<td align="left">52.8%</td>
 <td align="right">344</td>
-<td align="right">13254</td>
+<td align="left">13 254</td>
 <td align="right">4</td>
 <td align="left">Light Tank</td>
 <td align="left">Researchable</td>
@@ -3065,7 +3060,7 @@
     </div>
 </div>
 <h2 id="lowest-spot-rate">Lowest Spot Rate</h2>
-<p><img src="figure/fig_tanks_all_spot_rate_bottomN-1.png" alt="plot of chunk fig_tanks_all_spot_rate_bottomN"></p>
+<p><img src="figure/fig_tanks_all_spot_rate_bottomN-1.svg" alt="plot of chunk fig_tanks_all_spot_rate_bottomN"></p>
 <h4 id="lowest-spot-rate---table">Lowest Spot Rate - Table</h4>
 
 <div class="expand">
@@ -3084,10 +3079,10 @@
 <tr>
 <th align="left">Tank</th>
 <th align="right">Spot Rate</th>
-<th align="right">Average WR</th>
-<th align="right">Player WR</th>
-<th align="right">Players</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Average WR</th>
+<th align="left">Player WR</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
@@ -3095,181 +3090,181 @@
 <tr>
 <td align="left">AT-1</td>
 <td align="right">0.38</td>
-<td align="right">52.85</td>
-<td align="right">50.66</td>
-<td align="right">525</td>
-<td align="right">3</td>
+<td align="left">52.9%</td>
+<td align="left">50.7%</td>
+<td align="left">525</td>
+<td align="left">3</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">FV215b (183)</td>
 <td align="right">0.38</td>
-<td align="right">49.50</td>
-<td align="right">53.02</td>
-<td align="right">34227</td>
-<td align="right">38</td>
+<td align="left">49.5%</td>
+<td align="left">53%</td>
+<td align="left">34 227</td>
+<td align="left">38</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Sturer Emil</td>
 <td align="right">0.38</td>
-<td align="right">50.78</td>
-<td align="right">49.51</td>
-<td align="right">11917</td>
-<td align="right">28</td>
+<td align="left">50.8%</td>
+<td align="left">49.5%</td>
+<td align="left">11 917</td>
+<td align="left">28</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">FCM 36 Pak 40</td>
 <td align="right">0.39</td>
-<td align="right">51.41</td>
-<td align="right">49.84</td>
-<td align="right">3706</td>
-<td align="right">4</td>
+<td align="left">51.4%</td>
+<td align="left">49.8%</td>
+<td align="left">3 706</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Angry Connor</td>
 <td align="right">0.40</td>
-<td align="right">55.86</td>
-<td align="right">52.47</td>
-<td align="right">5545</td>
-<td align="right">10</td>
+<td align="left">55.9%</td>
+<td align="left">52.5%</td>
+<td align="left">5 545</td>
+<td align="left">10</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Rhm.-Borsig Waffenträger</td>
 <td align="right">0.43</td>
-<td align="right">51.83</td>
-<td align="right">51.62</td>
-<td align="right">38110</td>
-<td align="right">37</td>
+<td align="left">51.8%</td>
+<td align="left">51.6%</td>
+<td align="left">38 110</td>
+<td align="left">37</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T28</td>
 <td align="right">0.44</td>
-<td align="right">52.18</td>
-<td align="right">49.53</td>
-<td align="right">2906</td>
-<td align="right">25</td>
+<td align="left">52.2%</td>
+<td align="left">49.5%</td>
+<td align="left">2 906</td>
+<td align="left">25</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Valentine AT</td>
 <td align="right">0.44</td>
-<td align="right">53.09</td>
-<td align="right">51.15</td>
-<td align="right">508</td>
-<td align="right">7</td>
+<td align="left">53.1%</td>
+<td align="left">51.1%</td>
+<td align="left">508</td>
+<td align="left">7</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T95</td>
 <td align="right">0.46</td>
-<td align="right">56.43</td>
-<td align="right">52.13</td>
-<td align="right">4908</td>
-<td align="right">26</td>
+<td align="left">56.4%</td>
+<td align="left">52.1%</td>
+<td align="left">4 908</td>
+<td align="left">26</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">T28 Prototype</td>
 <td align="right">0.46</td>
-<td align="right">52.55</td>
-<td align="right">50.30</td>
-<td align="right">8278</td>
-<td align="right">24</td>
+<td align="left">52.5%</td>
+<td align="left">50.3%</td>
+<td align="left">8 278</td>
+<td align="left">24</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Panzerjäger I</td>
 <td align="right">0.47</td>
-<td align="right">54.61</td>
-<td align="right">50.29</td>
-<td align="right">933</td>
-<td align="right">6</td>
+<td align="left">54.6%</td>
+<td align="left">50.3%</td>
+<td align="left">933</td>
+<td align="left">6</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">ISU-152</td>
 <td align="right">0.47</td>
-<td align="right">52.06</td>
-<td align="right">51.26</td>
-<td align="right">39927</td>
-<td align="right">36</td>
+<td align="left">52.1%</td>
+<td align="left">51.3%</td>
+<td align="left">39 927</td>
+<td align="left">36</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">SU-76</td>
 <td align="right">0.47</td>
-<td align="right">49.89</td>
-<td align="right">50.64</td>
-<td align="right">669</td>
-<td align="right">5</td>
+<td align="left">49.9%</td>
+<td align="left">50.6%</td>
+<td align="left">669</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">SU-85</td>
 <td align="right">0.48</td>
-<td align="right">51.06</td>
-<td align="right">48.68</td>
-<td align="right">13781</td>
-<td align="right">17</td>
+<td align="left">51.1%</td>
+<td align="left">48.7%</td>
+<td align="left">13 781</td>
+<td align="left">17</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Marder II</td>
 <td align="right">0.48</td>
-<td align="right">54.76</td>
-<td align="right">50.41</td>
-<td align="right">2137</td>
-<td align="right">11</td>
+<td align="left">54.8%</td>
+<td align="left">50.4%</td>
+<td align="left">2 137</td>
+<td align="left">11</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">S35 CA</td>
 <td align="right">0.49</td>
-<td align="right">54.52</td>
-<td align="right">49.65</td>
-<td align="right">6547</td>
-<td align="right">17</td>
+<td align="left">54.5%</td>
+<td align="left">49.6%</td>
+<td align="left">6 547</td>
+<td align="left">17</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Hetzer</td>
 <td align="right">0.49</td>
-<td align="right">53.81</td>
-<td align="right">48.89</td>
-<td align="right">15393</td>
-<td align="right">12</td>
+<td align="left">53.8%</td>
+<td align="left">48.9%</td>
+<td align="left">15 393</td>
+<td align="left">12</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Waffenträger auf Pz. IV</td>
 <td align="right">0.49</td>
-<td align="right">53.36</td>
-<td align="right">52.03</td>
-<td align="right">37380</td>
-<td align="right">60</td>
+<td align="left">53.4%</td>
+<td align="left">52%</td>
+<td align="left">37 380</td>
+<td align="left">60</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">Somua SAu 40</td>
 <td align="right">0.49</td>
-<td align="right">50.95</td>
-<td align="right">48.79</td>
-<td align="right">3626</td>
-<td align="right">9</td>
+<td align="left">50.9%</td>
+<td align="left">48.8%</td>
+<td align="left">3 626</td>
+<td align="left">9</td>
 <td align="left">Researchable</td>
 </tr>
 <tr>
 <td align="left">SU-152</td>
 <td align="right">0.49</td>
-<td align="right">52.69</td>
-<td align="right">51.18</td>
-<td align="right">43226</td>
-<td align="right">33</td>
+<td align="left">52.7%</td>
+<td align="left">51.2%</td>
+<td align="left">43 226</td>
+<td align="left">33</td>
 <td align="left">Researchable</td>
 </tr>
 </tbody>
@@ -3278,8 +3273,8 @@
     </div>
 </div>
 <h2 id="least-played-tanks-players">Least Played Tanks (Players)</h2>
-<p>This graph shows the least played tanks by players during the update 7.0.</p>
-<p><img src="figure/fig_tanks_all_least_played_players-1.png" alt="plot of chunk fig_tanks_all_least_played_players"></p>
+<p>This graph shows the least played tanks by players during the update 7.0. The graph includes also unreleased tanks in super-testing.</p>
+<p><img src="figure/fig_tanks_all_least_played_players-1.svg" alt="plot of chunk fig_tanks_all_least_played_players"></p>
 <h3 id="least-played-tanks---table">Least Played Tanks - Table</h3>
 
 <div class="expand">
@@ -3297,151 +3292,151 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Players</th>
-<th align="right">Average WR</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Players</th>
+<th align="left">Average WR</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">T25 Pilot Number 1</td>
-<td align="right">2</td>
-<td align="right">100.0</td>
-<td align="right">2</td>
+<td align="left">2</td>
+<td align="left">100%</td>
+<td align="left">2</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T54E2</td>
-<td align="right">6</td>
-<td align="right">63.9</td>
-<td align="right">2</td>
+<td align="left">6</td>
+<td align="left">63.9%</td>
+<td align="left">2</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T26E3 Eagle 7</td>
-<td align="right">99</td>
-<td align="right">68.3</td>
-<td align="right">14</td>
+<td align="left">99</td>
+<td align="left">68.3%</td>
+<td align="left">14</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">IS-6 Fearless</td>
-<td align="right">144</td>
-<td align="right">62.4</td>
-<td align="right">18</td>
+<td align="left">144</td>
+<td align="left">62.4%</td>
+<td align="left">18</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Cruiser Mk. I</td>
-<td align="right">295</td>
-<td align="right">57.1</td>
-<td align="right">4</td>
+<td align="left">295</td>
+<td align="left">57.1%</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Renault FT AC</td>
-<td align="right">296</td>
-<td align="right">50.0</td>
-<td align="right">4</td>
+<td align="left">296</td>
+<td align="left">50%</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">EMIL 1951</td>
-<td align="right">310</td>
-<td align="right">76.3</td>
-<td align="right">41</td>
+<td align="left">310</td>
+<td align="left">76.3%</td>
+<td align="left">41</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Kranvagn</td>
-<td align="right">341</td>
-<td align="right">66.7</td>
-<td align="right">73</td>
+<td align="left">341</td>
+<td align="left">66.7%</td>
+<td align="left">73</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">D1</td>
-<td align="right">341</td>
-<td align="right">49.1</td>
-<td align="right">3</td>
+<td align="left">341</td>
+<td align="left">49.1%</td>
+<td align="left">3</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Vickers Medium Mk. II</td>
-<td align="right">358</td>
-<td align="right">48.5</td>
-<td align="right">4</td>
+<td align="left">358</td>
+<td align="left">48.5%</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Vickers Medium Mk. III</td>
-<td align="right">431</td>
-<td align="right">52.4</td>
-<td align="right">5</td>
+<td align="left">431</td>
+<td align="left">52.4%</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Universal Carrier 2-pdr</td>
-<td align="right">460</td>
-<td align="right">51.8</td>
-<td align="right">5</td>
+<td align="left">460</td>
+<td align="left">51.8%</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. 38 (t)</td>
-<td align="right">483</td>
-<td align="right">51.9</td>
-<td align="right">6</td>
+<td align="left">483</td>
+<td align="left">51.9%</td>
+<td align="left">6</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Valentine AT</td>
-<td align="right">508</td>
-<td align="right">53.1</td>
-<td align="right">7</td>
+<td align="left">508</td>
+<td align="left">53.1%</td>
+<td align="left">7</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">AT-1</td>
-<td align="right">525</td>
-<td align="right">52.9</td>
-<td align="right">3</td>
+<td align="left">525</td>
+<td align="left">52.9%</td>
+<td align="left">3</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T2 Medium Tank</td>
-<td align="right">570</td>
-<td align="right">50.0</td>
-<td align="right">7</td>
+<td align="left">570</td>
+<td align="left">50%</td>
+<td align="left">7</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. 38H 735 (f)</td>
-<td align="right">594</td>
-<td align="right">56.4</td>
-<td align="right">3</td>
+<td align="left">594</td>
+<td align="left">56.4%</td>
+<td align="left">3</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Type 98 Ke-Ni Otsu</td>
-<td align="right">604</td>
-<td align="right">64.5</td>
-<td align="right">20</td>
+<td align="left">604</td>
+<td align="left">64.5%</td>
+<td align="left">20</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">SU-76</td>
-<td align="right">669</td>
-<td align="right">49.9</td>
-<td align="right">5</td>
+<td align="left">669</td>
+<td align="left">49.9%</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">M2 Medium Tank</td>
-<td align="right">708</td>
-<td align="right">50.0</td>
-<td align="right">14</td>
+<td align="left">708</td>
+<td align="left">50%</td>
+<td align="left">14</td>
 <td align="left">Premium</td>
 </tr>
 </tbody>
@@ -3451,7 +3446,7 @@
 </div>
 <h2 id="least-played-tanks-battles">Least played tanks (Battles)</h2>
 <p>This graph shows the most played tanks by number of battles during the update 7.0.</p>
-<p><img src="figure/fig_tanks_all_least_played_battles-1.png" alt="plot of chunk fig_tanks_all_least_played_battles"></p>
+<p><img src="figure/fig_tanks_all_least_played_battles-1.svg" alt="plot of chunk fig_tanks_all_least_played_battles"></p>
 <h3 id="least-played-tanks---table-1">Least Played Tanks - Table</h3>
 
 <div class="expand">
@@ -3469,172 +3464,172 @@
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Battles</th>
-<th align="right">Average WR</th>
-<th align="right">Players</th>
-<th align="right">Avg. Battles</th>
+<th align="left">Battles</th>
+<th align="left">Average WR</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">T25 Pilot Number 1</td>
-<td align="right">5</td>
-<td align="right">100.0</td>
-<td align="right">2</td>
-<td align="right">2</td>
+<td align="left">5</td>
+<td align="left">100%</td>
+<td align="left">2</td>
+<td align="left">2</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T54E2</td>
-<td align="right">9</td>
-<td align="right">63.9</td>
-<td align="right">6</td>
-<td align="right">2</td>
+<td align="left">9</td>
+<td align="left">63.9%</td>
+<td align="left">6</td>
+<td align="left">2</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">D1</td>
-<td align="right">958</td>
-<td align="right">49.1</td>
-<td align="right">341</td>
-<td align="right">3</td>
+<td align="left">958</td>
+<td align="left">49.1%</td>
+<td align="left">341</td>
+<td align="left">3</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Renault FT AC</td>
-<td align="right">1095</td>
-<td align="right">50.0</td>
-<td align="right">296</td>
-<td align="right">4</td>
+<td align="left">1 095</td>
+<td align="left">50%</td>
+<td align="left">296</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Cruiser Mk. I</td>
-<td align="right">1110</td>
-<td align="right">57.1</td>
-<td align="right">295</td>
-<td align="right">4</td>
+<td align="left">1 110</td>
+<td align="left">57.1%</td>
+<td align="left">295</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T26E3 Eagle 7</td>
-<td align="right">1364</td>
-<td align="right">68.3</td>
-<td align="right">99</td>
-<td align="right">14</td>
+<td align="left">1 364</td>
+<td align="left">68.3%</td>
+<td align="left">99</td>
+<td align="left">14</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Vickers Medium Mk. II</td>
-<td align="right">1546</td>
-<td align="right">48.5</td>
-<td align="right">358</td>
-<td align="right">4</td>
+<td align="left">1 546</td>
+<td align="left">48.5%</td>
+<td align="left">358</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. 38H 735 (f)</td>
-<td align="right">1740</td>
-<td align="right">56.4</td>
-<td align="right">594</td>
-<td align="right">3</td>
+<td align="left">1 740</td>
+<td align="left">56.4%</td>
+<td align="left">594</td>
+<td align="left">3</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">AT-1</td>
-<td align="right">1759</td>
-<td align="right">52.9</td>
-<td align="right">525</td>
-<td align="right">3</td>
+<td align="left">1 759</td>
+<td align="left">52.9%</td>
+<td align="left">525</td>
+<td align="left">3</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Vickers Medium Mk. III</td>
-<td align="right">2050</td>
-<td align="right">52.4</td>
-<td align="right">431</td>
-<td align="right">5</td>
+<td align="left">2 050</td>
+<td align="left">52.4%</td>
+<td align="left">431</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Universal Carrier 2-pdr</td>
-<td align="right">2121</td>
-<td align="right">51.8</td>
-<td align="right">460</td>
-<td align="right">5</td>
+<td align="left">2 121</td>
+<td align="left">51.8%</td>
+<td align="left">460</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">IS-6 Fearless</td>
-<td align="right">2648</td>
-<td align="right">62.4</td>
-<td align="right">144</td>
-<td align="right">18</td>
+<td align="left">2 648</td>
+<td align="left">62.4%</td>
+<td align="left">144</td>
+<td align="left">18</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. 38 (t)</td>
-<td align="right">2817</td>
-<td align="right">51.9</td>
-<td align="right">483</td>
-<td align="right">6</td>
+<td align="left">2 817</td>
+<td align="left">51.9%</td>
+<td align="left">483</td>
+<td align="left">6</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">SU-76</td>
-<td align="right">3206</td>
-<td align="right">49.9</td>
-<td align="right">669</td>
-<td align="right">5</td>
+<td align="left">3 206</td>
+<td align="left">49.9%</td>
+<td align="left">669</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Valentine AT</td>
-<td align="right">3540</td>
-<td align="right">53.1</td>
-<td align="right">508</td>
-<td align="right">7</td>
+<td align="left">3 540</td>
+<td align="left">53.1%</td>
+<td align="left">508</td>
+<td align="left">7</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Sherman V</td>
-<td align="right">3791</td>
-<td align="right">56.4</td>
-<td align="right">822</td>
-<td align="right">5</td>
+<td align="left">3 791</td>
+<td align="left">56.4%</td>
+<td align="left">822</td>
+<td align="left">5</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Pz.Kpfw. IV hydrostat.</td>
-<td align="right">3839</td>
-<td align="right">58.8</td>
-<td align="right">971</td>
-<td align="right">4</td>
+<td align="left">3 839</td>
+<td align="left">58.8%</td>
+<td align="left">971</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T2 Medium Tank</td>
-<td align="right">3914</td>
-<td align="right">50.0</td>
-<td align="right">570</td>
-<td align="right">7</td>
+<td align="left">3 914</td>
+<td align="left">50%</td>
+<td align="left">570</td>
+<td align="left">7</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">T-127</td>
-<td align="right">3997</td>
-<td align="right">54.8</td>
-<td align="right">1088</td>
-<td align="right">4</td>
+<td align="left">3 997</td>
+<td align="left">54.8%</td>
+<td align="left">1 088</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 <tr>
 <td align="left">Renault UE 57</td>
-<td align="right">4145</td>
-<td align="right">52.6</td>
-<td align="right">1030</td>
-<td align="right">4</td>
+<td align="left">4 145</td>
+<td align="left">52.6%</td>
+<td align="left">1 030</td>
+<td align="left">4</td>
 <td align="left">Premium</td>
 </tr>
 </tbody>
@@ -3903,19 +3898,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1594910568"></script>
-    <script src="/js/perfect-scrollbar.min.js?1594910568"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1594910568"></script>
-    <script src="/js/jquery.sticky.js?1594910568"></script>
-    <script src="/js/featherlight.min.js?1594910568"></script>
-    <script src="/js/highlight.pack.js?1594910568"></script>
+    <script src="/js/clipboard.min.js?1596929604"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596929604"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596929604"></script>
+    <script src="/js/jquery.sticky.js?1596929604"></script>
+    <script src="/js/featherlight.min.js?1596929604"></script>
+    <script src="/js/highlight.pack.js?1596929604"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1594910568"></script>
-    <script src="/js/learn.js?1594910568"></script>
-    <script src="/js/hugo-learn.js?1594910568"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596929604"></script>
+    <script src="/js/learn.js?1596929604"></script>
+    <script src="/js/hugo-learn.js?1596929604"></script>
 
-    <link href="/mermaid/mermaid.css?1594910568" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1594910568"></script>
+    <link href="/mermaid/mermaid.css?1596929604" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596929604"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
