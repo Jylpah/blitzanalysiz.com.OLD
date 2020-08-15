@@ -18,21 +18,21 @@
     <title>Tier II Tank Destroyers :: Home</title>
 
     
-    <link href="/css/nucleus.css?1597057807" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1597057807" rel="stylesheet">
-    <link href="/css/hybrid.css?1597057807" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1597057807" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1597057807" rel="stylesheet">
-    <link href="/css/auto-complete.css?1597057807" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1597057807" rel="stylesheet">
-    <link href="/css/theme.css?1597057807" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1597057807" rel="stylesheet">
+    <link href="/css/nucleus.css?1597450433" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1597450433" rel="stylesheet">
+    <link href="/css/hybrid.css?1597450433" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1597450433" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1597450433" rel="stylesheet">
+    <link href="/css/auto-complete.css?1597450433" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1597450433" rel="stylesheet">
+    <link href="/css/theme.css?1597450433" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1597450433" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1597057807" rel="stylesheet">
+    <link href="/css/theme-mine.css?1597450433" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1597057807"></script>
+    <script src="/js/jquery-3.3.1.min.js?1597450433"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1597057807"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1597057807"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1597450433"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1597450433"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1597057807"></script>
+<script type="text/javascript" src="/js/search.js?1597450433"></script>
 
     
   </div>
@@ -79,6 +79,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
           
           
 
@@ -392,6 +416,8 @@
           
             
           
+            
+          
         
         </ul>
               
@@ -630,17 +656,27 @@
         <li></li>
       </ul>
     </li>
-    <li><a href="#highest-average-wr">Highest Average WR</a>
+    <li><a href="#average-wr">Average WR</a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#highest-average-damage">Highest Average Damage</a>
+    <li><a href="#average-damage">Average Damage</a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#highest-spot-rate">Highest Spot Rate</a>
+    <li><a href="#average-killsbattle">Average Kills/Battle</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#spot-rate">Spot Rate</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#hit-rate">Hit Rate</a>
       <ul>
         <li></li>
       </ul>
@@ -718,7 +754,7 @@
 <pre><code>## Warning in max(nchar(labels)): no non-missing arguments to max; returning -Inf
 </code></pre><pre><code>## Error: Aesthetics must be either length 1 or the same as the data (1): x, y and fill
 </code></pre><p><img src="figure/fig_tanks_tier_type_Relative_WR-1.svg" alt="plot of chunk fig_tanks_tier_type_Relative_WR"></p>
-<h4 id="highest-relative-wr---table">Highest Relative WR - Table</h4>
+<h4 id="relative-wr---table">Relative WR - Table</h4>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -750,12 +786,12 @@
 
     </div>
 </div>
-<h2 id="highest-average-wr">Highest Average WR</h2>
+<h2 id="average-wr">Average WR</h2>
 <p>This graph shows Tank Destroyers ranked by players&rsquo; average WR in the tanks. <strong>Player WR</strong> denotes the tank&rsquo;s players&rsquo; average WR across all the tier II tanks during the update. Only tanks with more than 400 players are listed. This may filter out few upcoming tanks that are being tested.</p>
 <pre><code>## Warning in max(nchar(labels)): no non-missing arguments to max; returning -Inf
 </code></pre><pre><code>## Error: Aesthetics must be either length 1 or the same as the data (1): x, y and fill
 </code></pre><p><img src="figure/fig_tanks_tier_type_WR-1.svg" alt="plot of chunk fig_tanks_tier_type_WR"></p>
-<h4 id="highest-average-wr---table">Highest Average WR - Table</h4>
+<h4 id="average-wr---table">Average WR - Table</h4>
 <p><strong>Average WR</strong> denotes average WR in a tank across all the players during the update. <strong>Player WR</strong> denotes the tank&rsquo;s players&rsquo; average WR across all the tanks during the update.</p>
 
 <div class="expand">
@@ -787,9 +823,11 @@
 
     </div>
 </div>
-<h2 id="highest-average-damage">Highest Average Damage</h2>
-<p><img src="figure/fig_tanks_tier_type_avg_dmg-1.svg" alt="plot of chunk fig_tanks_tier_type_avg_dmg"></p>
-<h4 id="highest-average-damage---table">Highest Average Damage - Table</h4>
+<h2 id="average-damage">Average Damage</h2>
+<pre><code>## Warning in max(nchar(labels)): no non-missing arguments to max; returning -Inf
+</code></pre><pre><code>## Error: Aesthetics must be either length 1 or the same as the data (1): x, y and fill
+</code></pre><p><img src="figure/fig_tanks_tier_type_avg_dmg-1.svg" alt="plot of chunk fig_tanks_tier_type_avg_dmg"></p>
+<h4 id="average-damage---table">Average Damage - Table</h4>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -802,63 +840,32 @@
     	</span>
     </div>
     <div class="expand-content" style="display: none;">
-        <table>
+        <pre><code>## Warning in max(get(col)): no non-missing arguments to max; returning -Inf
+
+## Warning in max(get(col)): no non-missing arguments to max; returning -Inf
+
+## Warning in max(get(col)): no non-missing arguments to max; returning -Inf
+</code></pre><table>
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Average Damage</th>
-<th align="left">Average WR</th>
-<th align="left">Player WR at Tier</th>
+<th align="left">Average Damage</th>
+<th align="right">Average WR</th>
+<th align="right">Player WR at Tier</th>
 <th align="left">Players</th>
 <th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td align="left">Panzerjäger I</td>
-<td align="right">365</td>
-<td align="left">54.6%</td>
-<td align="left">53.6%</td>
-<td align="left">933</td>
-<td align="left">6</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">T18</td>
-<td align="right">290</td>
-<td align="left">53.9%</td>
-<td align="left">53.3%</td>
-<td align="left">1 108</td>
-<td align="left">6</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">Universal Carrier 2-pdr</td>
-<td align="right">289</td>
-<td align="left">51.8%</td>
-<td align="left">52.5%</td>
-<td align="left">460</td>
-<td align="left">5</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">AT-1</td>
-<td align="right">289</td>
-<td align="left">52.9%</td>
-<td align="left">52.9%</td>
-<td align="left">525</td>
-<td align="left">3</td>
-<td align="left">Premium</td>
-</tr>
-</tbody>
 </table>
 
     </div>
 </div>
-<h2 id="highest-spot-rate">Highest Spot Rate</h2>
-<p><img src="figure/fig_tanks_tier_type_spot_rate_topN-1.svg" alt="plot of chunk fig_tanks_tier_type_spot_rate_topN"></p>
-<h4 id="highest-spot-rate---table">Highest Spot Rate - Table</h4>
+<h2 id="average-killsbattle">Average Kills/Battle</h2>
+<pre><code>## Warning in max(nchar(labels)): no non-missing arguments to max; returning -Inf
+</code></pre><pre><code>## Error: Aesthetics must be either length 1 or the same as the data (1): x, y and fill
+</code></pre><p><img src="figure/fig_tanks_tier_type_avg_kills-1.svg" alt="plot of chunk fig_tanks_tier_type_avg_kills"></p>
+<h4 id="average-killsbattle---table">Average Kills/Battle - Table</h4>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -871,56 +878,93 @@
     	</span>
     </div>
     <div class="expand-content" style="display: none;">
-        <table>
+        <pre><code>## Warning in max(get(col)): no non-missing arguments to max; returning -Inf
+
+## Warning in max(get(col)): no non-missing arguments to max; returning -Inf
+</code></pre><table>
 <thead>
 <tr>
 <th align="left">Tank</th>
-<th align="right">Spot Rate</th>
-<th align="left">Average WR</th>
-<th align="left">Player WR at Tier</th>
+<th align="right">Average Kills/Battle</th>
+<th align="right">Average WR</th>
+<th align="right">Player WR at Tier</th>
 <th align="left">Players</th>
 <th align="left">Battles/Player</th>
 <th align="left">Tank type</th>
 </tr>
 </thead>
-<tbody>
+</table>
+
+    </div>
+</div>
+<h2 id="spot-rate">Spot Rate</h2>
+<pre><code>## Warning in max(nchar(labels)): no non-missing arguments to max; returning -Inf
+</code></pre><pre><code>## Error: Aesthetics must be either length 1 or the same as the data (1): x, y and fill
+</code></pre><p><img src="figure/fig_tanks_tier_type_spot_rate-1.svg" alt="plot of chunk fig_tanks_tier_type_spot_rate"></p>
+<h4 id="spot-rate---table">Spot Rate - Table</h4>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Show table
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code>## Warning in max(get(col)): no non-missing arguments to max; returning -Inf
+
+## Warning in max(get(col)): no non-missing arguments to max; returning -Inf
+</code></pre><table>
+<thead>
 <tr>
-<td align="left">T18</td>
-<td align="right">0.73</td>
-<td align="left">53.9%</td>
-<td align="left">53.3%</td>
-<td align="left">1 108</td>
-<td align="left">6</td>
-<td align="left">Premium</td>
+<th align="left">Tank</th>
+<th align="right">Spot Rate</th>
+<th align="right">Average WR</th>
+<th align="right">Player WR at Tier</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
+<th align="left">Tank type</th>
 </tr>
+</thead>
+</table>
+
+    </div>
+</div>
+<h2 id="hit-rate">Hit Rate</h2>
+<pre><code>## Warning in max(nchar(labels)): no non-missing arguments to max; returning -Inf
+</code></pre><pre><code>## Error: Aesthetics must be either length 1 or the same as the data (1): x, y and fill
+</code></pre><p><img src="figure/fig_tanks_tier_type_hit_rate-1.svg" alt="plot of chunk fig_tanks_tier_type_hit_rate"></p>
+<h4 id="hit-rate---table">Hit Rate - Table</h4>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Show table
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <pre><code>## Warning in max(get(col)): no non-missing arguments to max; returning -Inf
+
+## Warning in max(get(col)): no non-missing arguments to max; returning -Inf
+</code></pre><table>
+<thead>
 <tr>
-<td align="left">Universal Carrier 2-pdr</td>
-<td align="right">0.73</td>
-<td align="left">51.8%</td>
-<td align="left">52.5%</td>
-<td align="left">460</td>
-<td align="left">5</td>
-<td align="left">Premium</td>
+<th align="left">Tank</th>
+<th align="right">Hit Rate</th>
+<th align="right">Average WR</th>
+<th align="right">Player WR at Tier</th>
+<th align="left">Players</th>
+<th align="left">Battles/Player</th>
+<th align="left">Tank type</th>
 </tr>
-<tr>
-<td align="left">Panzerjäger I</td>
-<td align="right">0.47</td>
-<td align="left">54.6%</td>
-<td align="left">53.6%</td>
-<td align="left">933</td>
-<td align="left">6</td>
-<td align="left">Premium</td>
-</tr>
-<tr>
-<td align="left">AT-1</td>
-<td align="right">0.38</td>
-<td align="left">52.9%</td>
-<td align="left">52.9%</td>
-<td align="left">525</td>
-<td align="left">3</td>
-<td align="left">Premium</td>
-</tr>
-</tbody>
+</thead>
 </table>
 
     </div>
@@ -960,7 +1004,7 @@
 <td align="left">T18</td>
 <td align="left">6 368</td>
 <td align="left">53.9%</td>
-<td align="left">53.3%</td>
+<td align="left">52.3%</td>
 <td align="left">1 108</td>
 <td align="left">6</td>
 <td align="left">Premium</td>
@@ -969,7 +1013,7 @@
 <td align="left">Panzerjäger I</td>
 <td align="left">5 984</td>
 <td align="left">54.6%</td>
-<td align="left">53.6%</td>
+<td align="left">53.8%</td>
 <td align="left">933</td>
 <td align="left">6</td>
 <td align="left">Premium</td>
@@ -978,7 +1022,7 @@
 <td align="left">Universal Carrier 2-pdr</td>
 <td align="left">2 121</td>
 <td align="left">51.8%</td>
-<td align="left">52.5%</td>
+<td align="left">53.5%</td>
 <td align="left">460</td>
 <td align="left">5</td>
 <td align="left">Premium</td>
@@ -987,7 +1031,7 @@
 <td align="left">AT-1</td>
 <td align="left">1 759</td>
 <td align="left">52.9%</td>
-<td align="left">52.9%</td>
+<td align="left">53.6%</td>
 <td align="left">525</td>
 <td align="left">3</td>
 <td align="left">Premium</td>
@@ -1035,6 +1079,16 @@
                         
             
             
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
                 
                     
                     
@@ -1128,6 +1182,11 @@
                     
                     
 
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -1258,19 +1317,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1597057807"></script>
-    <script src="/js/perfect-scrollbar.min.js?1597057807"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1597057807"></script>
-    <script src="/js/jquery.sticky.js?1597057807"></script>
-    <script src="/js/featherlight.min.js?1597057807"></script>
-    <script src="/js/highlight.pack.js?1597057807"></script>
+    <script src="/js/clipboard.min.js?1597450433"></script>
+    <script src="/js/perfect-scrollbar.min.js?1597450433"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1597450433"></script>
+    <script src="/js/jquery.sticky.js?1597450433"></script>
+    <script src="/js/featherlight.min.js?1597450433"></script>
+    <script src="/js/highlight.pack.js?1597450433"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1597057807"></script>
-    <script src="/js/learn.js?1597057807"></script>
-    <script src="/js/hugo-learn.js?1597057807"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1597450433"></script>
+    <script src="/js/learn.js?1597450433"></script>
+    <script src="/js/hugo-learn.js?1597450433"></script>
 
-    <link href="/mermaid/mermaid.css?1597057807" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1597057807"></script>
+    <link href="/mermaid/mermaid.css?1597450433" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1597450433"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
