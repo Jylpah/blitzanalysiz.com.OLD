@@ -10,10 +10,8 @@ var getUrlParameter = function getUrlParameter(sPageURL) {
           sParameterName = sURLVariables[i].split('=');
           obj[sParameterName[0]] = sParameterName[1];
       }
-      return obj;
-    } else {
-      return undefined;
     }
+    return obj;
 };
 
 // Execute actions on images generated from Markdown pages
@@ -22,15 +20,13 @@ var images = $("div#body-inner img").not(".inline");
 images.wrap(function(){
   var image =$(this);
   var o = getUrlParameter(image[0].src);
-  if (typeof o !== "undefined") { // FIX
-	  var f = o['featherlight'];
-	  // IF featherlight is false, do not use feather light
-	  if (f != 'false') {
-		if (!image.parent("a").length) {
-		  return "<a href='" + image[0].src + "' data-featherlight='image'></a>";
-		}
-	  }
-  } // FIX
+  var f = o['featherlight'];
+  // IF featherlight is false, do not use feather light
+  if (f != 'false') {
+    if (!image.parent("a").length) {
+      return "<a href='" + image[0].src + "' data-featherlight='image'></a>";
+    }
+  }
 });
 
 // Change styles, depending on parameters set to the image
