@@ -7,26 +7,32 @@
     <meta name="description" content="Stats analysis of World Of Tanks Blitz">
 <meta name="author" content="Jylpah@gmail.com">
 
-    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
 
     <title>Stats since update 6.0 added :: Home</title>
 
     
-    <link href="/css/nucleus.css?1598555822" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1598555822" rel="stylesheet">
-    <link href="/css/hybrid.css?1598555822" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1598555822" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1598555822" rel="stylesheet">
-    <link href="/css/auto-complete.css?1598555822" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1598555822" rel="stylesheet">
-    <link href="/css/theme.css?1598555822" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1598555822" rel="stylesheet">
+    <link href="/css/nucleus.css?1598558129" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1598558129" rel="stylesheet">
+    <link href="/css/hybrid.css?1598558129" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1598558129" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1598558129" rel="stylesheet">
+    <link href="/css/auto-complete.css?1598558129" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1598558129" rel="stylesheet">
+    <link href="/css/theme.css?1598558129" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1598558129" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1598555822" rel="stylesheet">
+    <link href="/css/theme-mine.css?1598558129" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1598555822"></script>
+    <script src="/js/jquery-3.3.1.min.js?1598558129"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1598555822"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1598555822"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1598558129"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1598558129"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1598555822"></script>
+<script type="text/javascript" src="/js/search.js?1598558129"></script>
 
     
   </div>
@@ -435,9 +441,9 @@
 <h3 id="stats-since-update-60">Stats since update 6.0</h3>
 <p>I have added stats for updates since 6.0 to the site. Please note that while certain graphs like <strong>WR vs. Battles played - update 6.0</strong> show big differences between <a href="/update/6.0/#wr-vs-battles-played">6.0</a> and <a href="/update/6.9/#wr-vs-battles-played">6.9</a>, the changes in the underlying game statistics are likely less, but are caused just BlitzAnalysiz() colleting data more players and especially more new/less active players.</p>
 <h5 id="update-60">Update 6.0</h5>
-<p><img src="/update/6.0/figure/fig_update_WR_vs_battles-1.png" alt="WR vs. Battles played - 6.9"></p>
+<p><img src="/update/6.0/figure/fig_update_WR_vs_battles-1.svg" alt="WR vs. Battles played - 6.0"></p>
 <h5 id="update-69">Update 6.9</h5>
-<p><img src="/update/6.9/figure/fig_update_WR_vs_battles-1.png" alt="WR vs. Battles played - 6.9"></p>
+<p><img src="/update/6.9/figure/fig_update_WR_vs_battles-1.svg" alt="WR vs. Battles played - 6.9"></p>
 <h3 id="graph-templates">Graph templates</h3>
 <p>Now the code is much more manageable weith new graph templates. Previously each graph was a copy-paste from the previous similar one (and with little changes along the line) making it hard to manage the code as I discovered issues and fixed bugs.  I can now add a new graph (as long as I have a template for the graph type), just with few lines of code like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">res <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">head</span>(stats.update<span style="color:#a6e22e">[DT_filter_battles_tank</span>(all.battles, all.battles.new, tier, is_premium), .(<span style="color:#e6db74">&#39;Average WR&#39;</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(WR), 
@@ -491,7 +497,7 @@ res[,Premium <span style="color:#f92672">:=</span> <span style="color:#66d9ef">N
 <p>In addition for the graph templates makin me happier, those ensure more consistent look and feel and allow me to easily add new graphs - there is never enough of those, right?</p>
 <h3 id="unfiltered-graphs">Unfiltered graphs</h3>
 <p>For couple of gprahs I have added <em>unfiltrered</em> (i.e. <em>all</em> players) versions of those. Blitz has huge number of players who just play  few games during the whole update. More than 10% of the players play less than e-i-g-h-t (<strong>8</strong>) battles during an update. And only small share of those players are ever looked at <a href="https://BlitzStars.com">BlitzStars</a> or happen to be recorded into replays sent to  <a href="https://replays.WoTinspector.com">WoTinspector.com</a>, therefore never ending up into Blitzanalysiz.com account database. For this reason I filter players based on minimun battle count requirement for many of the graphs. Otherwise the graphs would show players with 100% WR where in fact they had only one (lucky) game during the whole update.</p>
-<p><img src="/update/6.9/figure/fig_update_player_WR_histogram_unfiltered-1.png" alt="Unfiltered Player WR distribution"></p>
+<p><img src="/update/6.9/figure/fig_update_player_WR_histogram_unfiltered-1.svg" alt="Unfiltered Player WR distribution"></p>
 
 
 
@@ -771,19 +777,19 @@ res[,Premium <span style="color:#f92672">:=</span> <span style="color:#66d9ef">N
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1598555822"></script>
-    <script src="/js/perfect-scrollbar.min.js?1598555822"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1598555822"></script>
-    <script src="/js/jquery.sticky.js?1598555822"></script>
-    <script src="/js/featherlight.min.js?1598555822"></script>
-    <script src="/js/highlight.pack.js?1598555822"></script>
+    <script src="/js/clipboard.min.js?1598558129"></script>
+    <script src="/js/perfect-scrollbar.min.js?1598558129"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1598558129"></script>
+    <script src="/js/jquery.sticky.js?1598558129"></script>
+    <script src="/js/featherlight.min.js?1598558129"></script>
+    <script src="/js/highlight.pack.js?1598558129"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1598555822"></script>
-    <script src="/js/learn.js?1598555822"></script>
-    <script src="/js/hugo-learn.js?1598555822"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1598558129"></script>
+    <script src="/js/learn.js?1598558129"></script>
+    <script src="/js/hugo-learn.js?1598558129"></script>
 
-    <link href="/mermaid/mermaid.css?1598555822" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1598555822"></script>
+    <link href="/mermaid/mermaid.css?1598558129" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1598558129"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
