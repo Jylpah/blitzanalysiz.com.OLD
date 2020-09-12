@@ -7,26 +7,32 @@
     <meta name="description" content="Stats analysis of World Of Tanks Blitz">
 <meta name="author" content="Jylpah@gmail.com">
 
-    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
 
     <title>Measuring tank performance :: Home</title>
 
     
-    <link href="/css/nucleus.css?1598552871" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1598552871" rel="stylesheet">
-    <link href="/css/hybrid.css?1598552871" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1598552871" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1598552871" rel="stylesheet">
-    <link href="/css/auto-complete.css?1598552871" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1598552871" rel="stylesheet">
-    <link href="/css/theme.css?1598552871" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1598552871" rel="stylesheet">
+    <link href="/css/nucleus.css?1597450431" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1597450431" rel="stylesheet">
+    <link href="/css/hybrid.css?1597450431" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1597450431" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1597450431" rel="stylesheet">
+    <link href="/css/auto-complete.css?1597450431" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1597450431" rel="stylesheet">
+    <link href="/css/theme.css?1597450431" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1597450431" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1598552871" rel="stylesheet">
+    <link href="/css/theme-mine.css?1597450431" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1598552871"></script>
+    <script src="/js/jquery-3.3.1.min.js?1597450431"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1598552871"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1598552871"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1597450431"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1597450431"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1598552871"></script>
+<script type="text/javascript" src="/js/search.js?1597450431"></script>
 
     
   </div>
@@ -73,6 +79,30 @@
     <ul class="topics">
 
         
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+  
+ 
+
           
           
 
@@ -102,43 +132,28 @@
           
         
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
-            
-          
-             
             
           
         
@@ -177,25 +192,16 @@
           
         
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
             
           
-             
-            
-          
-             
             
           
         
@@ -479,7 +485,7 @@
 <p>Despite all the issues related to WR, I consider it the best performance measure over a large number of battles and in case of tanks, over large number of players since it measures directly the objective of the game (=to win battles). It is also a more understandable measure vs. somewhat abstract indexes. But I believe performance indicators like WN8 which are based on <em>input stats</em> (average damage, kills, spots) give a more accurate view of players&rsquo; short-term performance (&lt; 100 battles) than WR.</p>
 <p>Now going back to the tank performance.</p>
 <h2 id="so-average-wr-it-is-then-right">So Average WR it is then, right?</h2>
-<p><em>Not so fast.</em> Average WR of a tank is a good starter, but it has its own biases. Let&rsquo;s have a look at two tier IX mediums: <em>AMX 30 1er prototype</em> and <em>Prototipo Standard B</em>. Everything here is based on 7.1 data.</p>
+<p><em>Not so fast.</em> Average WR of a tank is a good starter, but it has its own biases. Let&rsquo;s have a look at two tier IX mediums: <em>AMX 30 1er prototype</em> and <em>Prototipo Standard B</em>. Everything here is based on 6.9 data.</p>
 <p><img src="figure/fig_Tank_WR-1.svg" alt="plot of chunk fig_Tank_WR"></p>
 <table>
 <thead>
@@ -493,12 +499,12 @@
 <tr>
 <td align="left">Prototipo Standard B</td>
 <td align="left">52.3%</td>
-<td align="left">7 633</td>
+<td align="left">7 622</td>
 </tr>
 <tr>
 <td align="left">AMX 30 1er prototype</td>
-<td align="left">56.6%</td>
-<td align="left">3 427</td>
+<td align="left">56.5%</td>
+<td align="left">3 414</td>
 </tr>
 </tbody>
 </table>
@@ -520,14 +526,14 @@
 ## 	Welch Two Sample t-test
 ## 
 ## data:  res[Tank == tanks.post.200608.tank_perf[[1]], `Average WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Average WR`]
-## t = -19.803, df = 5526.5, p-value &lt; 2.2e-16
+## t = -19.695, df = 5498.2, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -0.04715322 -0.03865846
+##  -0.04701283 -0.03850087
 ## sample estimates:
 ## mean of x mean of y 
-## 0.5226528 0.5655587
-</code></pre><pre><code>## p-value: 2.2e-84
+## 0.5226063 0.5653632
+</code></pre><pre><code>## p-value: 1.7e-83
 </code></pre><pre><code>## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 99% confidence level
 </code></pre>
     </div>
@@ -588,16 +594,16 @@
 <tr>
 <td align="left">Prototipo Standard B</td>
 <td align="left">52.6%</td>
-<td align="left">52.2%</td>
+<td align="left">52.1%</td>
 <td align="left">0.49%</td>
-<td align="left">5 948</td>
+<td align="left">5 937</td>
 </tr>
 <tr>
 <td align="left">AMX 30 1er prototype</td>
 <td align="left">56.7%</td>
 <td align="left">56.6%</td>
-<td align="left">0.11%</td>
-<td align="left">2 660</td>
+<td align="left">0.1%</td>
+<td align="left">2 650</td>
 </tr>
 </tbody>
 </table>
@@ -615,19 +621,19 @@
     	</span>
     </div>
     <div class="expand-content" style="display: none;">
-        <p>From statistical perspective the Standard B performs better than the AMX on average. p-value 0.0029 well below the limit 0.05 (95% confidence level).</p>
+        <p>From statistical perspective the Standard B performs better than the AMX on average. p-value 0.0024 well below the limit 0.05 (95% confidence level).</p>
 <pre><code>## 
 ## 	Welch Two Sample t-test
 ## 
 ## data:  res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`]
-## t = 2.9847, df = 4685.8, p-value = 0.002853
+## t = 3.033, df = 4669.7, p-value = 0.002434
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  0.001302731 0.006289738
+##  0.001365480 0.006357204
 ## sample estimates:
 ##   mean of x   mean of y 
-## 0.004866806 0.001070572
-</code></pre><pre><code>## p-value: 0.0029
+## 0.004876500 0.001015158
+</code></pre><pre><code>## p-value: 0.0024
 </code></pre><pre><code>## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 95% confidence level
 </code></pre>
     </div>
@@ -650,13 +656,13 @@
 <tbody>
 <tr>
 <td align="left">AMX 30 1er prototype</td>
-<td align="left">0.03%</td>
-<td align="left">186</td>
+<td align="left">0.07%</td>
+<td align="left">184</td>
 </tr>
 <tr>
 <td align="left">Prototipo Standard B</td>
-<td align="left">0.64%</td>
-<td align="left">97</td>
+<td align="left">0.62%</td>
+<td align="left">98</td>
 </tr>
 </tbody>
 </table>
@@ -677,14 +683,14 @@
 ## 	Welch Two Sample t-test
 ## 
 ## data:  res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`]
-## t = 0.92684, df = 177.93, p-value = 0.3553
+## t = 0.85015, df = 182.12, p-value = 0.3964
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -0.006915394  0.019164284
+##  -0.007345746  0.018468340
 ## sample estimates:
 ##    mean of x    mean of y 
-## 0.0063912301 0.0002667852
-</code></pre><pre><code>## p-value: 0.36
+## 0.0062333215 0.0006720244
+</code></pre><pre><code>## p-value: 0.4
 </code></pre><pre><code>## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level
 </code></pre>
     </div>
@@ -702,17 +708,17 @@
 <tbody>
 <tr>
 <td align="left">Prototipo Standard B</td>
-<td align="left">0.27%</td>
-<td align="left">744</td>
+<td align="left">0.26%</td>
+<td align="left">739</td>
 </tr>
 <tr>
 <td align="left">AMX 30 1er prototype</td>
-<td align="left">0.27%</td>
-<td align="left">758</td>
+<td align="left">0.28%</td>
+<td align="left">755</td>
 </tr>
 </tbody>
 </table>
-<p>When considering only players with 60-70% WR at tier IX, Standard B is still slightly better, but the margin is minuscule. The p-value is 1 so <strong>the difference is not statistically significant</strong> at <em>any</em> reasonable confidence level.</p>
+<p>When considering only players with 60-70% WR at tier IX, Standard B is still slightly better, but the margin is minuscule. The p-value is 0.94 so <strong>the difference is not statistically significant</strong> at <em>any</em> reasonable confidence level.</p>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -729,14 +735,14 @@
 ## 	Welch Two Sample t-test
 ## 
 ## data:  res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`]
-## t = -0.001502, df = 1499.9, p-value = 0.9988
+## t = -0.077832, df = 1492, p-value = 0.938
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -0.005346199  0.005338018
+##  -0.005570840  0.005145627
 ## sample estimates:
 ##   mean of x   mean of y 
-## 0.002739417 0.002743508
-</code></pre><pre><code>## p-value: 1
+## 0.002562778 0.002775385
+</code></pre><pre><code>## p-value: 0.94
 </code></pre><pre><code>## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level
 </code></pre>
     </div>
@@ -755,16 +761,16 @@
 <tr>
 <td align="left">Prototipo Standard B</td>
 <td align="left">0.54%</td>
-<td align="left">2 735</td>
+<td align="left">2 730</td>
 </tr>
 <tr>
 <td align="left">AMX 30 1er prototype</td>
-<td align="left">0.27%</td>
-<td align="left">1 135</td>
+<td align="left">0.25%</td>
+<td align="left">1 130</td>
 </tr>
 </tbody>
 </table>
-<p>For this player category the results have reversed again, and Standard B performs bit better vs. the AMX. This is a large player category in the overall dataset, but still <strong>the difference is not statistically significant</strong> (p-value is 0.2).</p>
+<p>For this player category the results have reversed again, and Standard B performs bit better vs. the AMX. This is a large player category in the overall dataset, but still <strong>the difference is not statistically significant</strong> (p-value is 0.16).</p>
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -781,14 +787,14 @@
 ## 	Welch Two Sample t-test
 ## 
 ## data:  res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`]
-## t = 1.2796, df = 1861.8, p-value = 0.2008
+## t = 1.4182, df = 1852.6, p-value = 0.1563
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -0.001402091  0.006666308
+##  -0.001118612  0.006961485
 ## sample estimates:
 ##   mean of x   mean of y 
-## 0.005360651 0.002728543
-</code></pre><pre><code>## p-value: 0.2
+## 0.005441002 0.002519566
+</code></pre><pre><code>## p-value: 0.16
 </code></pre><pre><code>## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level
 </code></pre>
     </div>
@@ -807,7 +813,7 @@
 <tr>
 <td align="left">Prototipo Standard B</td>
 <td align="left">0.49%</td>
-<td align="left">2 162</td>
+<td align="left">2 160</td>
 </tr>
 <tr>
 <td align="left">AMX 30 1er prototype</td>
@@ -833,13 +839,13 @@
 ## 	Welch Two Sample t-test
 ## 
 ## data:  res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`]
-## t = 3.2484, df = 710.86, p-value = 0.001215
+## t = 3.243, df = 711.21, p-value = 0.001238
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  0.003324566 0.013482766
+##  0.003310788 0.013469827
 ## sample estimates:
 ##    mean of x    mean of y 
-##  0.004873644 -0.003530022
+##  0.004865005 -0.003525303
 </code></pre><pre><code>## p-value: 0.0012
 </code></pre><pre><code>## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 95% confidence level
 </code></pre>
@@ -885,13 +891,13 @@
 ## 	Welch Two Sample t-test
 ## 
 ## data:  res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`]
-## t = 2.1055, df = 153.13, p-value = 0.03688
+## t = 2.1003, df = 153.09, p-value = 0.03734
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  0.0007948878 0.0249704696
+##  0.0007633056 0.0249368912
 ## sample estimates:
 ##    mean of x    mean of y 
-##  0.005207918 -0.007674761
+##  0.005175338 -0.007674761
 </code></pre><pre><code>## p-value: 0.037
 </code></pre><pre><code>## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 95% confidence level
 </code></pre>
@@ -943,6 +949,16 @@
                         
             
             
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
                 
                     
                         
@@ -1018,11 +1034,6 @@
             
         
                     
-                        
-            
-            
-        
-                    
             
         
                     
@@ -1041,11 +1052,6 @@
                     
                     
 
-                    
-                        
-            
-            
-        
                     
                         
             
@@ -1157,27 +1163,61 @@
 	 
     </div>
 
+	<div id="footer" style="text-align: center; margin: 20px;">
+	<ul class="banners">
+	<li class="cc">
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+			<img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" />
+		</a>
+		<p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p> 
+	</li>
+	<li class="wot-blitz">
+        <a target="_blank" rel="nofollow" href="https://wotblitz.com/">
+			<img src="/images/wot-blitz.png">
+		</a>
+    </li>
+	<li class="wg-customer-support">
+            <a target="_blank" rel="nofollow" href="https://wargaming.net/support">
+				<img src="/images/wg-customer-support.png">
+			</a>
+        </li>
+    </ul>
+	<p>Blitzanalysiz() is a player-created website for World of Tanks: Blitz and developed in accordance with <a target="_blank" rel="nofollow" href="https://developers.wargaming.net/documentation/rules/agreement/">WG DPP</a>. This site is not an official Wargaming or World of Tanks: Blitz website. World of Tanks Blitz and Wargaming are trademarks of <a target="_blank" rel="nofollow" href="https://wargaming.net">Wargaming.net Limited</a>. Game content and materials copyright <a target="_blank" rel="nofollow" href="https://wargaming.net/">© Wargaming.net. All rights reserved</a>. 	
+	</p>
+	</div>
     </section>
     
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1598552871"></script>
-    <script src="/js/perfect-scrollbar.min.js?1598552871"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1598552871"></script>
-    <script src="/js/jquery.sticky.js?1598552871"></script>
-    <script src="/js/featherlight.min.js?1598552871"></script>
-    <script src="/js/highlight.pack.js?1598552871"></script>
+    <script src="/js/clipboard.min.js?1597450431"></script>
+    <script src="/js/perfect-scrollbar.min.js?1597450431"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1597450431"></script>
+    <script src="/js/jquery.sticky.js?1597450431"></script>
+    <script src="/js/featherlight.min.js?1597450431"></script>
+    <script src="/js/highlight.pack.js?1597450431"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1598552871"></script>
-    <script src="/js/learn.js?1598552871"></script>
-    <script src="/js/hugo-learn.js?1598552871"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1597450431"></script>
+    <script src="/js/learn.js?1597450431"></script>
+    <script src="/js/hugo-learn.js?1597450431"></script>
 
-    <link href="/mermaid/mermaid.css?1598552871" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1598552871"></script>
+    <link href="/mermaid/mermaid.css?1597450431" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1597450431"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-164692238-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
