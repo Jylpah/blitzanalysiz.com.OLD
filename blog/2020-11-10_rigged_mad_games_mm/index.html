@@ -18,21 +18,21 @@
     <title>Rigged MM :: Home</title>
 
     
-    <link href="/css/nucleus.css?1604997504" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1604997504" rel="stylesheet">
-    <link href="/css/hybrid.css?1604997504" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1604997504" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1604997504" rel="stylesheet">
-    <link href="/css/auto-complete.css?1604997504" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1604997504" rel="stylesheet">
-    <link href="/css/theme.css?1604997504" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1604997504" rel="stylesheet">
+    <link href="/css/nucleus.css?1604999787" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1604999787" rel="stylesheet">
+    <link href="/css/hybrid.css?1604999787" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1604999787" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1604999787" rel="stylesheet">
+    <link href="/css/auto-complete.css?1604999787" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1604999787" rel="stylesheet">
+    <link href="/css/theme.css?1604999787" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1604999787" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1604997504" rel="stylesheet">
+    <link href="/css/theme-mine.css?1604999787" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1604997504"></script>
+    <script src="/js/jquery-3.3.1.min.js?1604999787"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -74,14 +74,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1604997504"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1604997504"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1604999787"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1604999787"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1604997504"></script>
+<script type="text/javascript" src="/js/search.js?1604999787"></script>
 
     
   </div>
@@ -475,9 +475,9 @@ Win rate     | Allies        | Enemies       | TOTAL
 65% - 70%    |     6 ( 0.7%) |    32 ( 3.4%) |    38 ( 2.2%)
 70% -        |     2 ( 0.2%) |     5 ( 0.5%) |     7 ( 0.4%)
 </code></pre><p>The analysis showed <strong>massive 2% difference between the allied and enemy teams&rsquo; average WRs</strong>. I had never seen anything close to such a massive difference. The distribution of player WR in the allied/enemy teams also showed how the enemy teams got constantly better players (see the graph below). The player was a capable 67% WR (career) player and yet he managed to win only 38.1% of his battles. A bad run? Maybe, but I knew such a large difference in teams average WR was extremely rare.</p>
-<p><img src="figure/figure_burning_games_histogram-1.png" alt="plot of chunk figure_burning_games_histogram"></p>
+<p><img src="figure/figure_burning_games_histogram-1.svg" alt="plot of chunk figure_burning_games_histogram"></p>
 <p>I then analyzed the replays for any cherry-picking and it was clear that he was speaking the truth. The replays seemed to be from consecutive battles played over few days.</p>
-<p><img src="figure/figure_replay_timestamps-1.png" alt="plot of chunk figure_replay_timestamps"></p>
+<p><img src="figure/figure_replay_timestamps-1.svg" alt="plot of chunk figure_replay_timestamps"></p>
 <p>I then published my findings on EU, NA, Asia and RU forums and started encouraging players to submit replays to <a href="https://replays.WoTinspector.com">WoTinspector.com</a>. Burning Games were about to end, but I had a suspicion that the very same MM rigging would continue in Mad Games.</p>
 <h2 id="mad-games">Mad Games</h2>
 <p>&hellip; And it did. After the Mad Games ended, there were 1037 Mad Games replays submitted to <a href="https://replays.WoTinspector.com">WoTinspector.com</a>. The results show how good players were clearly given stronger enemy teams, even the MM should have chosen the players randomly. For 65%+ WR players there was <strong>more than 2% difference</strong> between the allied/enemy teams&rsquo; average WR, and for 55-65% WR there was more than 1% average difference. The stronger-than-normal enemies caused the very good players to lose more than half of their battles. There was only one replay by a 35-45% WR player, but that replay was mirroring the good players destiny. He got carried by his team having nearly 2% average WR advantage.</p>
@@ -498,7 +498,7 @@ Player WR___________   Battles   % Battles     WR     Player WR   Allies WR   En
             65 -   %       354 :       34% :  49.7% :    68.33% :    50.31% :     52.45%
 
 </code></pre><p>And while 2% average WR difference may seem small, let&rsquo;s remember that this is a difference between the teams&rsquo; averages. In total there is 7 * 2% = 14% total WR point difference between the team equivalent of the enemy team having one extra unicum/super unicum against an average player (e.g. 64% player vs. a 50% player in the allied team). When plotting a histogram of allied &amp; enemy teams&rsquo; average WR, it becomes dead-obvious how the MM was not even trying to be random, but was clearly <em>rigged</em> against good players (WR 55%+).</p>
-<p><img src="figure/figure_mad_games_histogram-1.png" alt="plot of chunk figure_mad_games_histogram"></p>
+<p><img src="figure/figure_mad_games_histogram-1.svg" alt="plot of chunk figure_mad_games_histogram"></p>
 <h4 id="faq">FAQ</h4>
 <h4 id="are-these-some-cherry-picked-replays">Are these some cherry-picked replays?</h4>
 <p>Very unlikely. Most of these (926 out of 1037) were from players who submitted at least 10 replays, therefore undermining the claim that the replays themselves were somehow cherry-picked extraordinary games.</p>
@@ -534,7 +534,7 @@ Player WR___________   Battles   % Battles     WR     Player WR   Allies WR   En
             55 - 65%       342 :       62% :  66.7% :    59.70% :    50.31% :     50.28%
             65 -   %        85 :       15% :  77.6% :    69.43% :    50.01% :     50.18%
 </code></pre><p>The differences between allied/enemy teams average WR are <em>negligible</em> even the data set is far smaller (means over a smaller data set can have vary more than larger data sets). Many of the replays posted to <a href="https://replays.WoTinspector.com">WoTinspector.com</a> are special games (Masteries, big damage, ultra-noob teams). Therefore, I have selected here only replays from players who have submitted at least 10 replays during sample period (Regular battles played during the Mad Games). Selecting all the replays would not change the conclusion though that <em>Regular Battles MM is not rigged</em>.</p>
-<p><img src="figure/figure_regular_battles_histogram-1.png" alt="plot of chunk figure_regular_battles_histogram"></p>
+<p><img src="figure/figure_regular_battles_histogram-1.svg" alt="plot of chunk figure_regular_battles_histogram"></p>
 <h1 id="what-are-wgs-plans-for-mm">What are WG`'s plans for MM?</h1>
 <p>I think this is the very first proper evidence of rigged &hellip; err&hellip; skill-based MM in Blitz. But it has been applied only to Mad &amp; Burning Game modes so far. <strong>The big question is what is WG&rsquo;s plan with Skill-Based MM going forward?</strong> It is bit concerning that WG recently renamed &ldquo;Random Battles&rdquo; to &ldquo;Regular Battles&rdquo;. And it could be just coincidence, that and WG (RibbleStribe?) was talking about &ldquo;Tweaking MM&rdquo; in a recent Blitz Youtube stream few months back.</p>
 <p>All this raises concerns that WG could be considering implementing Skill-Based MM in Regular Battles. WG could also be applying the Skill-Based MM only to the not-so-serious &ldquo;special&rdquo; modes, but until WG clearly states its intentions, we simply do not know.</p>
@@ -845,19 +845,19 @@ Player WR___________   Battles   % Battles     WR     Player WR   Allies WR   En
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1604997504"></script>
-    <script src="/js/perfect-scrollbar.min.js?1604997504"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1604997504"></script>
-    <script src="/js/jquery.sticky.js?1604997504"></script>
-    <script src="/js/featherlight.min.js?1604997504"></script>
-    <script src="/js/highlight.pack.js?1604997504"></script>
+    <script src="/js/clipboard.min.js?1604999787"></script>
+    <script src="/js/perfect-scrollbar.min.js?1604999787"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1604999787"></script>
+    <script src="/js/jquery.sticky.js?1604999787"></script>
+    <script src="/js/featherlight.min.js?1604999787"></script>
+    <script src="/js/highlight.pack.js?1604999787"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1604997504"></script>
-    <script src="/js/learn.js?1604997504"></script>
-    <script src="/js/hugo-learn.js?1604997504"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1604999787"></script>
+    <script src="/js/learn.js?1604999787"></script>
+    <script src="/js/hugo-learn.js?1604999787"></script>
     
         
-            <script src="/mermaid/mermaid.js?1604997504"></script>
+            <script src="/mermaid/mermaid.js?1604999787"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
