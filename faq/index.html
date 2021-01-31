@@ -18,21 +18,21 @@
     <title>Frequently Asked Questions :: Home</title>
 
     
-    <link href="/css/nucleus.css?1608990016" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1608990016" rel="stylesheet">
-    <link href="/css/hybrid.css?1608990016" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1608990016" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1608990016" rel="stylesheet">
-    <link href="/css/auto-complete.css?1608990016" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1608990016" rel="stylesheet">
-    <link href="/css/theme.css?1608990016" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1608990016" rel="stylesheet">
+    <link href="/css/nucleus.css?1612090876" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1612090876" rel="stylesheet">
+    <link href="/css/hybrid.css?1612090876" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1612090876" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1612090876" rel="stylesheet">
+    <link href="/css/auto-complete.css?1612090876" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1612090876" rel="stylesheet">
+    <link href="/css/theme.css?1612090876" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1612090876" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1608990016" rel="stylesheet">
+    <link href="/css/theme-mine.css?1612090876" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1608990016"></script>
+    <script src="/js/jquery-3.3.1.min.js?1612090876"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1608990016"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1608990016"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1612090876"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612090876"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1608990016"></script>
+<script type="text/javascript" src="/js/search.js?1612090876"></script>
 
     
   </div>
@@ -187,6 +187,8 @@
           
 
         
+          
+            
           
             
           
@@ -432,7 +434,8 @@
         <li><a href="#3-why-did-you-make-the-site">3. Why did you make the site?</a></li>
         <li><a href="#4-what-is-relative-wr">4. What is &ldquo;Relative WR&rdquo;?</a></li>
         <li><a href="#5-is-blitzanalysiz-relative-wr-different-from-blitzstars-one">5. Is BlitzAnalysiz[]' Relative WR different from Blitzstars' one?</a></li>
-        <li><a href="#6-i-spotted-a-mistake-or-i-have-a-questionrequest">6. I spotted a mistake or I have a question/request</a></li>
+        <li><a href="#6-why-is-the-number-of-players-of-a-tank-different-in-different-tables">6. Why is the number of players of a tank different in different tables?</a></li>
+        <li><a href="#7-i-spotted-a-mistake-or-i-have-a-questionrequest">7. I spotted a mistake or I have a question/request</a></li>
       </ul>
     </li>
   </ul>
@@ -465,7 +468,7 @@
 <h3 id="2-are-your-numbers-correct-is-there-bias-in-the-numbers">2. Are your numbers correct? Is there bias in the numbers?</h3>
 <p>The statistics have been calculated from a data set with very high number of players (700,000+) and battles (in total 6bn+). That is maybe 4 times the users <a href="https://Blitzstars.com">Blitzstars.com</a> has. However, there <em>is</em> still <a href="https://en.wikipedia.org/wiki/Sampling_bias">sampling bias</a> as there is any Blitz stats tracker site. This is evidenced by the <a href="/update/7.5/#player-wr-dist">overall WR distribution</a> and the share of all wins out of all the battles in the database being above 50%. This is a topic worth of a longer post - stay tuned.</p>
 <h3 id="3-why-did-you-make-the-site">3. Why did you make the site?</h3>
-<p>Out of pure interest into analysizing Blitz game statistics and to learn data analysis and <a href="https://rstudio.com/">R</a>.</p>
+<p>Out of pure interest into analyzing Blitz game statistics and to learn data analysis and <a href="https://rstudio.com/">R</a>.</p>
 <h3 id="4-what-is-relative-wr">4. What is &ldquo;Relative WR&rdquo;?</h3>
 <p>Relative WR the average of player WR in a tank minus their Average WR in all the same tier tanks. If the tank is perfectly balanced, its Relative WR is 0 %. Large positive Relative WR indicates the tank is &ldquo;very good&rdquo; (read &ldquo;OP&rdquo;). Negative Relative WR indicate the tank performce worse than other same tier tanks. Relative WR is one of the better (if not the best) best measures for tank performance since <a href="/blog/2020-06-08_measuring_tank_performance/#tanks-have-different-playerbases">it takes the skill differences in tanks' playerbases</a> into account, <em>IMHO</em>.</p>
 
@@ -481,11 +484,14 @@
     </div>
     <div class="expand-content" style="display: none;">
         <p><strong>rWR</strong> = Relative WR</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">  stats<span style="color:#a6e22e">[DT_filter_battles_grind</span>(all.battles.new, tier, is_premium), 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">  <span style="color:#75715e"># calculate players WR at a tier (WR.tier) for all the _maxed-out_ tanks</span>
+  stats<span style="color:#a6e22e">[DT_filter_tank_is_maxed2</span>(all.battles.new, tier, is_premium), 
      WR.tier <span style="color:#f92672">:=</span> <span style="color:#a6e22e">sum</span>(all.wins)<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(all.battles), by<span style="color:#f92672">=</span>.(account_id, tier)];
-  stats<span style="color:#a6e22e">[DT_filter_battles_grind</span>(all.battles.new, tier, is_premium),
+  <span style="color:#75715e"># Count the number of maxed out tanks per player per tier</span>
+  stats<span style="color:#a6e22e">[DT_filter_tank_is_maxed2</span>(all.battles.new, tier, is_premium),
      tanks.tier <span style="color:#f92672">:=</span> .N, by<span style="color:#f92672">=</span>.(account_id, tier)];
-  stats[ , rWR <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>];
+  <span style="color:#75715e"># Calculate relative WR for players with 2 or more maxed-out tanks at the tier. </span>
+  <span style="color:#75715e"># Relative WR is calculated only maxed-out tanks with enough battles during the update </span>
   stats<span style="color:#a6e22e">[ </span>(tanks.tier <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">DT_filter_battles_tank</span>(all.battles, tier), 
           rWR <span style="color:#f92672">:=</span> WR <span style="color:#f92672">-</span> WR.tier];
 </code></pre></div><p>The bit cryptic syntax is R&rsquo;s <a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">data.table</a> - one of the fastest software packages for data analysis.</p>
@@ -494,7 +500,19 @@
 </div>
 <h3 id="5-is-blitzanalysiz-relative-wr-different-from-blitzstars-one">5. Is BlitzAnalysiz[]' Relative WR different from Blitzstars' one?</h3>
 <p>Yes, a bit. At the moment Blitzstars.com calculate the Relative WR as WR difference to the players' average WR over all their tanks. BlitzAnalysiz[] considers only the other same tier tanks. The real differences are likely rather small.</p>
-<h3 id="6-i-spotted-a-mistake-or-i-have-a-questionrequest">6. I spotted a mistake or I have a question/request</h3>
+<h3 id="6-why-is-the-number-of-players-of-a-tank-different-in-different-tables">6. Why is the number of players of a tank different in different tables?</h3>
+<p>Performance related graphs/tables are being calculated only of tanks that:</p>
+<ul>
+<li>Are <em>maxed-out</em> based on a tier-dependent <em>estimate</em> it takes to max out a tank (tier V: 18, tier X: 152 battles). Premium tanks do not have this requirement</li>
+<li>The player has enough battles (10-20) in the tank during the update. The requirement depends on the tier.</li>
+<li>The player is out from sub-5k MM queue existing in EU and RU servers (min 6000 battles). This requirement is not applied to the Asia or North America servers.</li>
+</ul>
+<p>In addition, Relative WR charts require a player to have:</p>
+<ul>
+<li>Enough battles in at least two maxed out tanks at a tier</li>
+</ul>
+<p>Graphs/tables showing tank popularity or battles played do not filter battles.</p>
+<h3 id="7-i-spotted-a-mistake-or-i-have-a-questionrequest">7. I spotted a mistake or I have a question/request</h3>
 <p>All the feedback on the site is welcome. You can reach out me via email (<a href="mailto:jylpah@gmail.com">Jylpah@gmail.com</a>), Discord (Jylpah#4662). I am also active at <a href="http://forum.wotblitz.eu/index.php?/forum/19-gameplay/">WoT Blitz EU forums</a>.</p>
 
 
@@ -722,6 +740,11 @@
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -831,19 +854,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1608990016"></script>
-    <script src="/js/perfect-scrollbar.min.js?1608990016"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1608990016"></script>
-    <script src="/js/jquery.sticky.js?1608990016"></script>
-    <script src="/js/featherlight.min.js?1608990016"></script>
-    <script src="/js/highlight.pack.js?1608990016"></script>
+    <script src="/js/clipboard.min.js?1612090876"></script>
+    <script src="/js/perfect-scrollbar.min.js?1612090876"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1612090876"></script>
+    <script src="/js/jquery.sticky.js?1612090876"></script>
+    <script src="/js/featherlight.min.js?1612090876"></script>
+    <script src="/js/highlight.pack.js?1612090876"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1608990016"></script>
-    <script src="/js/learn.js?1608990016"></script>
-    <script src="/js/hugo-learn.js?1608990016"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1612090876"></script>
+    <script src="/js/learn.js?1612090876"></script>
+    <script src="/js/hugo-learn.js?1612090876"></script>
     
         
-            <script src="/mermaid/mermaid.js?1608990016"></script>
+            <script src="/mermaid/mermaid.js?1612090876"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
