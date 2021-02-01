@@ -18,21 +18,21 @@
     <title>Tier IV Premium Tanks :: Home</title>
 
     
-    <link href="/css/nucleus.css?1612090877" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1612090877" rel="stylesheet">
-    <link href="/css/hybrid.css?1612090877" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1612090877" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1612090877" rel="stylesheet">
-    <link href="/css/auto-complete.css?1612090877" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1612090877" rel="stylesheet">
-    <link href="/css/theme.css?1612090877" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1612090877" rel="stylesheet">
+    <link href="/css/nucleus.css?1612168042" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1612168042" rel="stylesheet">
+    <link href="/css/hybrid.css?1612168042" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1612168042" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1612168042" rel="stylesheet">
+    <link href="/css/auto-complete.css?1612168042" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1612168042" rel="stylesheet">
+    <link href="/css/theme.css?1612168042" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1612168042" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1612090877" rel="stylesheet">
+    <link href="/css/theme-mine.css?1612168042" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1612090877"></script>
+    <script src="/js/jquery-3.3.1.min.js?1612168042"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1612090877"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1612090877"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1612168042"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612168042"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1612090877"></script>
+<script type="text/javascript" src="/js/search.js?1612168042"></script>
 
     
   </div>
@@ -745,7 +745,8 @@
   <ul>
     <li><a href="#the-best-performing-tanks">The Best Performing Tanks</a>
       <ul>
-        <li></li>
+        <li><a href="#highest-relative-wr">Highest Relative WR</a></li>
+        <li><a href="#relative-wr-by-player-skill-level">Relative WR by player skill-level</a></li>
       </ul>
     </li>
     <li><a href="#average-wr">Average WR</a>
@@ -816,7 +817,7 @@
 
 	<p>All the graphs are based on battles played during update 6.1 only (not cumulative data).</p>
 <h2 id="the-best-performing-tanks">The Best Performing Tanks</h2>
-<h4 id="relative-wr">Relative WR</h4>
+<h3 id="highest-relative-wr">Highest Relative WR</h3>
 <p>The graph shows tier <a href="..">IV</a> Premium Tanks by <em>Relative WR</em>. That is the average of players' WR in a tank compared to their average WR at the tier (in all same tier tanks). Relative WR is a measure of the performance/strength of the tank.</p>
 
 <div class="expand">
@@ -841,7 +842,7 @@
 
     </div>
 </div>
-<p><img src="figure/fig_tanks_tier_type_Relative_WR-1.svg" alt="plot of chunk fig_tanks_tier_type_Relative_WR"></p>
+<p><img src="figure/fig_tanks_tier_premium_Relative_WR-1.svg" alt="plot of chunk fig_tanks_tier_premium_Relative_WR"></p>
 <h4 id="relative-wr---table">Relative WR - Table</h4>
 
 <div class="expand">
@@ -909,9 +910,58 @@
 
     </div>
 </div>
+<h3 id="relative-wr-by-player-skill-level">Relative WR by player skill-level</h3>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Relative WR - 55%&#43; players
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p><img src="figure/fig_tanks_tier_premium_Relative_WR_topN_55_-1.svg" alt="plot of chunk fig_tanks_tier_premium_Relative_WR_topN_55_"></p>
+
+    </div>
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Relative WR - 45-55% players
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p><img src="figure/fig_tanks_tier_premium_Relative_WR_topN_45_55-1.svg" alt="plot of chunk fig_tanks_tier_premium_Relative_WR_topN_45_55"></p>
+
+    </div>
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Relative WR - 0-45% players
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>Not enough players to calculate Relative WR</p>
+
+    </div>
+</div>
 <h2 id="average-wr">Average WR</h2>
 <p>This graph shows <a href="..">IV</a> Premium Tanks ranked by players' average WR in the tanks. <strong>Player WR</strong> denotes the tank&rsquo;s players' average WR across all the tier IV tanks during the update. Only tanks with more than 400 players are listed. This may filter out few upcoming tanks that are being tested.</p>
-<p><img src="figure/fig_tanks_tier_type_WR-1.svg" alt="plot of chunk fig_tanks_tier_type_WR"></p>
+<p><img src="figure/fig_tanks_tier_premium_WR-1.svg" alt="plot of chunk fig_tanks_tier_premium_WR"></p>
 <h4 id="average-wr---table">Average WR - Table</h4>
 <p><strong>Average WR</strong> denotes average WR in a tank across all the players during the update. <strong>Player WR</strong> denotes the tank&rsquo;s players' average WR across all the tanks during the update.</p>
 
@@ -1009,7 +1059,7 @@
 </div>
 <h2 id="average-damage">Average Damage</h2>
 <p>This graph shows <a href="..">IV</a> Premium Tanks ranked by players' average damage in the tanks.</p>
-<p><img src="figure/fig_tanks_tier_type_avg_dmg-1.svg" alt="plot of chunk fig_tanks_tier_type_avg_dmg"></p>
+<p><img src="figure/fig_tanks_tier_premium_avg_dmg-1.svg" alt="plot of chunk fig_tanks_tier_premium_avg_dmg"></p>
 <h4 id="average-damage---table">Average Damage - Table</h4>
 
 <div class="expand">
@@ -1115,7 +1165,7 @@
 </div>
 <h2 id="average-killsbattle">Average Kills/Battle</h2>
 <p>This graph shows <a href="..">IV</a> Premium Tanks ranked by players' average kills per battle.</p>
-<p><img src="figure/fig_tanks_tier_type_avg_kills-1.svg" alt="plot of chunk fig_tanks_tier_type_avg_kills"></p>
+<p><img src="figure/fig_tanks_tier_premium_avg_kills-1.svg" alt="plot of chunk fig_tanks_tier_premium_avg_kills"></p>
 <h4 id="average-killsbattle---table">Average Kills/Battle - Table</h4>
 
 <div class="expand">
@@ -1221,7 +1271,7 @@
 </div>
 <h2 id="spot-rate">Spot Rate</h2>
 <p>This graph shows <a href="..">IV</a> Premium Tanks ranked by players' spot rate in the tanks.</p>
-<p><img src="figure/fig_tanks_tier_type_spot_rate-1.svg" alt="plot of chunk fig_tanks_tier_type_spot_rate"></p>
+<p><img src="figure/fig_tanks_tier_premium_spot_rate-1.svg" alt="plot of chunk fig_tanks_tier_premium_spot_rate"></p>
 <h4 id="spot-rate---table">Spot Rate - Table</h4>
 
 <div class="expand">
@@ -1327,7 +1377,7 @@
 </div>
 <h2 id="hit-rate">Hit Rate</h2>
 <p>This graph shows <a href="..">IV</a> Premium Tanks ranked by players' hit rate in the tanks.</p>
-<p><img src="figure/fig_tanks_tier_type_hit_rate-1.svg" alt="plot of chunk fig_tanks_tier_type_hit_rate"></p>
+<p><img src="figure/fig_tanks_tier_premium_hit_rate-1.svg" alt="plot of chunk fig_tanks_tier_premium_hit_rate"></p>
 <h4 id="hit-rate---table">Hit Rate - Table</h4>
 
 <div class="expand">
@@ -1433,10 +1483,10 @@
 </div>
 <h2 id="most-popular-tanks">Most popular Tanks</h2>
 <p>This graph shows most popular tier <a href="..">IV</a> Premium Tanks tanks by players.</p>
-<p><img src="figure/fig_tanks_tier_type_most_popular-1.svg" alt="plot of chunk fig_tanks_tier_type_most_popular"></p>
+<p><img src="figure/fig_tanks_tier_premium_most_popular-1.svg" alt="plot of chunk fig_tanks_tier_premium_most_popular"></p>
 <h2 id="most-played-tanks">Most played Tanks</h2>
 <p>This graph shows the most played tier <a href="..">IV</a> Premium Tanks by number of battles during the update 6.1.</p>
-<p><img src="figure/fig_tanks_tier_type_most_played-1.svg" alt="plot of chunk fig_tanks_tier_type_most_played"></p>
+<p><img src="figure/fig_tanks_tier_premium_most_played-1.svg" alt="plot of chunk fig_tanks_tier_premium_most_played"></p>
 <h3 id="most-played-tanks---table">Most Played Tanks - Table</h3>
 
 <div class="expand">
@@ -1949,19 +1999,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1612090877"></script>
-    <script src="/js/perfect-scrollbar.min.js?1612090877"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1612090877"></script>
-    <script src="/js/jquery.sticky.js?1612090877"></script>
-    <script src="/js/featherlight.min.js?1612090877"></script>
-    <script src="/js/highlight.pack.js?1612090877"></script>
+    <script src="/js/clipboard.min.js?1612168042"></script>
+    <script src="/js/perfect-scrollbar.min.js?1612168042"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1612168042"></script>
+    <script src="/js/jquery.sticky.js?1612168042"></script>
+    <script src="/js/featherlight.min.js?1612168042"></script>
+    <script src="/js/highlight.pack.js?1612168042"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1612090877"></script>
-    <script src="/js/learn.js?1612090877"></script>
-    <script src="/js/hugo-learn.js?1612090877"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1612168042"></script>
+    <script src="/js/learn.js?1612168042"></script>
+    <script src="/js/hugo-learn.js?1612168042"></script>
     
         
-            <script src="/mermaid/mermaid.js?1612090877"></script>
+            <script src="/mermaid/mermaid.js?1612168042"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
