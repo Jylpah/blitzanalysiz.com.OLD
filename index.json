@@ -929,6 +929,421 @@
     "content": "BlitzAnalysiz[] is a site about in-depth game statistics of Wargaming&rsquo;s World of Tanks Blitz World war II-themed multiplayer online tank game. You won&rsquo;t find individial player statistics here - for those, please check awesome Blitzstars.com. Instead, the the site is about analysis of the overall player population and tank performance statistics.\nAll the data has been fetched via WG&rsquo;s API and processed in RStudio. The web site has been build with Hugo.\nBig thanks for BlitzStars.com&rsquo;s developer SockRobber and WotInspector.com&rsquo;s developer reven86 for all the support!\nBlitzAnalysiz[] is build by Jylpah@EU. You can reach out me via email (Jylpah@gmail.com), Discord (Jylpah#4662). I am also active at WoT Blitz EU forums.\n"
   },
   {
+    "uri": "https://blitzanalysiz.com/blog/2020-05-16_stats_since_6.0_added/",
+    "title": "Stats since update 6.0 added",
+    "tags": [
+      "post"
+    ],
+    "description": "",
+    "content": "I have been busy cleaning up the codebase and fixing tons of little issues. Here are main updates:\nStats since update 6.0 I have added stats for updates since 6.0 to the site. Please note that while certain graphs like WR vs. Battles played - update 6.0 show big differences between 6.0 and 6.9, the changes in the underlying game statistics are likely less, but are caused just BlitzAnalysiz[] colleting data more players and especially more new/less active players.\nUpdate 6.0 Update 6.9 Graph templates Now the code is much more manageable weith new graph templates. Previously each graph was a copy-paste from the previous similar one (and with little changes along the line) making it hard to manage the code as I discovered issues and fixed bugs. I can now add a new graph (as long as I have a template for the graph type), just with few lines of code like this:\nres &lt;- head(stats.update[DT_filter_battles_tank(all.battles, all.battles.new, tier, is_premium), .(&#39;Average WR&#39; = mean(WR), &#39;Player WR&#39; = mean(WR.global), &#39;Players&#39; = uniqueN(account_id), &#39;Battles&#39; = sum(all.battles), &#39;Premium&#39; = first(is_premium)), by=name ][Players &gt;= min_players][ order(-`Average WR`)],n=topN); res &lt;- prep_plot_tank(res,&#39;Average WR&#39;) title = get_plot_title_top_tanks(&#39;Average WR&#39;, topN = 20) plot_col_discrete_2Y(res,title, update, &#39;Tank&#39;, &#39;Average WR&#39;, &#39;Player WR&#39;, fill_var = &#39;Tank type&#39;)    ...instead of this:   res &lt;- head(stats.update[, .(&#39;Avg. WR&#39; = mean(WR), &#39;Player WR&#39; = mean(WR.global), Players=uniqueN(account_id), Battles = sum(all.battles), Premium= unique(is_premium)), by=name ][Players &gt;= min_players][ order(-`Avg. WR`)],n=topN); setnames(res, &#39;name&#39;, &#39;Tank&#39;); res[, `Avg. WR`:=`Avg. WR` * 100]; res[, `Player WR`:=`Player WR` * 100]; res[Premium==TRUE, `Tank type`:=&#39;Premium&#39;] res[Premium==FALSE, `Tank type`:= &#39;Researchable&#39;] res[,`Tank type` := as.factor(`Tank type`)] res[,Premium := NULL] setcolorder(res,c(&#39;Tank&#39;, &#39;Avg. WR&#39;,&#39;Player WR&#39;, &#39;Players&#39;, &#39;Battles&#39;, &#39;Tank type&#39;)); ggplot(res) + aes(x = reorder(Tank, `Avg. WR`, (function (x) -x)), y = `Avg. WR`, fill= `Tank type`) + geom_col(aes(group=`Tank type`)) + scale_fill_manual(&#39;Tank type&#39;, values = c(&#39;Premium&#39;=&#39;black&#39;, &#39;Researchable&#39; = &#39;grey&#39;)) + geom_point(aes(x = reorder(Tank, `Avg. WR`, (function (x) -x)), y=`Player WR`, color = color.2nd_series, shape=&#39;Player WR&#39;), shape=&#39;-&#39;, size=20, inherit.aes = FALSE) + scale_color_identity(name = NULL, guide=&#39;legend&#39;, labels= &#39;Player WR&#39;) + scale_x_discrete(&#39;Tank&#39;) + scale_y_continuous(&#39;Win rate&#39;, labels = div_format(seq(0,100,5),1,&#39;%&#39;), breaks = seq(0, 100, 5)) + theme(panel.background = element_rect(fill = &#39;white&#39;), plot.title = element_text(hjust = 0.5), panel.grid.minor = element_line(colour=&#34;grey&#34;, size=0.5), axis.text.x = element_text(angle = 45, hjust = 1), plot.subtitle = element_text(hjust = 1), legend.key = element_blank()) + ggtitle(paste(&#39;TOP&#39;,topN, &#39;Tanks by WR&#39;), subtitle = paste(&#34;Update&#34;, update));    In addition for the graph templates makin me happier, those ensure more consistent look and feel and allow me to easily add new graphs - there is never enough of those, right?\nUnfiltered graphs For couple of gprahs I have added unfiltrered (i.e. all players) versions of those. Blitz has huge number of players who just play few games during the whole update. More than 10% of the players play less than e-i-g-h-t (8) battles during an update. And only small share of those players are ever looked at BlitzStars or happen to be recorded into replays sent to WoTinspector.com, therefore never ending up into Blitzanalysiz.com account database. For this reason I filter players based on minimun battle count requirement for many of the graphs. Otherwise the graphs would show players with 100% WR where in fact they had only one (lucky) game during the whole update.\n"
+  },
+  {
+    "uri": "https://blitzanalysiz.com/blog/2020-06-08_measuring_tank_performance/",
+    "title": "Measuring tank performance",
+    "tags": [
+      "post"
+    ],
+    "description": "",
+    "content": "Updated 2020-08-11\nOver-Powered (OP) tanks are maybe the 2nd most popular topic on Blitz YouTube videos and online chats - right after &ldquo;the Matchmaker&rdquo;. I have long held the view that if a tank is &ldquo;OP&rdquo;, this has to be visible in statistics. Otherwise there are only qualitative / subjective views left and those come in all sorts.\nPeople are susceptible to all kinds of biases in their thinking. Getting ammoracked by a Death Star will raise suspicion that the Death Star is an OP tank even though it is actually the worst tier X tank. Anecdotal experiences distort opinions and no one remembers those countless battles where a Death Star was at the bottom of the list. Therefore, tank performance is not a thing that we should vote about, but a thing we can measure with statistics.\nHow to measure performance in the game? Let&rsquo;s discuss first how to measure performance in the game. I am a proponent of win rate being the best measure for performance (player or tank) - not average damage, not average kills, and not speed, not alpha damage or any other attribute or characteristics. The reason for choosing win rate over other variables is the fact that winning is the objective of the game and all the damage, kills, spotting etc. are just means to win the game. Why measure proxy variables when you can measure the final variable itself?\nThere are some caveats in using WR as a performance measure:\n It requires many battles for the WR to settle near one&rsquo;s performance level due to both MM and RNG: It takes 400 battles to reach +/- 5% accuracy, 10000 battles to reach +/- 1% accuracy and whopping 1 million battles to reach 0.1% accuracy with 95% confidence level. Check this link at PC WoT forums for details. Platoon rate impacts on WR but cannot be separated well from the statistics since WG does not publish platoon rate per tank played, but just as a aggregate level over all the tanks. Platooning with a good player can lift one&rsquo;s WR 5-15%. Career WR measures historical average, not one&rsquo;s present performance level, and it reacts slowly once the player has lot (10k+) battles. WG&rsquo;s new &ldquo;newbie MM queue&rdquo; has distorted the Career stats for rerollers big time. This distorts both tank and player average WR. (Just ignore global &amp; career WR). Some tanks are more powerful than others. Comparing different players' WR in different tanks or global WR does not tell us much. Different tiers have different level of difficulty. Global / Average WR is close to useless for measuring player / tank performance. Stock tanks' performance is significantly lower compared to when maxed-out.  But other performance measures have issues too and can be gamed; Easiest way to increase average damage is to play more high tiers and more TDs, WN8 can be gamed by playing popular tech three tanks that are difficult for below average players and not too popular among the unicums.\nDespite all the issues related to WR, I consider it the best performance measure over a large number of battles and in case of tanks, over large number of players since it measures directly the objective of the game (=to win battles). It is also a more understandable measure vs. somewhat abstract indexes. But I believe performance indicators like WN8 which are based on input stats (average damage, kills, spots) give a more accurate view of players' short-term performance (&lt; 100 battles) than WR.\nNow going back to the tank performance.\nSo Average WR it is then, right? Not so fast. Average WR of a tank is a good starter, but it has its own biases. Let&rsquo;s have a look at two tier IX mediums: AMX 30 1er prototype and Prototipo Standard B. Everything here is based on 6.9 data.\n   Tank Average WR Players     Prototipo Standard B 52.5% 9 065   AMX 30 1er prototype 56.4% 4 370    Both tanks have also been played by thousands of players, but the AMX seems to have significantly higher average WR. Many would be tempted to claim the AMX is a better tank than Standard B. But is it?\n  Testing for Statistical significance   As the t-test shows below, the difference in average WR between the tanks is statistically significant with any confidence level.\n## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Average WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Average WR`] ## t = -20.276, df = 7143.9, p-value &lt; 2.2e-16 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.04359091 -0.03590513 ## sample estimates: ## mean of x mean of y ## 0.5245230 0.5642711 ## p-value: 6.4e-89 ## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 99% confidence level    Tank performance is a different variable from player skill Let us first consider a single player and the factors affecting the player&rsquo;s chances to win one battle:\nChance of winning ~ player skill * tank performance + RNG + team performance - enemy team performance\nOver a large number of battles the variables team performance and enemy team performance approach their respective averages and the impact of RNG approaches zero (&ldquo;What RNG gives, RNG takes&rdquo;). The more battles one plays in a tank, only two factors will influence one&rsquo;s WR in it:\nWR ~ player skill * tank performance\nAnd to be more precise, player skill is average player skill in the tank in question. Platooning has been ignored here since unfortunately WG does not publish very usable platooning stats via their API.\nSaying &ldquo;any tank is OP in good players hands&rdquo; is the same as saying &ldquo;any car is fast in the hands of a good driver&rdquo;. While a good driver can make better-than-average lap times with a slow car, a good driver does not make the car any faster, but is just &hellip; a good driver. Give the driver a faster car and they can drive even faster.\nTL;DR. Tank performance and player skill are two separate things\nTanks have different playerbases Let&rsquo;s now go back to the AMX 30 1er prototype vs. Standard B example and compare the playerbases. I have chosen player average WR at the tier as a measure for &ldquo;player skill&rdquo;. And more precisely as measured during the update under study (i.e. not career WR). This eliminates couple of biases:\n WR during the update measures the player&rsquo;s current performance unlike Career WR that measures the average historical performance (re-rollers vs. normal players) It measures player performance at the tier in question unlike average WR over all the tiers, and thus is not distorted by low-tier stats-padding  The plot below shows player WR distribution at tier IX (in any tank) for the both AMX 30 1er prototype and Standard B players. It is clear that the AMX 30 1er prototype is played by better players than Standard B. Stock tank battles (Standard B) have been filtered out based on an estimate of battles required to max-out the tank (139).\n   Tank Avg player WR at Tier IX     Prototipo Standard B 52.7%   AMX 30 1er prototype 56.3%    While both the tanks have been played by thousands of players, the AMX is a premium tank whereas Standard B is a Tech Three tank. The players of the both the tanks are roughly equally experienced (see the histogram graph below), but the AMX players are significantly better on average.\nBut do the differences in the tanks' playerbases explain the difference in Average WR differences or not?\nIntroducing Relative WR To separate the players' skill-level distribution from tank performance, we need to compare players' WR in a tank to their skill-level. As explained above, I have chosen Average WR at the Tier as the measure for player skill. Blitzstars' Tank-Compare uses players' average WR (on any tier) as a measure for player skill in its Relative WR graphs. I have chose to use the WR at the tier in question to eliminate the impact of low-tier stat padding.\nRelative WR(tank) = Average(WR in a tank - Player&rsquo;s WR at the Tier)\nIn a nutshell, Relative WR shows how much more/less the players are winning with the tank vs. their tier average. The higher the Relative WR, the stronger the tank is.\n   Tank Average WR WR at Tier Relative WR Players     Prototipo Standard B 52.6% 52.2% 0.43% 7 956   AMX 30 1er prototype 56.9% 56.7% 0.25% 3 570    The Relative WR graph above shows that players perform a bit better with Standard B than the AMX when compared to their tier IX average. The AMX&rsquo;s average WR is far higher than the Standard B&rsquo;s, but its playerbase is far better too - on average. when the differences in the playerbase are taken into account, the difference becomes small and to the Standard B&rsquo;s advantage. The difference IS statistically significant See significance testing below.\nPremium tanks and new higher tier tank lines are often played by better players than average. This distorts the average WR of those tanks and makes people regard the tanks as OP whereas the fundamental reason can be that the tanks are just being played by better players. Yes, there are many borderline-OP &amp; ridiculously-broken premium tanks, but the Relative WR analysis allows us to separate tank performance from skill-level differences in the tanks' playerbases.\n  Testing for Statistical significance   From statistical perspective the Standard B performs better than the AMX on average. p-value 0.081 well below the limit 0.05 (95% confidence level).\n## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 1.7469, df = 5971.7, p-value = 0.0807 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.0002202523 0.0038259103 ## sample estimates: ## mean of x mean of y ## 0.004291730 0.002488901 ## p-value: 0.081 ## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level    TL;DR: Relative WR measures how much higher/lower WR players achieve in a tank vs. their average WR at the same tier.\nOK, is this wall of text over now? Nope.\nPerformance within player skill category The data shows that the Standard B&rsquo;s Relative WR is slightly higher than the AMX 30 1er prototype&rsquo;s - on average - although the difference is not strictly statistically significant. The caveat here is the words on average. How about performance in the hands of below/above average players? Some tanks are known to be difficult for less-skilled players, but well performing in the hands of more skilled players.\nLet&rsquo;s see how the Standard B and the AMX perform when played by different player skill categories.\nPerformance in the hands of super-good players (WR at tier &gt;70%)    Tank Relative WR Players     AMX 30 1er prototype 0.22% 267   Prototipo Standard B 0.48% 158    Standard B seems to perform better than the AMX in the hands of super-good players. However, the player sample is on the small side and the difference is not statistically significant (see below).\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 0.56165, df = 313.91, p-value = 0.5748 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.006480443 0.011658220 ## sample estimates: ## mean of x mean of y ## 0.004814335 0.002225446 ## p-value: 0.57 ## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level    Performance in the hands of very good players (WR at tier 60-70%)    Tank Relative WR Players     Prototipo Standard B 0.4% 1 029   AMX 30 1er prototype 0.35% 1 022    When considering only players with 60-70% WR at tier IX, Standard B is still slightly better, but the margin is minuscule. The p-value is 0.8 so the difference is not statistically significant at any reasonable confidence level.\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 0.24816, df = 2029.4, p-value = 0.804 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.003669481 0.004732673 ## sample estimates: ## mean of x mean of y ## 0.004038950 0.003507354 ## p-value: 0.8 ## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level    Performance in the hands of good players (WR at tier 50-60%)    Tank Relative WR Players     Prototipo Standard B 0.49% 3 570   AMX 30 1er prototype 0.44% 1 485    For this player category the results have reversed again, and Standard B performs bit better vs. the AMX. This is a large player category in the overall dataset, but still the difference is not statistically significant (p-value is 0.78).\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 0.27339, df = 2353.5, p-value = 0.7846 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.002847024 0.003769455 ## sample estimates: ## mean of x mean of y ## 0.004875794 0.004414578 ## p-value: 0.78 ## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level    Performance in the hands of below-average players (WR at tier 40-50%)    Tank Relative WR Players     Prototipo Standard B 0.37% 2 905   AMX 30 1er prototype -0.16% 682    When analyzing players with 40-50% WR at tier IX, Standard B performance clearly better. Considering that this is a large player group, it is easy to understand why Standard B&rsquo;s average Relative WR is higher than the AMX&rsquo;s. My guess is that it is the Standard B&rsquo;s burst DPM that helps the below average players, where as AMX requires more skill in e.g. ridge fighting to perform, even it is a very good tank in the hands of a skilled player. Also, for this player group, the difference in Relative WR is statistically significant (p-value 0.015).\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 2.4359, df = 903.2, p-value = 0.01505 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## 0.001042643 0.009689074 ## sample estimates: ## mean of x mean of y ## 0.003716970 -0.001648889 ## p-value: 0.015 ## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 95% confidence level    Performance in the hands of well below-average players (WR at tier &lt;40%)    Tank Relative WR Players     Prototipo Standard B 0.35% 292   AMX 30 1er prototype -0.66% 112    Here the difference in Relative WR turns even larger between the tanks. Standard B seems to perform significantly better for players with below-average skills. Again, I suspect the reason being the burst damage. Even the sample size is getting small the difference IS statistically significant (p-value 0.044)).\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 2.0256, df = 188, p-value = 0.04422 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## 0.0002632513 0.0198760920 ## sample estimates: ## mean of x mean of y ## 0.003496051 -0.006573621 ## p-value: 0.044 ## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 95% confidence level    Final words As you can see, the question of tanks' performance is not that straightforward. Even though average WR is such a common measure for tanks' performance, it fails to separate the impact of the different playerbases from the underlying tank performance. And even when comparing tank&rsquo;s (average) Relative WR it only answers to the question in average - not for very good player or well-below average player.\nTo understand how does a tank perform in the hands of certain skill-level players, the Relative WR analysis can still come handy as it can be run for a specific skill-level players only. Again, the numbers are averages and there are always players who are relatively better on one tank vs other. But the Relative WR analysis per skill-level can help a player to choose tanks they are more likely to perform better with.\nIn case of the AMX 30 1er prototype and Standard B, the differences between the tank performance are mostly insignificant, but not far from being statistically significant. As anyone skilled player who has played those, both the tanks are good. I would call it a draw here since there are far larger imbalances in the game.\nThe graph below shows Relative WR for both the tanks as a function of players' average WR at the tier (IX). The grey area shows the share of players with particular WR at the tier in the dataset. Small sample sizes are likely to cause errors in both the ends of the graph.\nI find it surprising there were differences between the tanks' performance in the 60-70% and 70%+ WR player segments. The absolute differences are not that big and this could go into statistical error tolerances. What may explain the result is the fact that player skill follows broadly normal distribution, thus there are more players with (tier) WR closer to 50% than further away from it. Therefore the 60-70% WR player segment consist of mostly 60-65% players vs. 65-70% players. And there is quite a difference skill still between 60-65% and 70%+ players as I can observe every time I watch e.g. Juicy Tender Steak or Sk8xtrm playing tanks.\nThat&rsquo;s all folks - this time\n"
+  },
+  {
+    "uri": "https://blitzanalysiz.com/blog/2020-06-17_update_6.10_stats_added/",
+    "title": "Update 6.10 stats added",
+    "tags": [
+      "post"
+    ],
+    "description": "",
+    "content": "Stats for update 6.10 has been added to the site. How did the ATGM tanks actually perform? Did Sheridan deserve its nerf in 7.0? Was T92E1 still one of the best performing tier IX tanks?\nI also discovered a bug in the code (function params in wrong order) that has likely impact the earlier results to some extend by filtering out too many results. Fixed now after several hours of debugging&hellip;\n"
+  },
+  {
+    "uri": "https://blitzanalysiz.com/blog/2021-02-14_7.6_prelim_stats_added/",
+    "title": "Update 7.6 preliminary stats added ",
+    "tags": [
+      "post",
+      "7.6"
+    ],
+    "description": "",
+    "content": "Preliminary stats for update 7.6 have been added.\n In total, there has been 148M battles by 498k players recorded in the database during the update 7.6 so far. Please note, these are note all the WoT Blitz players, just those tracked by BlitzAnalysiz[].  \n T28 Concept, Annihilator and Object 252U took the top spots (most OP) in terms of Relative WR. The recently introduced EMIL 1951 premium tank is 10th making premium tanks to take 8 out of the 10 top spot. No pay-to-win here, of course not.  \n The infamous TOG II* was buffed in update 7.6 and it has jumped from the 6th lowest performing to the 11th best performing tier VI tank.  \n\n"
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.0/",
+    "title": "6.0",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.1/",
+    "title": "6.1",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.10/",
+    "title": "6.10",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.2/",
+    "title": "6.2",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.3/",
+    "title": "6.3",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.4/",
+    "title": "6.4",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.5/",
+    "title": "6.5",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.6/",
+    "title": "6.6",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.7/",
+    "title": "6.7",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.8/",
+    "title": "6.8",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.9/",
+    "title": "6.9",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.0/",
+    "title": "7.0",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.1/",
+    "title": "7.1",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.2/",
+    "title": "7.2",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.3/",
+    "title": "7.3",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.4/",
+    "title": "7.4",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.5/",
+    "title": "7.5",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.6/",
+    "title": "7.6",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/at-1/",
+    "title": "AT-1",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/career-stats/",
+    "title": "Career stats",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/churchill-gun-carrier/",
+    "title": "Churchill Gun Carrier",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/gro%C3%9Ftraktor-krupp/",
+    "title": "Großtraktor - Krupp",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/hafen/",
+    "title": "Hafen",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/heavy-tank/",
+    "title": "Heavy Tank",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/kv-220-beta-test/",
+    "title": "KV-220 Beta-Test",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/light-tank/",
+    "title": "Light Tank",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/ltp/",
+    "title": "LTP",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/medium-tank/",
+    "title": "Medium Tank",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/post/",
+    "title": "Post",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/pz.kpfw.-iv-ausf.-a/",
+    "title": "Pz.Kpfw. IV Ausf. A",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/region/",
+    "title": "Region",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/renault-ue-57/",
+    "title": "Renault UE 57",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/su-76/",
+    "title": "SU-76",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/t-127/",
+    "title": "T-127",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/t2-medium-tank/",
+    "title": "T2 Medium Tank",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/t25-pilot-number-1/",
+    "title": "T25 Pilot Number 1",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/",
+    "title": "Tags",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tank-destroyer/",
+    "title": "Tank Destroyer",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-i/",
+    "title": "Tier I",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-ii/",
+    "title": "Tier II",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-iii/",
+    "title": "Tier III",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-iv/",
+    "title": "Tier IV",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-ix/",
+    "title": "Tier IX",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-stats/",
+    "title": "Tier stats",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-v/",
+    "title": "Tier V",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-vi/",
+    "title": "Tier VI",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-vii/",
+    "title": "Tier VII",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-viii/",
+    "title": "Tier VIII",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tier-x/",
+    "title": "Tier X",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/tiers-all/",
+    "title": "Tiers all",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/universal-carrier-2-pdr/",
+    "title": "Universal Carrier 2-pdr",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/valentine-at/",
+    "title": "Valentine AT",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/vickers-medium-mk.-ii/",
+    "title": "Vickers Medium Mk. II",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/vulcan/",
+    "title": "Vulcan",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
     "uri": "https://blitzanalysiz.com/tags/10tp/",
     "title": "10TP",
     "tags": [],
@@ -1009,16 +1424,6 @@
     "content": "Preliminary stats\n14TP is a European Tier III Light Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Light Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
   },
   {
-    "uri": "https://blitzanalysiz.com/blog/2021-02-14_7.6_prelim_stats_added/",
-    "title": "Update 7.6 preliminary stats added ",
-    "tags": [
-      "post",
-      "7.6"
-    ],
-    "description": "",
-    "content": "Preliminary stats for update 7.6 have been added.\n In total, there has been 148M battles by 498k players recorded in the database during the update 7.6 so far. Please note, these are note all the WoT Blitz players, just those tracked by BlitzAnalysiz[].  \n T28 Concept, Annihilator and Object 252U took the top spots (most OP) in terms of Relative WR. The recently introduced EMIL 1951 premium tank is 10th making premium tanks to take 8 out of the 10 top spot. No pay-to-win here, of course not.  \n The infamous TOG II* was buffed in update 7.6 and it has jumped from the 6th lowest performing to the 11th best performing tier VI tank.  \n\n"
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/59-patton/",
     "title": "59-Patton",
     "tags": [],
@@ -1037,13 +1442,6 @@
     ],
     "description": "",
     "content": "Preliminary stats\n59-Patton is a Chinese Tier VIII premium Medium Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Medium Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.6/",
-    "title": "7.6",
-    "tags": [],
-    "description": "",
-    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/tags/88-cm-pak-43-jagdtiger/",
@@ -1964,13 +2362,6 @@
     ],
     "description": "",
     "content": "Preliminary stats\nCaernarvon Action X is a British Tier VIII premium Heavy Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Heavy Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/career-stats/",
-    "title": "Career stats",
-    "tags": [],
-    "description": "",
-    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/update/latest/tanks/8/all/20305/",
@@ -2992,13 +3383,6 @@
     "content": "Preliminary stats\nGrille 15 is a German Tier X Tank Destroyer.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Tank Destroyers.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/gro%C3%9Ftraktor-krupp/",
-    "title": "Großtraktor - Krupp",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/update/latest/tanks/3/all/59665/",
     "title": "Großtraktor - Krupp",
     "tags": [
@@ -3010,13 +3394,6 @@
     ],
     "description": "",
     "content": "Preliminary stats\nGroßtraktor - Krupp is a German Tier III premium Heavy Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Heavy Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/heavy-tank/",
-    "title": "Heavy Tank",
-    "tags": [],
-    "description": "",
-    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/tags/helsing-h0/",
@@ -3779,13 +4156,6 @@
     "content": "Preliminary stats\nKV-2 is a Soviet Tier VI Heavy Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Heavy Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/kv-220-beta-test/",
-    "title": "KV-220 Beta-Test",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/update/latest/tanks/5/all/51201/",
     "title": "KV-220 Beta-Test",
     "tags": [
@@ -3977,13 +4347,6 @@
     ],
     "description": "",
     "content": "Preliminary stats\nLight Mk. VIC is a British Tier II premium Light Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Light Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/light-tank/",
-    "title": "Light Tank",
-    "tags": [],
-    "description": "",
-    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/tags/lorraine-40-t/",
@@ -4819,13 +5182,6 @@
     "content": "Preliminary stats\nMaus is a German Tier X Heavy Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Heavy Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/medium-tank/",
-    "title": "Medium Tank",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/mt-25/",
     "title": "MT-25",
     "tags": [],
@@ -5265,13 +5621,6 @@
     "content": "Preliminary stats\nPanzerjäger I is a German Tier II premium Tank Destroyer.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Tank Destroyers.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/post/",
-    "title": "Post",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/predator-ultramarines/",
     "title": "Predator Ultramarines",
     "tags": [],
@@ -5669,13 +6018,6 @@
     ],
     "description": "",
     "content": "Preliminary stats\nRam II is a American Tier V premium Medium Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Medium Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/region/",
-    "title": "Region",
-    "tags": [],
-    "description": "",
-    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/tags/renault-r35/",
@@ -7024,13 +7366,6 @@
     "content": "Preliminary stats\nT2 Light Tank is a American Tier II premium Light Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Light Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/t2-medium-tank/",
-    "title": "T2 Medium Tank",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/update/latest/tanks/2/all/5665/",
     "title": "T2 Medium Tank",
     "tags": [
@@ -7697,20 +8032,6 @@
     "content": "Preliminary stats\nT95E6 is a American Tier X premium Heavy Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Heavy Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/",
-    "title": "Tags",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tank-destroyer/",
-    "title": "Tank Destroyer",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/tankenstein/",
     "title": "Tankenstein",
     "tags": [],
@@ -7769,90 +8090,6 @@
     ],
     "description": "",
     "content": "Preliminary stats\nThunder is a Soviet Tier VI premium Heavy Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Heavy Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-i/",
-    "title": "Tier I",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-ii/",
-    "title": "Tier II",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-iii/",
-    "title": "Tier III",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-iv/",
-    "title": "Tier IV",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-ix/",
-    "title": "Tier IX",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-stats/",
-    "title": "Tier stats",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-v/",
-    "title": "Tier V",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-vi/",
-    "title": "Tier VI",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-vii/",
-    "title": "Tier VII",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-viii/",
-    "title": "Tier VIII",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tier-x/",
-    "title": "Tier X",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/tiers-all/",
-    "title": "Tiers all",
-    "tags": [],
-    "description": "",
-    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/tags/tiger-p/",
@@ -8306,13 +8543,6 @@
     ],
     "description": "",
     "content": "Preliminary stats\nType T-34 is a Chinese Tier V Medium Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Medium Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/valentine-at/",
-    "title": "Valentine AT",
-    "tags": [],
-    "description": "",
-    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/update/latest/tanks/3/all/8017/",
@@ -9138,134 +9368,8 @@
     "content": "Final stats for update 7.5 have been added.\n In total, there were mind-blowing 452M battles by 610k players recorded in the database during the update 7.5. These are by far the largest numbers ever record at BlitzAnalysiz[]. Please note, these are not all the WoT Blitz players, just those tracked by BlitzAnalysiz[].  \n  EMIL 1951 took straight away the second spot pushing Maus, the best performing Tech tree tank, out of TOP 5. Great, people get bang for their rubles. Never mind the tank balance.\n  Otherwise the top spots went to tanks with great &ldquo;balance&rdquo; of armor, mobility and firepower such as T28 Concept, T54E2 and Annihilator.\n  \n New Relative WR by player skill-level charts added for the main tank stats and tier tank stats. There are three player skill-level buckets measured as WR at the tier: 0-45%, 45-55% and 55%+.  \n"
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/6.0/",
-    "title": "6.0",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.1/",
-    "title": "6.1",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.10/",
-    "title": "6.10",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.2/",
-    "title": "6.2",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.3/",
-    "title": "6.3",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.4/",
-    "title": "6.4",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.5/",
-    "title": "6.5",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.6/",
-    "title": "6.6",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.7/",
-    "title": "6.7",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.8/",
-    "title": "6.8",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.9/",
-    "title": "6.9",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.0/",
-    "title": "7.0",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.1/",
-    "title": "7.1",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.2/",
-    "title": "7.2",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.3/",
-    "title": "7.3",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.4/",
-    "title": "7.4",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.5/",
-    "title": "7.5",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/amx-13-57/",
     "title": "AMX 13 57",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/churchill-gun-carrier/",
-    "title": "Churchill Gun Carrier",
     "tags": [],
     "description": "",
     "content": ""
@@ -9285,20 +9389,6 @@
     "content": ""
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/hafen/",
-    "title": "Hafen",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/ltp/",
-    "title": "LTP",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/m2-medium-tank/",
     "title": "M2 Medium Tank",
     "tags": [],
@@ -9308,13 +9398,6 @@
   {
     "uri": "https://blitzanalysiz.com/tags/nameless/",
     "title": "Nameless",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/pz.kpfw.-iv-ausf.-a/",
-    "title": "Pz.Kpfw. IV Ausf. A",
     "tags": [],
     "description": "",
     "content": ""
@@ -9351,13 +9434,6 @@
     "content": ""
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/at-1/",
-    "title": "AT-1",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/d1/",
     "title": "D1",
     "tags": [],
@@ -9379,43 +9455,8 @@
     "content": ""
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/renault-ue-57/",
-    "title": "Renault UE 57",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/sherman-v/",
     "title": "Sherman V",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/su-76/",
-    "title": "SU-76",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/t-127/",
-    "title": "T-127",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/t25-pilot-number-1/",
-    "title": "T25 Pilot Number 1",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/universal-carrier-2-pdr/",
-    "title": "Universal Carrier 2-pdr",
     "tags": [],
     "description": "",
     "content": ""
@@ -9428,22 +9469,8 @@
     "content": ""
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/vickers-medium-mk.-ii/",
-    "title": "Vickers Medium Mk. II",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/vickers-medium-mk.-iii/",
     "title": "Vickers Medium Mk. III",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/vulcan/",
-    "title": "Vulcan",
     "tags": [],
     "description": "",
     "content": ""
@@ -9457,15 +9484,6 @@
     ],
     "description": "",
     "content": "Preliminary stats for update 7.4 have been added.\n In total, there were 105M battles by 419k players recorded in the database during the update 7.4 so far. Please note, these are note all the WoT Blitz players, just those tracked by BlitzAnalysiz[].  \n Chimera has taken the title of the best performing (most OP) tank in the game just ahead of Maus and Emil I. Fair enough, I was wrong, and WG should go and nerf the Emil I a bit :-)  \n  In general it is great to see Tech Tree tanks taking three spots out of the TOP 5 best performing tanks. The Relative WR figures tend to be bit lower for the new tank lines since many people have been grinding the tank with stock crews and modules. It is not uncommon to see Tech Tree tanks improving their performance stats 1-2 updates since the release. This is despite the fact that I filter out players with too few cumulative battles in a Tech Tree tank to avoid including too many stock tanks in the performance stats.\n  And as anyone playing tiers VI-VII knows, the Annihilator is performing great.\n  \n"
-  },
-  {
-    "uri": "https://blitzanalysiz.com/blog/2020-05-16_stats_since_6.0_added/",
-    "title": "Stats since update 6.0 added",
-    "tags": [
-      "post"
-    ],
-    "description": "",
-    "content": "I have been busy cleaning up the codebase and fixing tons of little issues. Here are main updates:\nStats since update 6.0 I have added stats for updates since 6.0 to the site. Please note that while certain graphs like WR vs. Battles played - update 6.0 show big differences between 6.0 and 6.9, the changes in the underlying game statistics are likely less, but are caused just BlitzAnalysiz[] colleting data more players and especially more new/less active players.\nUpdate 6.0 Update 6.9 Graph templates Now the code is much more manageable weith new graph templates. Previously each graph was a copy-paste from the previous similar one (and with little changes along the line) making it hard to manage the code as I discovered issues and fixed bugs. I can now add a new graph (as long as I have a template for the graph type), just with few lines of code like this:\nres &lt;- head(stats.update[DT_filter_battles_tank(all.battles, all.battles.new, tier, is_premium), .(&#39;Average WR&#39; = mean(WR), &#39;Player WR&#39; = mean(WR.global), &#39;Players&#39; = uniqueN(account_id), &#39;Battles&#39; = sum(all.battles), &#39;Premium&#39; = first(is_premium)), by=name ][Players &gt;= min_players][ order(-`Average WR`)],n=topN); res &lt;- prep_plot_tank(res,&#39;Average WR&#39;) title = get_plot_title_top_tanks(&#39;Average WR&#39;, topN = 20) plot_col_discrete_2Y(res,title, update, &#39;Tank&#39;, &#39;Average WR&#39;, &#39;Player WR&#39;, fill_var = &#39;Tank type&#39;)    ...instead of this:   res &lt;- head(stats.update[, .(&#39;Avg. WR&#39; = mean(WR), &#39;Player WR&#39; = mean(WR.global), Players=uniqueN(account_id), Battles = sum(all.battles), Premium= unique(is_premium)), by=name ][Players &gt;= min_players][ order(-`Avg. WR`)],n=topN); setnames(res, &#39;name&#39;, &#39;Tank&#39;); res[, `Avg. WR`:=`Avg. WR` * 100]; res[, `Player WR`:=`Player WR` * 100]; res[Premium==TRUE, `Tank type`:=&#39;Premium&#39;] res[Premium==FALSE, `Tank type`:= &#39;Researchable&#39;] res[,`Tank type` := as.factor(`Tank type`)] res[,Premium := NULL] setcolorder(res,c(&#39;Tank&#39;, &#39;Avg. WR&#39;,&#39;Player WR&#39;, &#39;Players&#39;, &#39;Battles&#39;, &#39;Tank type&#39;)); ggplot(res) + aes(x = reorder(Tank, `Avg. WR`, (function (x) -x)), y = `Avg. WR`, fill= `Tank type`) + geom_col(aes(group=`Tank type`)) + scale_fill_manual(&#39;Tank type&#39;, values = c(&#39;Premium&#39;=&#39;black&#39;, &#39;Researchable&#39; = &#39;grey&#39;)) + geom_point(aes(x = reorder(Tank, `Avg. WR`, (function (x) -x)), y=`Player WR`, color = color.2nd_series, shape=&#39;Player WR&#39;), shape=&#39;-&#39;, size=20, inherit.aes = FALSE) + scale_color_identity(name = NULL, guide=&#39;legend&#39;, labels= &#39;Player WR&#39;) + scale_x_discrete(&#39;Tank&#39;) + scale_y_continuous(&#39;Win rate&#39;, labels = div_format(seq(0,100,5),1,&#39;%&#39;), breaks = seq(0, 100, 5)) + theme(panel.background = element_rect(fill = &#39;white&#39;), plot.title = element_text(hjust = 0.5), panel.grid.minor = element_line(colour=&#34;grey&#34;, size=0.5), axis.text.x = element_text(angle = 45, hjust = 1), plot.subtitle = element_text(hjust = 1), legend.key = element_blank()) + ggtitle(paste(&#39;TOP&#39;,topN, &#39;Tanks by WR&#39;), subtitle = paste(&#34;Update&#34;, update));    In addition for the graph templates makin me happier, those ensure more consistent look and feel and allow me to easily add new graphs - there is never enough of those, right?\nUnfiltered graphs For couple of gprahs I have added unfiltrered (i.e. all players) versions of those. Blitz has huge number of players who just play few games during the whole update. More than 10% of the players play less than e-i-g-h-t (8) battles during an update. And only small share of those players are ever looked at BlitzStars or happen to be recorded into replays sent to WoTinspector.com, therefore never ending up into Blitzanalysiz.com account database. For this reason I filter players based on minimun battle count requirement for many of the graphs. Otherwise the graphs would show players with 100% WR where in fact they had only one (lucky) game during the whole update.\n"
   },
   {
     "uri": "https://blitzanalysiz.com/blog/2020-10-11_7.2_stats_added/",
@@ -9514,24 +9532,6 @@
     ],
     "description": "",
     "content": "Final stats for update 7.4 have been added.\n In total, there were 208M battles by 491k players recorded in the database during the update 7.4 so far. Please note, these are note all the WoT Blitz players, just those tracked by BlitzAnalysiz[].  \n Chimera has taken the title of the best performing (most OP) tank in the game and T28 Concept maintained its 2nd place. In the final stats Emil I dropped to 5th, but was still ahead of notoriously well-known OP tanks like Annihilator and Object 252U.  \n  Emil I and Emil II got nerfed in update 7.5. It will be in the interesting to see how will those perform during update 7.5.\n  Kranvagn remains meh. Maybe the Minsk folks are not fans of Sweden and have decided to leave it at its bit disappointing level.\n  \n"
-  },
-  {
-    "uri": "https://blitzanalysiz.com/blog/2020-06-17_update_6.10_stats_added/",
-    "title": "Update 6.10 stats added",
-    "tags": [
-      "post"
-    ],
-    "description": "",
-    "content": "Stats for update 6.10 has been added to the site. How did the ATGM tanks actually perform? Did Sheridan deserve its nerf in 7.0? Was T92E1 still one of the best performing tier IX tanks?\nI also discovered a bug in the code (function params in wrong order) that has likely impact the earlier results to some extend by filtering out too many results. Fixed now after several hours of debugging&hellip;\n"
-  },
-  {
-    "uri": "https://blitzanalysiz.com/blog/2020-06-08_measuring_tank_performance/",
-    "title": "Measuring tank performance",
-    "tags": [
-      "post"
-    ],
-    "description": "",
-    "content": "Updated 2020-08-11\nOver-Powered (OP) tanks are maybe the 2nd most popular topic on Blitz YouTube videos and online chats - right after &ldquo;the Matchmaker&rdquo;. I have long held the view that if a tank is &ldquo;OP&rdquo;, this has to be visible in statistics. Otherwise there are only qualitative / subjective views left and those come in all sorts.\nPeople are susceptible to all kinds of biases in their thinking. Getting ammoracked by a Death Star will raise suspicion that the Death Star is an OP tank even though it is actually the worst tier X tank. Anecdotal experiences distort opinions and no one remembers those countless battles where a Death Star was at the bottom of the list. Therefore, tank performance is not a thing that we should vote about, but a thing we can measure with statistics.\nHow to measure performance in the game? Let&rsquo;s discuss first how to measure performance in the game. I am a proponent of win rate being the best measure for performance (player or tank) - not average damage, not average kills, and not speed, not alpha damage or any other attribute or characteristics. The reason for choosing win rate over other variables is the fact that winning is the objective of the game and all the damage, kills, spotting etc. are just means to win the game. Why measure proxy variables when you can measure the final variable itself?\nThere are some caveats in using WR as a performance measure:\n It requires many battles for the WR to settle near one&rsquo;s performance level due to both MM and RNG: It takes 400 battles to reach +/- 5% accuracy, 10000 battles to reach +/- 1% accuracy and whopping 1 million battles to reach 0.1% accuracy with 95% confidence level. Check this link at PC WoT forums for details. Platoon rate impacts on WR but cannot be separated well from the statistics since WG does not publish platoon rate per tank played, but just as a aggregate level over all the tanks. Platooning with a good player can lift one&rsquo;s WR 5-15%. Career WR measures historical average, not one&rsquo;s present performance level, and it reacts slowly once the player has lot (10k+) battles. WG&rsquo;s new &ldquo;newbie MM queue&rdquo; has distorted the Career stats for rerollers big time. This distorts both tank and player average WR. (Just ignore global &amp; career WR). Some tanks are more powerful than others. Comparing different players' WR in different tanks or global WR does not tell us much. Different tiers have different level of difficulty. Global / Average WR is close to useless for measuring player / tank performance. Stock tanks' performance is significantly lower compared to when maxed-out.  But other performance measures have issues too and can be gamed; Easiest way to increase average damage is to play more high tiers and more TDs, WN8 can be gamed by playing popular tech three tanks that are difficult for below average players and not too popular among the unicums.\nDespite all the issues related to WR, I consider it the best performance measure over a large number of battles and in case of tanks, over large number of players since it measures directly the objective of the game (=to win battles). It is also a more understandable measure vs. somewhat abstract indexes. But I believe performance indicators like WN8 which are based on input stats (average damage, kills, spots) give a more accurate view of players' short-term performance (&lt; 100 battles) than WR.\nNow going back to the tank performance.\nSo Average WR it is then, right? Not so fast. Average WR of a tank is a good starter, but it has its own biases. Let&rsquo;s have a look at two tier IX mediums: AMX 30 1er prototype and Prototipo Standard B. Everything here is based on 6.9 data.\n   Tank Average WR Players     Prototipo Standard B 52.5% 9 065   AMX 30 1er prototype 56.4% 4 370    Both tanks have also been played by thousands of players, but the AMX seems to have significantly higher average WR. Many would be tempted to claim the AMX is a better tank than Standard B. But is it?\n  Testing for Statistical significance   As the t-test shows below, the difference in average WR between the tanks is statistically significant with any confidence level.\n## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Average WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Average WR`] ## t = -20.276, df = 7143.9, p-value &lt; 2.2e-16 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.04359091 -0.03590513 ## sample estimates: ## mean of x mean of y ## 0.5245230 0.5642711 ## p-value: 6.4e-89 ## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 99% confidence level    Tank performance is a different variable from player skill Let us first consider a single player and the factors affecting the player&rsquo;s chances to win one battle:\nChance of winning ~ player skill * tank performance + RNG + team performance - enemy team performance\nOver a large number of battles the variables team performance and enemy team performance approach their respective averages and the impact of RNG approaches zero (&ldquo;What RNG gives, RNG takes&rdquo;). The more battles one plays in a tank, only two factors will influence one&rsquo;s WR in it:\nWR ~ player skill * tank performance\nAnd to be more precise, player skill is average player skill in the tank in question. Platooning has been ignored here since unfortunately WG does not publish very usable platooning stats via their API.\nSaying &ldquo;any tank is OP in good players hands&rdquo; is the same as saying &ldquo;any car is fast in the hands of a good driver&rdquo;. While a good driver can make better-than-average lap times with a slow car, a good driver does not make the car any faster, but is just &hellip; a good driver. Give the driver a faster car and they can drive even faster.\nTL;DR. Tank performance and player skill are two separate things\nTanks have different playerbases Let&rsquo;s now go back to the AMX 30 1er prototype vs. Standard B example and compare the playerbases. I have chosen player average WR at the tier as a measure for &ldquo;player skill&rdquo;. And more precisely as measured during the update under study (i.e. not career WR). This eliminates couple of biases:\n WR during the update measures the player&rsquo;s current performance unlike Career WR that measures the average historical performance (re-rollers vs. normal players) It measures player performance at the tier in question unlike average WR over all the tiers, and thus is not distorted by low-tier stats-padding  The plot below shows player WR distribution at tier IX (in any tank) for the both AMX 30 1er prototype and Standard B players. It is clear that the AMX 30 1er prototype is played by better players than Standard B. Stock tank battles (Standard B) have been filtered out based on an estimate of battles required to max-out the tank (139).\n   Tank Avg player WR at Tier IX     Prototipo Standard B 52.7%   AMX 30 1er prototype 56.3%    While both the tanks have been played by thousands of players, the AMX is a premium tank whereas Standard B is a Tech Three tank. The players of the both the tanks are roughly equally experienced (see the histogram graph below), but the AMX players are significantly better on average.\nBut do the differences in the tanks' playerbases explain the difference in Average WR differences or not?\nIntroducing Relative WR To separate the players' skill-level distribution from tank performance, we need to compare players' WR in a tank to their skill-level. As explained above, I have chosen Average WR at the Tier as the measure for player skill. Blitzstars' Tank-Compare uses players' average WR (on any tier) as a measure for player skill in its Relative WR graphs. I have chose to use the WR at the tier in question to eliminate the impact of low-tier stat padding.\nRelative WR(tank) = Average(WR in a tank - Player&rsquo;s WR at the Tier)\nIn a nutshell, Relative WR shows how much more/less the players are winning with the tank vs. their tier average. The higher the Relative WR, the stronger the tank is.\n   Tank Average WR WR at Tier Relative WR Players     Prototipo Standard B 52.6% 52.2% 0.43% 7 956   AMX 30 1er prototype 56.9% 56.7% 0.25% 3 570    The Relative WR graph above shows that players perform a bit better with Standard B than the AMX when compared to their tier IX average. The AMX&rsquo;s average WR is far higher than the Standard B&rsquo;s, but its playerbase is far better too - on average. when the differences in the playerbase are taken into account, the difference becomes small and to the Standard B&rsquo;s advantage. The difference IS statistically significant See significance testing below.\nPremium tanks and new higher tier tank lines are often played by better players than average. This distorts the average WR of those tanks and makes people regard the tanks as OP whereas the fundamental reason can be that the tanks are just being played by better players. Yes, there are many borderline-OP &amp; ridiculously-broken premium tanks, but the Relative WR analysis allows us to separate tank performance from skill-level differences in the tanks' playerbases.\n  Testing for Statistical significance   From statistical perspective the Standard B performs better than the AMX on average. p-value 0.081 well below the limit 0.05 (95% confidence level).\n## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 1.7469, df = 5971.7, p-value = 0.0807 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.0002202523 0.0038259103 ## sample estimates: ## mean of x mean of y ## 0.004291730 0.002488901 ## p-value: 0.081 ## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level    TL;DR: Relative WR measures how much higher/lower WR players achieve in a tank vs. their average WR at the same tier.\nOK, is this wall of text over now? Nope.\nPerformance within player skill category The data shows that the Standard B&rsquo;s Relative WR is slightly higher than the AMX 30 1er prototype&rsquo;s - on average - although the difference is not strictly statistically significant. The caveat here is the words on average. How about performance in the hands of below/above average players? Some tanks are known to be difficult for less-skilled players, but well performing in the hands of more skilled players.\nLet&rsquo;s see how the Standard B and the AMX perform when played by different player skill categories.\nPerformance in the hands of super-good players (WR at tier &gt;70%)    Tank Relative WR Players     AMX 30 1er prototype 0.22% 267   Prototipo Standard B 0.48% 158    Standard B seems to perform better than the AMX in the hands of super-good players. However, the player sample is on the small side and the difference is not statistically significant (see below).\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 0.56165, df = 313.91, p-value = 0.5748 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.006480443 0.011658220 ## sample estimates: ## mean of x mean of y ## 0.004814335 0.002225446 ## p-value: 0.57 ## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level    Performance in the hands of very good players (WR at tier 60-70%)    Tank Relative WR Players     Prototipo Standard B 0.4% 1 029   AMX 30 1er prototype 0.35% 1 022    When considering only players with 60-70% WR at tier IX, Standard B is still slightly better, but the margin is minuscule. The p-value is 0.8 so the difference is not statistically significant at any reasonable confidence level.\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 0.24816, df = 2029.4, p-value = 0.804 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.003669481 0.004732673 ## sample estimates: ## mean of x mean of y ## 0.004038950 0.003507354 ## p-value: 0.8 ## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level    Performance in the hands of good players (WR at tier 50-60%)    Tank Relative WR Players     Prototipo Standard B 0.49% 3 570   AMX 30 1er prototype 0.44% 1 485    For this player category the results have reversed again, and Standard B performs bit better vs. the AMX. This is a large player category in the overall dataset, but still the difference is not statistically significant (p-value is 0.78).\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 0.27339, df = 2353.5, p-value = 0.7846 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## -0.002847024 0.003769455 ## sample estimates: ## mean of x mean of y ## 0.004875794 0.004414578 ## p-value: 0.78 ## Null hypothesis of the tanks's Relative WR being equal cannot be rejected (i.e. there is not statistically significant difference at 95% confidence level    Performance in the hands of below-average players (WR at tier 40-50%)    Tank Relative WR Players     Prototipo Standard B 0.37% 2 905   AMX 30 1er prototype -0.16% 682    When analyzing players with 40-50% WR at tier IX, Standard B performance clearly better. Considering that this is a large player group, it is easy to understand why Standard B&rsquo;s average Relative WR is higher than the AMX&rsquo;s. My guess is that it is the Standard B&rsquo;s burst DPM that helps the below average players, where as AMX requires more skill in e.g. ridge fighting to perform, even it is a very good tank in the hands of a skilled player. Also, for this player group, the difference in Relative WR is statistically significant (p-value 0.015).\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 2.4359, df = 903.2, p-value = 0.01505 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## 0.001042643 0.009689074 ## sample estimates: ## mean of x mean of y ## 0.003716970 -0.001648889 ## p-value: 0.015 ## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 95% confidence level    Performance in the hands of well below-average players (WR at tier &lt;40%)    Tank Relative WR Players     Prototipo Standard B 0.35% 292   AMX 30 1er prototype -0.66% 112    Here the difference in Relative WR turns even larger between the tanks. Standard B seems to perform significantly better for players with below-average skills. Again, I suspect the reason being the burst damage. Even the sample size is getting small the difference IS statistically significant (p-value 0.044)).\n  Testing for Statistical significance   ## ## Welch Two Sample t-test ## ## data: res[Tank == tanks.post.200608.tank_perf[[1]], `Relative WR`] and res[Tank == tanks.post.200608.tank_perf[[2]], `Relative WR`] ## t = 2.0256, df = 188, p-value = 0.04422 ## alternative hypothesis: true difference in means is not equal to 0 ## 95 percent confidence interval: ## 0.0002632513 0.0198760920 ## sample estimates: ## mean of x mean of y ## 0.003496051 -0.006573621 ## p-value: 0.044 ## Null hypothesis of the tanks's Relative WR being equal has to be rejected (i.e. there is a statistically significant difference at 95% confidence level    Final words As you can see, the question of tanks' performance is not that straightforward. Even though average WR is such a common measure for tanks' performance, it fails to separate the impact of the different playerbases from the underlying tank performance. And even when comparing tank&rsquo;s (average) Relative WR it only answers to the question in average - not for very good player or well-below average player.\nTo understand how does a tank perform in the hands of certain skill-level players, the Relative WR analysis can still come handy as it can be run for a specific skill-level players only. Again, the numbers are averages and there are always players who are relatively better on one tank vs other. But the Relative WR analysis per skill-level can help a player to choose tanks they are more likely to perform better with.\nIn case of the AMX 30 1er prototype and Standard B, the differences between the tank performance are mostly insignificant, but not far from being statistically significant. As anyone skilled player who has played those, both the tanks are good. I would call it a draw here since there are far larger imbalances in the game.\nThe graph below shows Relative WR for both the tanks as a function of players' average WR at the tier (IX). The grey area shows the share of players with particular WR at the tier in the dataset. Small sample sizes are likely to cause errors in both the ends of the graph.\nI find it surprising there were differences between the tanks' performance in the 60-70% and 70%+ WR player segments. The absolute differences are not that big and this could go into statistical error tolerances. What may explain the result is the fact that player skill follows broadly normal distribution, thus there are more players with (tier) WR closer to 50% than further away from it. Therefore the 60-70% WR player segment consist of mostly 60-65% players vs. 65-70% players. And there is quite a difference skill still between 60-65% and 70%+ players as I can observe every time I watch e.g. Juicy Tender Steak or Sk8xtrm playing tanks.\nThat&rsquo;s all folks - this time\n"
   },
   {
     "uri": "https://blitzanalysiz.com/blog/2020-07-16_7.0_stats_added/",
@@ -9659,6 +9659,13 @@
   {
     "uri": "https://blitzanalysiz.com/tags/t-54-ltwt./",
     "title": "T-54 ltwt.",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/t-70/57/",
+    "title": "T-70/57",
     "tags": [],
     "description": "",
     "content": ""
