@@ -959,7 +959,21 @@
       "post"
     ],
     "description": "",
-    "content": "BlitzAnalysiz[] recently reach an impressive milestone: the site&rsquo;s database tracks now over 1 million players! That&rsquo;s is a big number so let&rsquo;s have a look on the player base.\nCareer WR The chart below shows player&rsquo;s career WR over those 1M players. The career WR distribution seems almost normal distribution, but only almost. The right-hand side &ldquo;tail&rdquo; is reaching further from the mean vs. the left-hand side and the mean WR is above 50%. This seems impossible. This is likely related to the sampling of the players, since more active players are more likely to end up in the the database. Many players (38%) have given up the game or at least have not played in 2021. It seems the the success of the player does not influence on the decision to give up on the game - at least among those who have ended into the database.\nLength of the Blitz Career The next chart looks how long the players have been playing Blitz so far. The mean is 2.7 years and the chart is surprisingly flat.\nCareer start The following chart shows when did the players start playing Blitz. However, this does not give true picture since the database has been collected only since update 5.3 (2018 September). I do have earlier data sets, but I have not had time to integrate those in the main database for the enjoyment for those handful hard-core Blitz stats nerds. Some day I will. Also strictly speaking it shows the oldest last battle time across the players' tanks. The chart therefore tells how long the players have at least played.\nLatest battle The chart shows when did the players tracked by the site play the last time. Only 50% of the tracked players have played in current month (Feb 2021). The slope of the chart does not indicate the the exodus from the game increasing since also the site has constantly increased the number of players being tracked. But it shows that there is a large player base who do not play Blitz even every month.\n"
+    "content": "BlitzAnalysiz[] recently reach an impressive milestone: the site&rsquo;s database tracks now over 1 million players! That&rsquo;s is a big number so let&rsquo;s have a look on the player base.\nCareer WR The chart below shows player&rsquo;s career WR over those 1M players. The career WR distribution seems almost normal distribution, but only almost. The right-hand side &ldquo;tail&rdquo; is reaching further from the mean vs. the left-hand side and the mean WR is above 50%. This seems impossible. This is likely related to the sampling of the players, since more active players are more likely to end up in the the database. Many players (38%) have given up the game or at least have not played in 2021. It seems the the success of the player does not influence on the decision to give up on the game - at least among those who have ended into the database.\nCareer WR table This table shows the career WR of the players as quantiles.\n  Show table      % of Players WR     0% 0%   1% 38.8%   2% 40.1%   3% 40.9%   4% 41.5%   5% 41.9%   10% 43.4%   15% 44.5%   20% 45.3%   25% 46.1%   30% 46.8%   35% 47.4%   40% 48.1%   45% 48.7%   50% 49.4%   55% 50.1%   60% 50.8%   65% 51.6%   70% 52.4%   75% 53.4%   80% 54.6%   85% 56.2%   90% 58.4%   95% 62.2%   96% 63.5%   97% 65.1%   98% 67.3%   99% 71.2%   100% 100%      Length of the Blitz Career The next chart looks how long the players have been playing Blitz so far. The mean is 2.7 years and the chart is surprisingly flat.\nCareer start The following chart shows when did the players start playing Blitz. However, this does not give true picture since the database has been collected only since update 5.3 (2018 September). I do have earlier data sets, but I have not had time to integrate those in the main database for the enjoyment for those handful hard-core Blitz stats nerds. Some day I will. Also strictly speaking it shows the oldest last battle time across the players' tanks. The chart therefore tells how long the players have at least played.\nLatest battle The chart shows when did the players tracked by the site play the last time. Only 50% of the tracked players have played in current month (Feb 2021). The slope of the chart does not indicate the the exodus from the game increasing since also the site has constantly increased the number of players being tracked. But it shows that there is a large player base who do not play Blitz even every month.\n"
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/post/",
+    "title": "Post",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/",
+    "title": "Tags",
+    "tags": [],
+    "description": "",
+    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/blog/2021-02-27_7.6_final_stats_added/",
@@ -974,20 +988,6 @@
   {
     "uri": "https://blitzanalysiz.com/tags/7.6/",
     "title": "7.6",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/post/",
-    "title": "Post",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/",
-    "title": "Tags",
     "tags": [],
     "description": "",
     "content": ""

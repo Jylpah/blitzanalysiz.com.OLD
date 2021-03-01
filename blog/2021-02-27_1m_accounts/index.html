@@ -18,21 +18,21 @@
     <title>1 Million players :: Home</title>
 
     
-    <link href="/css/nucleus.css?1614444963" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1614444963" rel="stylesheet">
-    <link href="/css/hybrid.css?1614444963" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1614444963" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1614444963" rel="stylesheet">
-    <link href="/css/auto-complete.css?1614444963" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1614444963" rel="stylesheet">
-    <link href="/css/theme.css?1614444963" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1614444963" rel="stylesheet">
+    <link href="/css/nucleus.css?1614617166" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1614617166" rel="stylesheet">
+    <link href="/css/hybrid.css?1614617166" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1614617166" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1614617166" rel="stylesheet">
+    <link href="/css/auto-complete.css?1614617166" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1614617166" rel="stylesheet">
+    <link href="/css/theme.css?1614617166" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1614617166" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1614444963" rel="stylesheet">
+    <link href="/css/theme-mine.css?1614617166" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1614444963"></script>
+    <script src="/js/jquery-3.3.1.min.js?1614617166"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1614444963"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1614444963"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1614617166"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1614617166"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1614444963"></script>
+<script type="text/javascript" src="/js/search.js?1614617166"></script>
 
     
   </div>
@@ -441,7 +441,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#career-wr">Career WR</a></li>
+    <li><a href="#career-wr">Career WR</a>
+      <ul>
+        <li><a href="#career-wr-table">Career WR table</a></li>
+      </ul>
+    </li>
     <li><a href="#length-of-the-blitz-career">Length of the Blitz Career</a></li>
     <li><a href="#career-start">Career start</a></li>
     <li><a href="#latest-battle">Latest battle</a></li>
@@ -480,6 +484,149 @@
 <h2 id="career-wr">Career WR</h2>
 <p>The chart below shows player&rsquo;s career WR over those 1M players. The career WR distribution seems <em>almost</em> normal distribution, but only almost. The right-hand side &ldquo;tail&rdquo; is reaching further from the mean vs. the left-hand side and the mean WR is above 50%. This seems impossible. This is likely related to the sampling of the players, since more active players are more likely to end up in the the database. Many players (38%) have given up the game or at least have not played in 2021. It seems the the success of the player does not influence on the decision to give up on the game - at least among those who have ended into the database.</p>
 <p><img src="figure/fig_career_wr-1.svg" alt="plot of chunk fig_career_wr"></p>
+<h3 id="career-wr-table">Career WR table</h3>
+<p>This table shows the career WR of the players as <a href="https://en.wikipedia.org/wiki/Quantile">quantiles</a>.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Show table
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <table>
+<thead>
+<tr>
+<th style="text-align:left">% of Players</th>
+<th style="text-align:left">WR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0%</td>
+<td style="text-align:left">0%</td>
+</tr>
+<tr>
+<td style="text-align:left">1%</td>
+<td style="text-align:left">38.8%</td>
+</tr>
+<tr>
+<td style="text-align:left">2%</td>
+<td style="text-align:left">40.1%</td>
+</tr>
+<tr>
+<td style="text-align:left">3%</td>
+<td style="text-align:left">40.9%</td>
+</tr>
+<tr>
+<td style="text-align:left">4%</td>
+<td style="text-align:left">41.5%</td>
+</tr>
+<tr>
+<td style="text-align:left">5%</td>
+<td style="text-align:left">41.9%</td>
+</tr>
+<tr>
+<td style="text-align:left">10%</td>
+<td style="text-align:left">43.4%</td>
+</tr>
+<tr>
+<td style="text-align:left">15%</td>
+<td style="text-align:left">44.5%</td>
+</tr>
+<tr>
+<td style="text-align:left">20%</td>
+<td style="text-align:left">45.3%</td>
+</tr>
+<tr>
+<td style="text-align:left">25%</td>
+<td style="text-align:left">46.1%</td>
+</tr>
+<tr>
+<td style="text-align:left">30%</td>
+<td style="text-align:left">46.8%</td>
+</tr>
+<tr>
+<td style="text-align:left">35%</td>
+<td style="text-align:left">47.4%</td>
+</tr>
+<tr>
+<td style="text-align:left">40%</td>
+<td style="text-align:left">48.1%</td>
+</tr>
+<tr>
+<td style="text-align:left">45%</td>
+<td style="text-align:left">48.7%</td>
+</tr>
+<tr>
+<td style="text-align:left">50%</td>
+<td style="text-align:left">49.4%</td>
+</tr>
+<tr>
+<td style="text-align:left">55%</td>
+<td style="text-align:left">50.1%</td>
+</tr>
+<tr>
+<td style="text-align:left">60%</td>
+<td style="text-align:left">50.8%</td>
+</tr>
+<tr>
+<td style="text-align:left">65%</td>
+<td style="text-align:left">51.6%</td>
+</tr>
+<tr>
+<td style="text-align:left">70%</td>
+<td style="text-align:left">52.4%</td>
+</tr>
+<tr>
+<td style="text-align:left">75%</td>
+<td style="text-align:left">53.4%</td>
+</tr>
+<tr>
+<td style="text-align:left">80%</td>
+<td style="text-align:left">54.6%</td>
+</tr>
+<tr>
+<td style="text-align:left">85%</td>
+<td style="text-align:left">56.2%</td>
+</tr>
+<tr>
+<td style="text-align:left">90%</td>
+<td style="text-align:left">58.4%</td>
+</tr>
+<tr>
+<td style="text-align:left">95%</td>
+<td style="text-align:left">62.2%</td>
+</tr>
+<tr>
+<td style="text-align:left">96%</td>
+<td style="text-align:left">63.5%</td>
+</tr>
+<tr>
+<td style="text-align:left">97%</td>
+<td style="text-align:left">65.1%</td>
+</tr>
+<tr>
+<td style="text-align:left">98%</td>
+<td style="text-align:left">67.3%</td>
+</tr>
+<tr>
+<td style="text-align:left">99%</td>
+<td style="text-align:left">71.2%</td>
+</tr>
+<tr>
+<td style="text-align:left">100%</td>
+<td style="text-align:left">100%</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
 <h2 id="length-of-the-blitz-career">Length of the Blitz Career</h2>
 <p>The next chart looks how long the players have been playing Blitz so far. The mean is 2.7 years and the chart is surprisingly flat.</p>
 <p><img src="figure/fig_career_length-1.svg" alt="plot of chunk fig_career_length"></p>
@@ -849,19 +996,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1614444963"></script>
-    <script src="/js/perfect-scrollbar.min.js?1614444963"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1614444963"></script>
-    <script src="/js/jquery.sticky.js?1614444963"></script>
-    <script src="/js/featherlight.min.js?1614444963"></script>
-    <script src="/js/highlight.pack.js?1614444963"></script>
+    <script src="/js/clipboard.min.js?1614617166"></script>
+    <script src="/js/perfect-scrollbar.min.js?1614617166"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1614617166"></script>
+    <script src="/js/jquery.sticky.js?1614617166"></script>
+    <script src="/js/featherlight.min.js?1614617166"></script>
+    <script src="/js/highlight.pack.js?1614617166"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1614444963"></script>
-    <script src="/js/learn.js?1614444963"></script>
-    <script src="/js/hugo-learn.js?1614444963"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1614617166"></script>
+    <script src="/js/learn.js?1614617166"></script>
+    <script src="/js/hugo-learn.js?1614617166"></script>
     
         
-            <script src="/mermaid/mermaid.js?1614444963"></script>
+            <script src="/mermaid/mermaid.js?1614617166"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
