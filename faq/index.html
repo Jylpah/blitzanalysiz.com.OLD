@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.79.0" />
+    <meta name="generator" content="Hugo 0.87.0" />
     <meta name="description" content="Stats analysis of World Of Tanks Blitz">
 <meta name="author" content="Jylpah@gmail.com">
 
@@ -18,21 +18,21 @@
     <title>Frequently Asked Questions :: Home</title>
 
     
-    <link href="/css/nucleus.css?1626854793" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1626854793" rel="stylesheet">
-    <link href="/css/hybrid.css?1626854793" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1626854793" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1626854793" rel="stylesheet">
-    <link href="/css/auto-complete.css?1626854793" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1626854793" rel="stylesheet">
-    <link href="/css/theme.css?1626854793" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1626854793" rel="stylesheet">
+    <link href="/css/nucleus.css?1629648752" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1629648752" rel="stylesheet">
+    <link href="/css/hybrid.css?1629648752" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1629648752" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1629648752" rel="stylesheet">
+    <link href="/css/auto-complete.css?1629648752" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1629648752" rel="stylesheet">
+    <link href="/css/theme.css?1629648752" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1629648752" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1626854793" rel="stylesheet">
+    <link href="/css/theme-mine.css?1629648752" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1626854793"></script>
+    <script src="/js/jquery-3.3.1.min.js?1629648752"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1626854793"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1626854793"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1629648752"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1629648752"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1626854793"></script>
+<script type="text/javascript" src="/js/search.js?1629648752"></script>
 
     
   </div>
@@ -162,6 +162,8 @@
           
             
           
+            
+          
         
         </ul>
       
@@ -197,6 +199,8 @@
           
 
         
+          
+            
           
             
           
@@ -494,7 +498,7 @@
 	<h3 id="1-where-is-the-data-from">1. Where is the data from</h3>
 <p>All the data has been collected from <a href="https://developers.wargaming.net/reference/">Wargaming API</a> and processed with <a href="https://rstudio.com/">R/RStudio</a>.</p>
 <h3 id="2-are-your-numbers-correct-is-there-bias-in-the-numbers">2. Are your numbers correct? Is there bias in the numbers?</h3>
-<p>The statistics have been calculated from a data set with very high number of players (700,000+) and battles (in total 6bn+). That is maybe 4 times the users <a href="https://Blitzstars.com">Blitzstars.com</a> has. However, there <em>is</em> still <a href="https://en.wikipedia.org/wiki/Sampling_bias">sampling bias</a> as there is any Blitz stats tracker site. This is evidenced by the <a href="/update/8.0/#player-wr-dist">overall WR distribution</a> and the share of all wins out of all the battles in the database being above 50%. This is a topic worth of a longer post - stay tuned.</p>
+<p>The statistics have been calculated from a data set with very high number of players (700,000+) and battles (in total 6bn+). That is maybe 4 times the users <a href="https://Blitzstars.com">Blitzstars.com</a> has. However, there <em>is</em> still <a href="https://en.wikipedia.org/wiki/Sampling_bias">sampling bias</a> as there is any Blitz stats tracker site. This is evidenced by the <a href="/update/8.1/#player-wr-dist">overall WR distribution</a> and the share of all wins out of all the battles in the database being above 50%. This is a topic worth of a longer post - stay tuned.</p>
 <h3 id="3-why-did-you-make-the-site">3. Why did you make the site?</h3>
 <p>Out of pure interest into analyzing Blitz game statistics and to learn data analysis and <a href="https://rstudio.com/">R</a>.</p>
 <h3 id="4-what-is-relative-wr">4. What is &ldquo;Relative WR&rdquo;?</h3>
@@ -512,7 +516,7 @@
     </div>
     <div class="expand-content" style="display: none;">
         <p><strong>rWR</strong> = Relative WR</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">  <span style="color:#75715e"># calculate players WR at a tier (WR.tier) for all the _maxed-out_ tanks</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">  <span style="color:#75715e"># calculate players WR at a tier (WR.tier) for all the _maxed-out_ tanks</span>
   stats<span style="color:#a6e22e">[DT_filter_tank_is_maxed2</span>(all.battles.new, tier, is_premium), 
      WR.tier <span style="color:#f92672">:=</span> <span style="color:#a6e22e">sum</span>(all.wins)<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(all.battles), by<span style="color:#f92672">=</span>.(account_id, tier)];
   <span style="color:#75715e"># Count the number of maxed out tanks per player per tier</span>
@@ -533,7 +537,7 @@
 <ul>
 <li>Are <em>maxed-out</em> based on a tier-dependent <em>estimate</em> it takes to max out a tank (tier V: 18, tier X: 152 battles). Premium tanks do not have this requirement</li>
 <li>The player has enough battles (10-20) in the tank during the update. The requirement depends on the tier.</li>
-<li>The player is out from sub-5k MM queue existing in EU and RU servers (min 6000 battles). This requirement is not applied to the Asia or North America servers.</li>
+<li>The player is out from sub-5k MM queue existing in EU and RU servers (min 5000 battles). This requirement is not applied to the Asia or North America servers.</li>
 </ul>
 <p>In addition, Relative WR charts require a player to have:</p>
 <ul>
@@ -705,6 +709,11 @@
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -722,6 +731,11 @@
                     
                     
 
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -952,19 +966,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1626854793"></script>
-    <script src="/js/perfect-scrollbar.min.js?1626854793"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1626854793"></script>
-    <script src="/js/jquery.sticky.js?1626854793"></script>
-    <script src="/js/featherlight.min.js?1626854793"></script>
-    <script src="/js/highlight.pack.js?1626854793"></script>
+    <script src="/js/clipboard.min.js?1629648752"></script>
+    <script src="/js/perfect-scrollbar.min.js?1629648752"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1629648752"></script>
+    <script src="/js/jquery.sticky.js?1629648752"></script>
+    <script src="/js/featherlight.min.js?1629648752"></script>
+    <script src="/js/highlight.pack.js?1629648752"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1626854793"></script>
-    <script src="/js/learn.js?1626854793"></script>
-    <script src="/js/hugo-learn.js?1626854793"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1629648752"></script>
+    <script src="/js/learn.js?1629648752"></script>
+    <script src="/js/hugo-learn.js?1629648752"></script>
     
         
-            <script src="/mermaid/mermaid.js?1626854793"></script>
+            <script src="/mermaid/mermaid.js?1629648752"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
