@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="description" content="Stats analysis of World Of Tanks Blitz">
+<meta name="author" content="Jylpah@gmail.com">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+
+    <title>Measuring tank performance, part II :: Home</title>
+
+    
+    <link href="/css/nucleus.css?1630264214" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1630264214" rel="stylesheet">
+    <link href="/css/hybrid.css?1630264214" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1630264214" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1630264214" rel="stylesheet">
+    <link href="/css/auto-complete.css?1630264214" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1630264214" rel="stylesheet">
+    <link href="/css/theme.css?1630264214" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1630264214" rel="stylesheet">
+    
+    <link href="/css/theme-mine.css?1630264214" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1630264214"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB9LFTYQCG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YB9LFTYQCG');
+</script>
+
+  </head>
+  <body class="" data-url="/blog/2021-08-28_measuring_tank_performance_2/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<img class="logo" src="/images/logo_white.svg" alt="BlitzAnalysiz[]" />
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1630264214"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1630264214"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/blitzanalysiz.com";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1630264214"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/update/" title="Blitz Updates" class="dd-item
+        
+        
+        parent
+        ">
+      <a href="/update/">
+          Statistics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/blog/" title="Blog" class="dd-item
+        parent
+        
+        parent
+        ">
+      <a href="/blog/">
+          Blog
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/changelog/" title="Changelog" class="dd-item
+        
+        
+        
+        ">
+      <a href="/changelog/">
+          Changelog
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/todo/" title="TODO" class="dd-item
+        
+        
+        
+        ">
+      <a href="/todo/">
+          TODO
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/faq/" title="Frequently Asked Questions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/faq/">
+          FAQ
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/about/" title="About" class="dd-item
+        
+        
+        
+        ">
+      <a href="/about/">
+          About
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://blitzanalysiz.com/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://github.com/Jylpah/blitz-tools"><i class='fab fa-fw fa-github'></i> blitz-tools at GitHub</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://wotblitz.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/wg.png'></img> WoT Blitz game site</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://blitzstars.com"><img class='fab fa-fw va-bo' margin=0px; src='/images/blitzstars.ico'></img> BlitzStars</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://wotinspector.com"><i class='fas fa-search'></i> WoTinspector</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://blitzhangar.com"><img margin=0px; src='/images/blitz_hangar16x16.png'></img> BlitzHangar</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://blitzanalysiz.com/about"><i class='far fa-question-circle'></i> About</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>BlitzAnalysiz[]</a> > <a href='/blog/'>Blog</a> > Measuring tank performance, part II
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#shortage-of-data">Shortage of data</a></li>
+    <li><a href="#different-comparison-points">Different comparison points</a></li>
+    <li><a href="#player-base-composition">Player base composition</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/post">post</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Measuring tank performance, part II
+            </h1>
+          
+
+        
+
+
+
+	<p>Measuring and comparing tanks’ performance was my key motivation behind the decision to develop the <a href="/">BlitzAnalysiz[]</a> site. In a <a href="/blog/2020-06-08_measuring_tank_performance/">Measuring tank performance, part I</a> I showed how tanks’ player bases differ from each other and why thus <strong>Average WR is a poor measure for comparing tanks’ performance</strong>. Have a look at the differences among the <a href="/update/8.1/tanks/8/all/5137">Tiger II</a> and <a href="/update/8.1/tanks/8/all/17729">Somua SM</a> players' WR at <a href="/update/8.1/tanks/8/">tier VIII</a>. There is over 8% difference between the tanks' players average WR at tier VIII. That is  huge difference and therefore it&rsquo;s clear the average WR of  <a href="/update/8.1/tanks/8/all/17729">Somua SM</a> is far higher than that of <a href="/update/8.1/tanks/8/all/5137">Tiger II</a>.</p>
+<p><img src="figure/fig_player_WR_histogram-1.svg" alt="plot of chunk fig_player_WR_histogram"></p>
+<p>But does that tell the <a href="/update/8.1/tanks/8/all/17729">Somua SM</a> is a better thank than <a href="/update/8.1/tanks/8/all/5137">Tiger II</a>? You can&rsquo;t tell based on average WR. You need to look the tank&rsquo;s Relative WR to compare the tanks' performance, not just the tanks' players' performance.</p>
+<h1 id="relative-wr-has-its-issues">Relative WR has its issues</h1>
+<p>But while Relative WR is a very good and (semi)understandable measure, but it has few issues in practice.</p>
+<h2 id="shortage-of-data">Shortage of data</h2>
+<p>To keep the stats relevant, the analysis should be run for a reasonably short period (e.g. for each update), but only small share of players play enough battles in maxed-out tanks during each update. Most of the time players are grinding new tanks. The histogram of tier VIII players shows how 33% of players do not play a single game in a maxed out tank (or a premium tank) and how almost 80% of players do not play enough battles (20) in a maxed-out tank during an update to get included into Relative WR calculations. In other words, only 20% of the players get included into Relative WR calculations (i.e. have enough battles in at least one maxed-out tank and have enough battles at the same tier in maxed out-tanks). This really is not an issue for more popular tanks, but it impacts on the accuracy of Relative WR for less-played tanks.</p>
+<p><img src="figure/hist_maxed_out_tanks-1.svg" alt="plot of chunk hist_maxed_out_tanks"></p>
+<h2 id="different-comparison-points">Different comparison points</h2>
+<p>Since players play enough battles with only very few maxed-out tanks during an update, the comparison points for different players is not the same. One could think that with enough data the differences will level, but not. For example just 2.3% of <a href="/update/8.1/tanks/7/all/11025">Sturer Emil</a> players played also <a href="/update/8.1/tanks/7/all/7793">Annihilator</a> enough for their <a href="/update/8.1/tanks/7/all/7793">Annihilator</a> games to count into Relative WR calculations. For <a href="/update/8.1/tanks/7/all/5233">Smasher</a> players the percentage was 17%.</p>
+<p><img src="figure/Tier_VII_anni_smasher_StEmil-1.svg" alt="plot of chunk Tier_VII_anni_smasher_StEmil"></p>
+<p>It seems players who play an OP tank (that often premiums) are more likely to play also other OP tanks.  This is distorting Relative WR as a measure since the comparison point for those players is already elevated. And I don&rsquo;t blame the players - it takes certain attitude to play underdog tanks for fun.</p>
+<h2 id="player-base-composition">Player base composition</h2>
+<p>Different tanks are played by different player populations. While the Relative WR is more resistant to the player base skill differences than average WR, it is not immune to those. The differences become meaningful with tanks with specially high skill-floor or low skill-ceiling. These tanks perform relatively worse (or better) with low-skilled (and vice versa for the highly-skilled) players. Light tanks are generally tanks with high skill-floor. It takes considerable skill to even carry one’s own weight in light tanks. As you can see from the Relative WR by WR at the tier plot below, less-skilled players underperform in <a href="/update/8.1/tanks/7/all/18961">Spähpanzer SP I C</a>, but very good players overperform their personal tier VII average.</p>
+<p><img src="figure/rWR_per_skill_level_SP_IC-1.svg" alt="plot of chunk rWR_per_skill_level_SP_IC"></p>
+<p>A contrary effect can be seen in tanks with a low skill-ceiling. These are tanks which perform relatively worse in the hands of very good players. These are often well-armored, but slow tanks. The armor keeps poor players alive, but the poor mobility hinders good players from seizing opportunities they could with other more mobile tanks. <a href="/update/8.1/tanks/8/all/21265">VK 168.01 (P)</a> is one example of tanks with low skill-ceiling. It does not mean that good players have lower WR in it than bad players, but it means good players have (on average) lower WR in the <a href="/update/8.1/tanks/8/all/21265">VK 168.01 (P)</a> than in their other same tier tanks.</p>
+<p><img src="figure/rWR_per_skill_level_VK168.01P-1.svg" alt="plot of chunk rWR_per_skill_level_VK168.01P"></p>
+<p>It is easy to see how the player population can impact significantly to the tanks (average) Relative WR if tank&rsquo;s Relative WR varies greatly by player skill-level. If, for example, <a href="/update/8.1/tanks/8/all/21265">VK 168.01 (P)</a> was played mostly by below-average players, its (average) Relative WR would be high, but if it were mostly played by very good players, its (average) Relative WR would be low and actually negative (i.e. below average).</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Despite the issues discussed above Relative WR is a good tank performance measure. It should be noted that the last issue - the impact of player population - is a sampling issue and not an issue of the Relative WR per se. Player population impacts on every performance measure.</p>
+<p>The distortions caused by sampling errors are common in all statistical studies and surveys. The common way to counter sampling issues and in case of tank stats the differences in player base composition is the use of <a href="https://en.wikipedia.org/wiki/Stratified_sampling">stratified sampling</a>. The issues of availability of data and different comparison points are more fundamental and directly related to the Relative WR methodology.</p>
+<p>But how to tackle the first two issues? Well, I would have not written this post if I didn&rsquo;t have something in mind. Stay tuned ;-)</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+    </div>
+
+	<div id="footer" style="text-align: center; margin: 20px;">
+	<ul class="banners">
+	<li class="cc">
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+			<img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" />
+		</a>
+		<p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p> 
+	</li>
+	<li class="wot-blitz">
+        <a target="_blank" rel="nofollow" href="https://wotblitz.com/">
+			<img src="/images/wot-blitz.png">
+		</a>
+    </li>
+	<li class="wg-customer-support">
+            <a target="_blank" rel="nofollow" href="https://wargaming.net/support">
+				<img src="/images/wg-customer-support.png">
+			</a>
+        </li>
+    </ul>
+	<p>BlitzAnalysiz[] is a player-created website for World of Tanks: Blitz and developed in accordance with <a target="_blank" rel="nofollow" href="https://developers.wargaming.net/documentation/rules/agreement/">WG DPP</a>. This site is not an official Wargaming or World of Tanks: Blitz website. World of Tanks Blitz and Wargaming are trademarks of <a target="_blank" rel="nofollow" href="https://wargaming.net">Wargaming.net Limited</a>. Game content and materials copyright <a target="_blank" rel="nofollow" href="https://wargaming.net/">© Wargaming.net. All rights reserved</a>. 	
+	</p>
+	</div>
+	
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1630264214"></script>
+    <script src="/js/perfect-scrollbar.min.js?1630264214"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1630264214"></script>
+    <script src="/js/jquery.sticky.js?1630264214"></script>
+    <script src="/js/featherlight.min.js?1630264214"></script>
+    <script src="/js/highlight.pack.js?1630264214"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1630264214"></script>
+    <script src="/js/learn.js?1630264214"></script>
+    <script src="/js/hugo-learn.js?1630264214"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1630264214"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+  </body>
+</html>
