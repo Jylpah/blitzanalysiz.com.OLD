@@ -18,21 +18,21 @@
     <title>Measuring tank performance :: Home</title>
 
     
-    <link href="/css/nucleus.css?1640120559" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1640120559" rel="stylesheet">
-    <link href="/css/hybrid.css?1640120559" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1640120559" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1640120559" rel="stylesheet">
-    <link href="/css/auto-complete.css?1640120559" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1640120559" rel="stylesheet">
-    <link href="/css/theme.css?1640120559" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1640120559" rel="stylesheet">
+    <link href="/css/nucleus.css?1642895645" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1642895645" rel="stylesheet">
+    <link href="/css/hybrid.css?1642895645" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1642895645" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1642895645" rel="stylesheet">
+    <link href="/css/auto-complete.css?1642895645" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1642895645" rel="stylesheet">
+    <link href="/css/theme.css?1642895645" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1642895645" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1640120559" rel="stylesheet">
+    <link href="/css/theme-mine.css?1642895645" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1640120559"></script>
+    <script src="/js/jquery-3.3.1.min.js?1642895645"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1640120559"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1640120559"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1642895645"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1642895645"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/blitzanalysiz.com";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1640120559"></script>
+<script type="text/javascript" src="/js/search.js?1642895645"></script>
 
     
   </div>
@@ -117,6 +117,8 @@
           
 
         
+          
+            
           
             
           
@@ -636,7 +638,7 @@
 </table>
 <p>While both the tanks have been played by thousands of players, the AMX is a premium tank whereas Standard B is a Tech Three tank. The players of the both the tanks are roughly equally experienced (see the histogram graph below), but the AMX players are significantly better on average.</p>
 <p><img src="figure/fig_player_battle_count_histogram-1.svg" alt="plot of chunk fig_player_battle_count_histogram"></p>
-<p>But do the differences in the tanks' playerbases explain the difference in Average WR differences or not?</p>
+<p>But do the differences in the tanks' player bases explain the difference in Average WR differences or not?</p>
 <h2 id="introducing-relative-wr">Introducing Relative WR</h2>
 <p>To separate the players' skill-level distribution from tank performance, we need to compare players' WR in a tank to their skill-level. As explained above, I have chosen <em>Average WR at the Tier</em> as the measure for player skill. <a href="https://tank-compare.blitzstars.com/">Blitzstars' Tank-Compare</a> uses players' average WR (on any tier) as a measure for player skill in its Relative WR graphs. I have chose to use the WR at the tier in question to eliminate the impact of low-tier stat padding.</p>
 <p><em>Relative WR(tank)  = Average(WR in a tank  - Player&rsquo;s WR at the Tier)</em></p>
@@ -969,9 +971,9 @@
 <p>As you can see, the question of tanks' performance is not that straightforward. Even though average WR is such a common measure for tanks' performance, it fails to separate the impact of the different playerbases from the underlying tank performance. And even when comparing tank&rsquo;s (average) Relative WR it only answers to the question <em>in average</em> - not for very good player or well-below average player.</p>
 <p>To understand how does a tank perform in the hands of certain skill-level players, the Relative WR analysis can still come handy as it can be run for a specific skill-level players only. Again, the numbers are averages and there are always players who are relatively better on one tank vs other. But the Relative WR analysis per skill-level can help a player to choose tanks they are more likely to perform better with.</p>
 <p>In case of the AMX 30 1er prototype and Standard B, the differences between the tank performance are mostly insignificant, but not far from being statistically significant. As anyone skilled player who has played those, both the tanks are good. I would call it a draw here since there are far larger imbalances in the game.</p>
-<p>The graph below shows Relative WR for both the tanks as a function of players' average WR at the tier (IX). The grey area shows the share of players with particular WR at the tier in the dataset. Small sample sizes are likely to cause errors in both the ends of the graph.</p>
+<p>The graph below shows Relative WR for both the tanks as a function of players' average WR at the tier (IX). The grey area shows the share of players with particular WR at the tier in the data set. Small sample sizes are likely to cause errors in both the ends of the graph.</p>
 <p><img src="figure/fig_player_RelativeWR-1.svg" alt="plot of chunk fig_player_RelativeWR"></p>
-<p>I find it surprising there were differences between the tanks' performance in the 60-70% and 70%+ WR player segments. The absolute differences are not that big and this could go into statistical error tolerances. What may explain the result is the fact that player skill follows broadly normal distribution, thus there are more players with (tier) WR closer to 50% than further away from it. Therefore the 60-70% WR player segment consist of mostly 60-65% players vs. 65-70% players. And there is quite a difference skill still between 60-65% and 70%+ players as I can observe every time I watch e.g. <a href="https://www.youtube.com/channel/UCpXlz_YO1yM2JBVFi7g727A">Juicy Tender Steak</a> or <a href="https://www.youtube.com/channel/UC9pxmwHX5LPRmjVrXBruljg">Sk8xtrm</a> playing tanks.</p>
+<p>I find it surprising there were differences between the tanks' performance in the 60-70% and 70%+ WR player segments. The absolute differences are not that big and this could go into statistical error tolerances. What may explain the result is the fact that player skill follows broadly normal distribution, thus there are more players with (tier) WR closer to 50% than further away from it. Therefore the 60-70% WR player segment consist of mostly 60-65% players vs. 65-70% players. And there is quite a difference skill still between 60-65% and 70%+ players as I can observe every time I watch e.g. <a href="https://www.youtube.com/channel/UCpXlz_YO1yM2JBVFi7g727A">Juicy Tender Steak</a> or <a href="https://www.youtube.com/channel/UCrQ-Dy8lVsm11u8pCJ8W7Tw">HisRoyalFatness</a> playing tanks.</p>
 <p><em>That&rsquo;s all folks - this time</em></p>
 
 
@@ -1025,6 +1027,11 @@
                     
                     
 
+                    
+                        
+            
+            
+        
                     
                         
             
@@ -1433,19 +1440,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1640120559"></script>
-    <script src="/js/perfect-scrollbar.min.js?1640120559"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1640120559"></script>
-    <script src="/js/jquery.sticky.js?1640120559"></script>
-    <script src="/js/featherlight.min.js?1640120559"></script>
-    <script src="/js/highlight.pack.js?1640120559"></script>
+    <script src="/js/clipboard.min.js?1642895645"></script>
+    <script src="/js/perfect-scrollbar.min.js?1642895645"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1642895645"></script>
+    <script src="/js/jquery.sticky.js?1642895645"></script>
+    <script src="/js/featherlight.min.js?1642895645"></script>
+    <script src="/js/highlight.pack.js?1642895645"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1640120559"></script>
-    <script src="/js/learn.js?1640120559"></script>
-    <script src="/js/hugo-learn.js?1640120559"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1642895645"></script>
+    <script src="/js/learn.js?1642895645"></script>
+    <script src="/js/hugo-learn.js?1642895645"></script>
     
         
-            <script src="/mermaid/mermaid.js?1640120559"></script>
+            <script src="/mermaid/mermaid.js?1642895645"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
