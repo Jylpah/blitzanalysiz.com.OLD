@@ -9,6 +9,9 @@
       stroke-linejoin: round;
       stroke-miterlimit: 10.00;
     }
+    .svglite text {
+      white-space: pre;
+    }
   ]]></style>
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
@@ -95,15 +98,15 @@
 <rect x='548.05' y='310.77' width='19.26' height='9.32' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #E1D883;' />
 </g>
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA=)'>
-<text x='47.66' y='323.23' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Open Sans;' textLength='11.93px' lengthAdjust='spacingAndGlyphs'> 0k</text>
-<text x='47.66' y='296.27' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Open Sans;' textLength='11.93px' lengthAdjust='spacingAndGlyphs'> 5k</text>
-<text x='47.66' y='269.31' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Open Sans;' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>10k</text>
-<text x='47.66' y='242.35' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Open Sans;' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>15k</text>
-<text x='47.66' y='215.39' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Open Sans;' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>20k</text>
-<text x='47.66' y='188.43' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Open Sans;' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>25k</text>
-<text x='47.66' y='161.47' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Open Sans;' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>30k</text>
-<text x='47.66' y='134.51' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Open Sans;' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>35k</text>
-<text x='47.66' y='107.55' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Open Sans;' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>40k</text>
+<text x='47.66' y='323.23' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='11.93px' lengthAdjust='spacingAndGlyphs'> 0k</text>
+<text x='47.66' y='296.27' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='11.93px' lengthAdjust='spacingAndGlyphs'> 5k</text>
+<text x='47.66' y='269.31' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>10k</text>
+<text x='47.66' y='242.35' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>15k</text>
+<text x='47.66' y='215.39' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>20k</text>
+<text x='47.66' y='188.43' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>25k</text>
+<text x='47.66' y='161.47' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>30k</text>
+<text x='47.66' y='134.51' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>35k</text>
+<text x='47.66' y='107.55' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='14.68px' lengthAdjust='spacingAndGlyphs'>40k</text>
 <polyline points='49.86,320.09 52.59,320.09 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='49.86,293.13 52.59,293.13 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='49.86,266.17 52.59,266.17 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
@@ -137,44 +140,44 @@
 <polyline points='514.88,334.33 514.88,331.59 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='536.28,334.33 536.28,331.59 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='557.68,334.33 557.68,331.59 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<text transform='translate(69.98,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='89.15px' lengthAdjust='spacingAndGlyphs'>T26E4 SuperPershing</text>
-<text transform='translate(91.38,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='51.96px' lengthAdjust='spacingAndGlyphs'>P.44 Pantera</text>
-<text transform='translate(112.78,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='98.40px' lengthAdjust='spacingAndGlyphs'>AMX Chasseur de chars</text>
-<text transform='translate(134.18,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='17.81px' lengthAdjust='spacingAndGlyphs'>T-44</text>
-<text transform='translate(155.58,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='80.29px' lengthAdjust='spacingAndGlyphs'>T-54 first prototype</text>
-<text transform='translate(176.99,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='32.54px' lengthAdjust='spacingAndGlyphs'>Type 59</text>
-<text transform='translate(198.39,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='36.60px' lengthAdjust='spacingAndGlyphs'>FCM 50 t</text>
-<text transform='translate(219.79,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='40.73px' lengthAdjust='spacingAndGlyphs'>Panther II</text>
-<text transform='translate(241.19,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='64.30px' lengthAdjust='spacingAndGlyphs'>Centurion Mk. I</text>
-<text transform='translate(262.59,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='25.86px' lengthAdjust='spacingAndGlyphs'>T-34-2</text>
-<text transform='translate(284.00,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='15.28px' lengthAdjust='spacingAndGlyphs'>T69</text>
-<text transform='translate(305.40,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='57.45px' lengthAdjust='spacingAndGlyphs'>M26 Pershing</text>
-<text transform='translate(326.80,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='23.03px' lengthAdjust='spacingAndGlyphs'>STA-1</text>
-<text transform='translate(348.20,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='36.15px' lengthAdjust='spacingAndGlyphs'>T-44-100</text>
-<text transform='translate(369.60,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='69.40px' lengthAdjust='spacingAndGlyphs'>M4A1 Revalorisé</text>
-<text transform='translate(391.01,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='58.17px' lengthAdjust='spacingAndGlyphs'>Indien-Panzer</text>
-<text transform='translate(412.41,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='40.92px' lengthAdjust='spacingAndGlyphs'>59-Patton</text>
-<text transform='translate(433.81,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='25.43px' lengthAdjust='spacingAndGlyphs'>T95E2</text>
-<text transform='translate(455.21,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='25.86px' lengthAdjust='spacingAndGlyphs'>T-34-3</text>
-<text transform='translate(476.61,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='53.27px' lengthAdjust='spacingAndGlyphs'>Lorraine 40 t</text>
-<text transform='translate(498.02,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='93.58px' lengthAdjust='spacingAndGlyphs'>Progetto M35 mod. 46</text>
-<text transform='translate(519.42,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='20.20px' lengthAdjust='spacingAndGlyphs'>O-47</text>
-<text transform='translate(540.82,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='41.52px' lengthAdjust='spacingAndGlyphs'>Panzer 58</text>
-<text transform='translate(562.22,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px; fill: #4D4D4D; font-family: Open Sans;' textLength='99.98px' lengthAdjust='spacingAndGlyphs'>Panther mit 8,8 cm L/71</text>
-<text x='311.56' y='423.88' text-anchor='middle' style='font-size: 11.00px; font-family: Open Sans;' textLength='23.85px' lengthAdjust='spacingAndGlyphs'>Tank</text>
-<text transform='translate(21.84,205.06) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: Open Sans;' textLength='36.98px' lengthAdjust='spacingAndGlyphs'>Players</text>
+<text transform='translate(69.98,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='89.15px' lengthAdjust='spacingAndGlyphs'>T26E4 SuperPershing</text>
+<text transform='translate(91.38,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='51.96px' lengthAdjust='spacingAndGlyphs'>P.44 Pantera</text>
+<text transform='translate(112.78,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='98.40px' lengthAdjust='spacingAndGlyphs'>AMX Chasseur de chars</text>
+<text transform='translate(134.18,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='17.81px' lengthAdjust='spacingAndGlyphs'>T-44</text>
+<text transform='translate(155.58,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='80.29px' lengthAdjust='spacingAndGlyphs'>T-54 first prototype</text>
+<text transform='translate(176.99,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='32.54px' lengthAdjust='spacingAndGlyphs'>Type 59</text>
+<text transform='translate(198.39,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='36.60px' lengthAdjust='spacingAndGlyphs'>FCM 50 t</text>
+<text transform='translate(219.79,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='40.73px' lengthAdjust='spacingAndGlyphs'>Panther II</text>
+<text transform='translate(241.19,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='64.30px' lengthAdjust='spacingAndGlyphs'>Centurion Mk. I</text>
+<text transform='translate(262.59,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='25.86px' lengthAdjust='spacingAndGlyphs'>T-34-2</text>
+<text transform='translate(284.00,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='15.28px' lengthAdjust='spacingAndGlyphs'>T69</text>
+<text transform='translate(305.40,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='57.45px' lengthAdjust='spacingAndGlyphs'>M26 Pershing</text>
+<text transform='translate(326.80,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='23.03px' lengthAdjust='spacingAndGlyphs'>STA-1</text>
+<text transform='translate(348.20,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='36.15px' lengthAdjust='spacingAndGlyphs'>T-44-100</text>
+<text transform='translate(369.60,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='69.40px' lengthAdjust='spacingAndGlyphs'>M4A1 Revalorisé</text>
+<text transform='translate(391.01,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='58.17px' lengthAdjust='spacingAndGlyphs'>Indien-Panzer</text>
+<text transform='translate(412.41,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='40.92px' lengthAdjust='spacingAndGlyphs'>59-Patton</text>
+<text transform='translate(433.81,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='25.43px' lengthAdjust='spacingAndGlyphs'>T95E2</text>
+<text transform='translate(455.21,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='25.86px' lengthAdjust='spacingAndGlyphs'>T-34-3</text>
+<text transform='translate(476.61,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='53.27px' lengthAdjust='spacingAndGlyphs'>Lorraine 40 t</text>
+<text transform='translate(498.02,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='93.58px' lengthAdjust='spacingAndGlyphs'>Progetto M35 mod. 46</text>
+<text transform='translate(519.42,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='20.20px' lengthAdjust='spacingAndGlyphs'>O-47</text>
+<text transform='translate(540.82,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='41.52px' lengthAdjust='spacingAndGlyphs'>Panzer 58</text>
+<text transform='translate(562.22,341.06) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='99.98px' lengthAdjust='spacingAndGlyphs'>Panther mit 8,8 cm L/71</text>
+<text x='311.56' y='423.88' text-anchor='middle' style='font-size: 11.00px; font-family: "Open Sans";' textLength='23.85px' lengthAdjust='spacingAndGlyphs'>Tank</text>
+<text transform='translate(21.84,205.06) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Open Sans";' textLength='36.98px' lengthAdjust='spacingAndGlyphs'>Players</text>
 <rect x='206.01' y='39.34' width='211.09' height='28.24' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<text x='211.49' y='57.38' style='font-size: 11.00px; font-family: Open Sans;' textLength='49.05px' lengthAdjust='spacingAndGlyphs'>Tank type</text>
+<text x='211.49' y='57.38' style='font-size: 11.00px; font-family: "Open Sans";' textLength='49.05px' lengthAdjust='spacingAndGlyphs'>Tank type</text>
 <rect x='266.02' y='44.82' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none;' />
 <rect x='266.73' y='45.52' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #E1D883;' />
 <rect x='332.76' y='44.82' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none;' />
 <rect x='333.47' y='45.52' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #406E86;' />
-<text x='288.78' y='56.59' style='font-size: 8.80px; font-family: Open Sans;' textLength='37.66px' lengthAdjust='spacingAndGlyphs'>Premium</text>
-<text x='355.52' y='56.59' style='font-size: 8.80px; font-family: Open Sans;' textLength='54.87px' lengthAdjust='spacingAndGlyphs'>Researchable</text>
-<text x='570.52' y='31.22' text-anchor='end' style='font-size: 11.00px; font-family: Open Sans;' textLength='97.02px' lengthAdjust='spacingAndGlyphs'>Tier VIII Update 6.6</text>
-<text x='235.14' y='14.76' style='font-size: 13.20px; font-family: Open Sans;' textLength='51.09px' lengthAdjust='spacingAndGlyphs'>Medium</text>
-<text x='288.88' y='14.76' style='font-size: 13.20px; font-family: Open Sans;' textLength='34.89px' lengthAdjust='spacingAndGlyphs'>Tanks</text>
-<text x='326.64' y='14.76' style='font-size: 13.20px; font-family: Open Sans;' textLength='14.46px' lengthAdjust='spacingAndGlyphs'>by</text>
-<text x='344.29' y='14.76' style='font-size: 13.20px; font-family: Open Sans;' textLength='44.34px' lengthAdjust='spacingAndGlyphs'>Players</text>
+<text x='288.78' y='56.59' style='font-size: 8.80px; font-family: "Open Sans";' textLength='37.66px' lengthAdjust='spacingAndGlyphs'>Premium</text>
+<text x='355.52' y='56.59' style='font-size: 8.80px; font-family: "Open Sans";' textLength='54.87px' lengthAdjust='spacingAndGlyphs'>Researchable</text>
+<text x='570.52' y='31.22' text-anchor='end' style='font-size: 11.00px; font-family: "Open Sans";' textLength='97.02px' lengthAdjust='spacingAndGlyphs'>Tier VIII Update 6.6</text>
+<text x='235.14' y='14.76' style='font-size: 13.20px; font-family: "Open Sans";' textLength='51.09px' lengthAdjust='spacingAndGlyphs'>Medium</text>
+<text x='288.88' y='14.76' style='font-size: 13.20px; font-family: "Open Sans";' textLength='34.89px' lengthAdjust='spacingAndGlyphs'>Tanks</text>
+<text x='326.64' y='14.76' style='font-size: 13.20px; font-family: "Open Sans";' textLength='14.46px' lengthAdjust='spacingAndGlyphs'>by</text>
+<text x='344.29' y='14.76' style='font-size: 13.20px; font-family: "Open Sans";' textLength='44.34px' lengthAdjust='spacingAndGlyphs'>Players</text>
 </g>
 </svg>
