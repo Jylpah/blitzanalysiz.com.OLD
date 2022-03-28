@@ -586,7 +586,7 @@
       "Region"
     ],
     "description": "",
-    "content": "This page shows statistics per Blitz servers/regions (EU, North America, Asia, Russia) during update 8.8. Statistics for the Chinese server are not available via WG API.\nNumber of players This graphs shows players by region in the dataset who have played at least one game. Please note, this does not mean all the players per server, but just those who have been recorded in the BlitzAnalysiz database.\nWR Distribution This graph shows players' overall WR distribution during update 8.8 on different regions.\nThese graphs cannot be used to say anything about the skill-level differences between the servers. Instead, the graphs tell more about the player sampling per server. BlitzAnalysiz[] database has relatively more players from EU and NA (com) servers vs. RU and Asia servers. In all the servers the players sampled are on average more active and better than the true player average due to the way how the player account_ids are being harvested.\n Cumulative distribution function This graphs shows the same information than the previous in different format. The curve tells how large share of players (y-axis) had WR less than (x-axis) during update 8.8.\nPopularity of Tank Nations This graph shows the popularity of tank nations by region/server.\n"
+    "content": "This page shows statistics per Blitz servers/regions (EU, North America, Asia, Russia) during update 8.8. Statistics for the Chinese server are not available via WG API.\nNumber of players This graphs shows players by region in the dataset who have played at least one game. Please note, this does not mean all the players per server, but just those who have been recorded in the BlitzAnalysiz database.\nWR Distribution This graph shows players' overall WR distribution during update 8.8 on different regions.\nThese graphs cannot be used to say anything about the skill-level differences between the servers. Instead, the graphs tell more about the player sampling per server. BlitzAnalysiz[] database has relatively more players from EU and NA (com) servers vs. RU and Asia servers. In all the servers the players sampled are on average more active and better than the true player average due to the way how the player account_ids are being harvested.\n Cumulative distribution function This graphs shows the same information than the previous in different format. The curve tells how large share of players (y-axis) had WR less than (x-axis) during update 8.8.\nPopularity of Tank Nations This graph shows the popularity of tank nations by region/server.\nPopularity of Vehicle Classes This graph shows the popularity of vehicle classes by region/server.\n"
   },
   {
     "uri": "https://blitzanalysiz.com/update/latest/tanks/4/tank-destroyers/",
@@ -917,6 +917,230 @@
     "content": "BlitzAnalysiz[] is a site about in-depth game statistics of Wargaming&rsquo;s World of Tanks Blitz World war II-themed multiplayer online tank game. You won&rsquo;t find individial player statistics here - for those, please check awesome Blitzstars.com. Instead, the the site is about analysis of the overall player population and tank performance statistics.\nAll the data has been fetched via WG&rsquo;s API and processed in RStudio. The web site has been build with Hugo.\nBig thanks for BlitzStars.com&rsquo;s developer SockRobber and WotInspector.com&rsquo;s developer reven86 for all the support!\nBlitzAnalysiz[] is build by Jylpah@EU. You can reach out me via email (Jylpah@gmail.com), Discord (Jylpah#4662). I am also active at WoT Blitz EU forums.\n"
   },
   {
+    "uri": "https://blitzanalysiz.com/tags/6.0/",
+    "title": "6.0",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.1/",
+    "title": "6.1",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.10/",
+    "title": "6.10",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.2/",
+    "title": "6.2",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.3/",
+    "title": "6.3",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.4/",
+    "title": "6.4",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.5/",
+    "title": "6.5",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.6/",
+    "title": "6.6",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.7/",
+    "title": "6.7",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.8/",
+    "title": "6.8",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/6.9/",
+    "title": "6.9",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.0/",
+    "title": "7.0",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.1/",
+    "title": "7.1",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.2/",
+    "title": "7.2",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.3/",
+    "title": "7.3",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.4/",
+    "title": "7.4",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.5/",
+    "title": "7.5",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.6/",
+    "title": "7.6",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.7/",
+    "title": "7.7",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.8/",
+    "title": "7.8",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/7.9/",
+    "title": "7.9",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/8.0/",
+    "title": "8.0",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/8.1/",
+    "title": "8.1",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/8.2/",
+    "title": "8.2",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/8.3/",
+    "title": "8.3",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/8.4/",
+    "title": "8.4",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/8.5/",
+    "title": "8.5",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/8.6/",
+    "title": "8.6",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/8.7/",
+    "title": "8.7",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/8.8/",
+    "title": "8.8",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/region/",
+    "title": "Region",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
+    "uri": "https://blitzanalysiz.com/tags/",
+    "title": "Tags",
+    "tags": [],
+    "description": "",
+    "content": ""
+  },
+  {
     "uri": "https://blitzanalysiz.com/tags/10tp/",
     "title": "10TP",
     "tags": [],
@@ -1175,13 +1399,6 @@
     ],
     "description": "",
     "content": "8,8 cm Pak 43 Jagdtiger is a German Tier VIII premium Tank Destroyer.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Tank Destroyers.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/8.8/",
-    "title": "8.8",
-    "tags": [],
-    "description": "",
-    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/tags/a-20/",
@@ -6142,13 +6359,6 @@
     "content": "Ram II is a American Tier V premium Medium Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Medium Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/region/",
-    "title": "Region",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/renault-r35/",
     "title": "Renault R35",
     "tags": [],
@@ -8208,13 +8418,6 @@
     "content": "T95E6 is a American Tier X premium Heavy Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Heavy Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
   },
   {
-    "uri": "https://blitzanalysiz.com/tags/",
-    "title": "Tags",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
     "uri": "https://blitzanalysiz.com/tags/tank-destroyer/",
     "title": "Tank Destroyer",
     "tags": [],
@@ -9877,209 +10080,6 @@
     ],
     "description": "",
     "content": "Škoda T 56 is a European Tier VIII premium Heavy Tank.\nPlayer Population This graphs compare&rsquo;s the tank&rsquo;s player population by WR at Tier to other same tier Heavy Tanks.\nRelative WR vs. Player Skill-level This graphs shows how well players of different skill-level (measured by WR at Tier) perform in the tank vs. their other same tier, same type tanks.\nStat levels vs. WR These graphs players input-stats vs. the WR they have reached with the tank. The players' averages over all the same tier tanks is shown in grey. The bars show the 20-80% stat levels within the WR bucket (20% of players will have higher/lower stats than these).\nAverage Damage Kills per Battle Spot Rate Hit Rate WR analysis These graphs shows how different stat-pairs (X/Y) relate to WR (the color coding).\nAverage Damage + kills per Battle vs. WR This graphs shows Average WR as a function of Average Damage and Kill per Battle.\nSpot Rate + Survival Rate vs. WR Spot Rate + Average Battle Lifetime vs. WR Shots/Battle + Average Battle Lifetime vs. WR Hit Rate + Shots/Battle vs. WR "
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.0/",
-    "title": "6.0",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.1/",
-    "title": "6.1",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.10/",
-    "title": "6.10",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.2/",
-    "title": "6.2",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.3/",
-    "title": "6.3",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.4/",
-    "title": "6.4",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.5/",
-    "title": "6.5",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.6/",
-    "title": "6.6",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.7/",
-    "title": "6.7",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.8/",
-    "title": "6.8",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/6.9/",
-    "title": "6.9",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.0/",
-    "title": "7.0",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.1/",
-    "title": "7.1",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.2/",
-    "title": "7.2",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.3/",
-    "title": "7.3",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.4/",
-    "title": "7.4",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.5/",
-    "title": "7.5",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.6/",
-    "title": "7.6",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.7/",
-    "title": "7.7",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.8/",
-    "title": "7.8",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/7.9/",
-    "title": "7.9",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/8.0/",
-    "title": "8.0",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/8.1/",
-    "title": "8.1",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/8.2/",
-    "title": "8.2",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/8.3/",
-    "title": "8.3",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/8.4/",
-    "title": "8.4",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/8.5/",
-    "title": "8.5",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/8.6/",
-    "title": "8.6",
-    "tags": [],
-    "description": "",
-    "content": ""
-  },
-  {
-    "uri": "https://blitzanalysiz.com/tags/8.7/",
-    "title": "8.7",
-    "tags": [],
-    "description": "",
-    "content": ""
   },
   {
     "uri": "https://blitzanalysiz.com/tags/amx-40/",
