@@ -71,14 +71,14 @@
 <polyline points='374.46,373.62 374.46,78.53 ' style='stroke-width: 1.07; stroke: #BEBEBE; stroke-linecap: butt;' />
 <polyline points='474.26,373.62 474.26,78.53 ' style='stroke-width: 1.07; stroke: #BEBEBE; stroke-linecap: butt;' />
 <polyline points='522.56,373.62 522.56,78.53 ' style='stroke-width: 1.07; stroke: #BEBEBE; stroke-linecap: butt;' />
-<rect x='57.20' y='91.95' width='23.03' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #ACD8F1;' />
-<rect x='80.22' y='91.95' width='63.37' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #ACD8F1;' />
-<rect x='143.59' y='91.95' width='41.47' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #7BABC4;' />
-<rect x='185.06' y='91.95' width='65.42' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #ACD8F1;' />
-<rect x='250.48' y='91.95' width='48.95' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #ACD8F1;' />
-<rect x='299.43' y='91.95' width='150.06' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #ACD8F1;' />
-<rect x='449.49' y='91.95' width='49.55' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #ACD8F1;' />
-<rect x='499.04' y='91.95' width='47.04' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #ACD8F1;' />
+<rect x='57.20' y='91.95' width='23.03' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #ACD8F1;' />
+<rect x='80.22' y='91.95' width='63.37' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #ACD8F1;' />
+<rect x='143.59' y='91.95' width='41.47' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #7BABC4;' />
+<rect x='185.06' y='91.95' width='65.42' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #ACD8F1;' />
+<rect x='250.48' y='91.95' width='48.95' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #ACD8F1;' />
+<rect x='299.43' y='91.95' width='150.06' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #ACD8F1;' />
+<rect x='449.49' y='91.95' width='49.55' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #ACD8F1;' />
+<rect x='499.04' y='91.95' width='47.04' height='268.26' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #ACD8F1;' />
 </g>
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA=)'>
 <text x='27.82' y='363.34' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Open Sans";' textLength='12.28px' lengthAdjust='spacingAndGlyphs'>0%</text>
@@ -120,20 +120,14 @@
 <text transform='translate(478.81,383.09) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='17.19px' lengthAdjust='spacingAndGlyphs'>USA</text>
 <text transform='translate(527.10,383.09) rotate(-45)' text-anchor='end' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Open Sans";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>USSR</text>
 <text x='301.64' y='423.88' text-anchor='middle' style='font-size: 11.00px; font-family: "Open Sans";' textLength='34.47px' lengthAdjust='spacingAndGlyphs'>Nation</text>
-<rect x='102.13' y='39.34' width='399.01' height='28.24' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<text x='107.61' y='57.38' style='font-size: 11.00px; font-family: "Open Sans";' textLength='65.40px' lengthAdjust='spacingAndGlyphs'>Vehicle Class</text>
-<rect x='178.51' y='44.82' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none;' />
-<rect x='178.79' y='45.10' width='16.71' height='16.71' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #ACD8F1;' />
-<rect x='249.18' y='44.82' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none;' />
-<rect x='249.46' y='45.10' width='16.71' height='16.71' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #7BABC4;' />
-<rect x='334.14' y='44.82' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none;' />
-<rect x='334.42' y='45.10' width='16.71' height='16.71' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #497D97;' />
-<rect x='409.97' y='44.82' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none;' />
-<rect x='410.25' y='45.10' width='16.71' height='16.71' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: square; stroke-linejoin: miter; fill: #60AB54;' />
-<text x='201.27' y='56.59' style='font-size: 8.80px; font-family: "Open Sans";' textLength='41.46px' lengthAdjust='spacingAndGlyphs'>Light Tank</text>
-<text x='271.94' y='56.59' style='font-size: 8.80px; font-family: "Open Sans";' textLength='55.44px' lengthAdjust='spacingAndGlyphs'>Medium Tank</text>
-<text x='356.90' y='56.59' style='font-size: 8.80px; font-family: "Open Sans";' textLength='46.53px' lengthAdjust='spacingAndGlyphs'>Heavy Tank</text>
-<text x='432.73' y='56.59' style='font-size: 8.80px; font-family: "Open Sans";' textLength='61.54px' lengthAdjust='spacingAndGlyphs'>Tank Destroyer</text>
+<rect x='185.63' y='39.34' width='232.01' height='28.24' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<text x='191.11' y='57.38' style='font-size: 11.00px; font-family: "Open Sans";' textLength='65.40px' lengthAdjust='spacingAndGlyphs'>Vehicle Class</text>
+<rect x='262.01' y='44.82' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none;' />
+<rect x='262.29' y='45.10' width='16.71' height='16.71' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #ACD8F1;' />
+<rect x='332.68' y='44.82' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none;' />
+<rect x='332.97' y='45.10' width='16.71' height='16.71' style='stroke-width: 0.43; stroke: #E5E5E5; stroke-linecap: butt; stroke-linejoin: miter; fill: #7BABC4;' />
+<text x='284.77' y='56.59' style='font-size: 8.80px; font-family: "Open Sans";' textLength='41.46px' lengthAdjust='spacingAndGlyphs'>Light Tank</text>
+<text x='355.44' y='56.59' style='font-size: 8.80px; font-family: "Open Sans";' textLength='55.44px' lengthAdjust='spacingAndGlyphs'>Medium Tank</text>
 <text x='570.52' y='31.22' text-anchor='end' style='font-size: 11.00px; font-family: "Open Sans";' textLength='56.03px' lengthAdjust='spacingAndGlyphs'>Update 9.0</text>
 <text x='173.93' y='14.76' style='font-size: 13.20px; font-family: "Open Sans";' textLength='35.19px' lengthAdjust='spacingAndGlyphs'>Share</text>
 <text x='212.00' y='14.76' style='font-size: 13.20px; font-family: "Open Sans";' textLength='12.44px' lengthAdjust='spacingAndGlyphs'>of</text>
