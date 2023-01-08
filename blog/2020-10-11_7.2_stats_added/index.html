@@ -14,7 +14,7 @@ parent"><a href=/blog/>Blog</a><ul></ul></li><li data-nav-id=/changelog/ title=C
 <a class=tag-link href=/tags/7.2>7.2</a></div></div><div id=body-inner><h1>Update 7.2 stats added</h1><p>Stats for update 7.2 have been added.</p><ul><li><p>Record 205M battles by 456k players was recorded in the database.
 Please note, these are note all the WoT Blitz players, just those
 tracked by BlitzAnalysiz[].</p></li><li><p>There seem to be more low-tier stat-padders captured in the database
-since Top 5 highest WR tanks are Tier V or below.</p></li></ul><p><img src=figure/fig_tanks_top_averageWR-1.svgz alt="plot of chunk fig_tanks_top_averageWR"></p><ul><li><a href=/update/latest/7/tanks/56609>T28 Concept</a>,
+since Top 5 highest WR tanks are Tier V or below.</p></li></ul><p><img src=figure/fig_tanks_top_averageWR-1.svg.gz alt="plot of chunk fig_tanks_top_averageWR"></p><ul><li><a href=/update/latest/7/tanks/56609>T28 Concept</a>,
 <a href=/update/latest/8/tanks/20481>Object 252U</a><br>and <a href=/update/latest/8/tanks/18513>Chimera</a>
 continue to be the best performing tanks in the game, with
 <a href=/update/latest/8/tanks/20513>T54E2</a>
@@ -22,7 +22,7 @@ taking the 3rd place in front of
 <a href=/update/latest/8/tanks/18513>Chimera</a>.
 Top four tanks are all premium tanks. It must be a pure accident by WG balancing
 department. If it were a result of conscious decision, someone could say the
-game is becoming pay-to-win&mldr;</li></ul><p><img src=figure/fig_tanks_top_RelativeWR-1.svgz alt="plot of chunk fig_tanks_top_RelativeWR"></p><ul><li>Armor continues to rule in the game. The top tanks are a well-armored tanks.
+game is becoming pay-to-win&mldr;</li></ul><p><img src=figure/fig_tanks_top_RelativeWR-1.svg.gz alt="plot of chunk fig_tanks_top_RelativeWR"></p><ul><li>Armor continues to rule in the game. The top tanks are a well-armored tanks.
 Tier X is dominated by tanks
 like
 <a href=/update/latest/10/tanks/6929>Maus</a> ,
@@ -31,7 +31,7 @@ like
 <a href=/update/latest/10/tanks/9489>E 100</a> and
 <a href=/update/latest/10/tanks/7169>IS-7</a>.
 Of course the <em>average</em> Relative WR favors tanks that are easy to
-play for the <em>average players</em>.</li></ul><p><img src=figure/fig_tanks_top20_tier10_RelativeWR-1.svgz alt="plot of chunk fig_tanks_top20_tier10_RelativeWR"></p><ul><li>And I finally managed to fix the annoying parallel processing bug that has
+play for the <em>average players</em>.</li></ul><p><img src=figure/fig_tanks_top20_tier10_RelativeWR-1.svg.gz alt="plot of chunk fig_tanks_top20_tier10_RelativeWR"></p><ul><li>And I finally managed to fix the annoying parallel processing bug that has
 taken most of my BlitzAnalysiz development time. The issue was that multi-threaded
 <a href=https://www.openblas.net/>OpenBLAS</a>-libraries used by <code>loess()</code> not being
 thread-safe in multi-core applications. <code>library('RhcpBLASctl'); blas_set_num_threads(1)</code>
