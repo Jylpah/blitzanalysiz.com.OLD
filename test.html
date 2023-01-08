@@ -13,6 +13,9 @@
 
 <h2>SVGZ</h2>
 
+This requires both HTTP Request header (request not to compress content `Accept-Encoding: gzip;q=0`) 
+  and Response header (`Content-Type: image/svg+xml`, `Content-Encoding: gzip`) modifications to work. 
+  
 <p><img src="test.svgz"></p>
 
 <a href="test.svgz">test.svgz</a>
@@ -21,6 +24,8 @@
 
 <p><img src="test.svg.gz"></p>
 
+  This one requires only Response header (`Content-Type: image/svg+xml`, `Content-Encoding: gzip`) modifications to work.
+  
 <a href="test.svg.gz">test.svg.gz</a>
 
 </body>
